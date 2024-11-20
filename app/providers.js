@@ -1,11 +1,11 @@
 'use client'
 import { ThemeProvider } from "./theme-provider"
 
-export default function providers({ children }) {
+export default function Providers({ children }) {
     return (
         <ThemeProvider
             attribute='class'
-            defaultTheme='system'
+            defaultTheme='light'
             enableSystem
             disableTransitionOnChange
         >
