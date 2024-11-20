@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from '@/components/nav/Header'
 import Footer from '@/components/Footer'
+import providers from "./providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,7 +16,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Create My Portfolio web",
+  title: "Yoonju Portfolio by NextJs ",
   description: "yoonju portfolio",
 };
 
@@ -25,11 +26,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main className="flex min-h-screen flex-col items-center justify-center">
-          {children}
-        </main>
-        <Footer />
+        <providers >
+          <Header />
+          <main className="flex min-h-screen flex-col items-center justify-center">
+            {children}
+          </main>
+          <Footer />
+        </providers>
       </body>
     </html>
   );
