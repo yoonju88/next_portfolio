@@ -2,16 +2,18 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ProjectCard({ works }) {
+export default function ProjectList({ works }) {
     return (
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
 
             {
                 works.map((item) => {
                     return (
-                        <div className="p-4 md:w-1/3 sm:mb-0 mb-6 mt-3">
+                        <div key={item.id} className="p-4 md:w-1/3 sm:mb-0 mb-6 mt-3">
                             <div className="rounded-lg h-60 overflow-hidden">
-                                <Image alt={item.title} className="object-cover object-center h-full w-full" src={item.image} />
+                                <Link href={`/works/${item.id}`} >
+                                    <Image alt={item.title} className="object-cover object-center h-full w-full transform transition duration-300 hover:scale-110" src={item.image} />
+                                </Link>
                             </div>
                             <h2 className="text-xl font-medium title-font text-gray-900 mt-6">{item.title}</h2>
                             <p className="text-base leading-relaxed mt-2">
