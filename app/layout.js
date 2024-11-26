@@ -22,13 +22,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-primary`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Providers >
           <Header />
-          <main className="flex min-h-screen flex-col justify-center items-center">
+          <main
+            className="flex min-h-screen flex-col justify-center items-center"
+          >
             {children}
           </main>
           <Footer />

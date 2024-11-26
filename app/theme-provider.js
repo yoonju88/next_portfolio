@@ -1,6 +1,7 @@
 'use client'
 import * as React from 'react'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import PropTypes from 'prop-types';
 
 export function ThemeProvider({ children, ...props }) {
     return (
@@ -9,3 +10,7 @@ export function ThemeProvider({ children, ...props }) {
         </NextThemesProvider>
     )
 }
+
+ThemeProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
