@@ -13,12 +13,27 @@ export default function Intro() {
                 <p className="mb-8 leading-relaxed text-foreground">
                     Here, you’ll find the work I’ve done so far and the endless possibilities that lie ahead. New projects and challenges always bring me excitement and inspiration. I’m always looking forward to collaborative efforts that push boundaries with innovative technologies. Let’s create something amazing together!
                 </p>
-                <div className="flex justify-center">
-                    <Button variant='default' size="lg">
-                        <Link href='/works' className="text-white">
-                            See my projects
-                        </Link>
-                    </Button>
+                <div className='flex gap-6'>
+                    <div className="flex justify-center">
+                        <Button variant='default' size="sm">
+                            <Link href='/works/web' className="text-white capitalize flex items-center">
+                                web projects
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </Link>
+                        </Button>
+                    </div>
+                    <div className="flex justify-center">
+                        <Button variant='default' size="sm">
+                            <Link href='/works/design' className="text-white capitalize flex items-center">
+                                graphic project
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                </svg>
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
