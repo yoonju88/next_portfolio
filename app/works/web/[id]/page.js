@@ -28,7 +28,7 @@ export default function WebDetailsPage({ params }) {
                         </Link>
                     </div>
                     <div className="lg:w-1/2 w-full lg:pl-10 lg:py-0 mt-4 lg:mt-0">
-                        <h1 className="title-font font-medium mb-1 text-foreground text-2xl">{project.title}</h1>
+                        <h1 className="title-font font-medium mb-1 text-foreground text-3xl capitalize">{project.title}</h1>
                         <p className="leading-relaxed text-foreground mt-3 text-sm mb-4">{project.description}</p>
                         <ProjectDetailContainer >
                             <CalculateDays
@@ -42,12 +42,16 @@ export default function WebDetailsPage({ params }) {
                                 tags={project.tags}
                             />
                         </ProjectDetailContainer>
-                        <ButtonLink
-                            href={project.link}
-                            name="Go to GitHub"
-                        >
-                            <IoLogoGithub className="text-black" size="22" />
-                        </ButtonLink>
+                        <div className="border-t border-gray-200 flex justify-center py-4 ">
+                            <ButtonLink
+                                href={project.link}
+                                name="Go to GitHub"
+                                variant="link"
+                                size="sm"
+                            >
+                                <IoLogoGithub size="22" />
+                            </ButtonLink>
+                        </div>
                     </div>
                 </div>
             </div>
