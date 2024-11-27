@@ -1,5 +1,5 @@
 
-export const Experiences = [
+export const experiences = [
 
     {
         jobTitle: "Freelance graphic designer",
@@ -23,8 +23,8 @@ export const Experiences = [
     },
     {
         jobTitle: "Trilingual Customer Service",
-        companyName: "Planet payment",
-        address: 'Le bonmarché | Paris 7E',
+        companyName: "Planet payment in Bonmarché",
+        address: 'Paris 7E',
         description: "Customer reception, creation and management of customer files, daily summary.",
         duration: {
             start: "06-2016",
@@ -43,7 +43,7 @@ export const Experiences = [
     },
 ]
 
-export const Educations = [
+export const educations = [
     {
         name: "Intergration web",
         schoolName: "OpenClassRooms",
