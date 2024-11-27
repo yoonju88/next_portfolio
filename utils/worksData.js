@@ -4,6 +4,8 @@ import ArgentBank from '@/public/argentbank-v2.png'
 import Event from '@/public/724events-v2.png'
 
 
+
+
 export const worksData = [
     {
         id: "a15",
@@ -21,7 +23,7 @@ export const worksData = [
     {
         id: "a14",
         type: "web",
-        title: "724events",
+        title: "724 events",
         tags: ["Debug", "React", "Nodejs", "SEO", "Test unit"],
         link: "https://github.com/yoonju88/Projet10-724events",
         duration: {
