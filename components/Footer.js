@@ -9,7 +9,10 @@ export default function Footer() {
                     <Link href="/" className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                         <span className="ml-3 text-xl text-foreground">Yoonju.T </span>
                     </Link>
-                    <p className='text-xs sm: mt-2 text-foreground'> ©2024 - Create by TERRENOIRE Yoonju </p>
+                    <p className='text-xs sm: mt-2 text-foreground flex items-center'>
+                        <span>©</span>
+                        <span>2024 - Create by TERRENOIRE Yoonju</span>
+                    </p>
                 </div>
             </div>
         </footer>
