@@ -1,15 +1,15 @@
 import React from 'react'
 import ProfileYJ from "@/public/yoonju-profil.jpg"
 import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { ButtonLink } from '@/components/Buttons'
+import { experiences, educations } from '@/utils/Profile'
 
 export default function AboutMePage() {
+
     return (
         <section className="text-gray-600 body-font">
             <div className="container px-5 pb-10 mx-auto flex flex-col">
-                <div className="lg:w-[90%] mx-auto">
+                <div className="lg:w-[95%] mx-auto">
                     <div className="flex flex-col sm:flex-row mt-10">
                         <div className="lg:w-2/5 flex items-center justify-center">
                             <div className="w-1/2 height-1/2 rounded-full items-center justify-center overflow-hidden">
@@ -60,20 +60,68 @@ export default function AboutMePage() {
                             </div>
                         </div>
                     </div>
-                    <div className="container lg:w-[90%] px-5 py-24 mx-auto">
-                        <div className="lg:w-1/2">
-                            <div className="-my-8 divide-y-2 divide-gray-100">
-                                <div className="py-8 flex flex-wrap md:flex-nowrap">
-                                    <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                                        <span className="font-semibold title-font text-gray-700">CATEGORY</span>
-                                        <span className="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
-                                    </div>
-                                    <div className="md:flex-grow">
-                                        <h2 className="text-2xl font-medium text-gray-900 title-font mb-2">Bitters hashtag waistcoat fashion axe chia unicorn</h2>
-                                        <p className="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
-                                    </div>
-                                </div>
+                    <div className="px-5 py-24 mx-auto flex flex-wrap">
+                        <div className="lg:w-1/2 pr-10">
+                            <div className='flex items-center gap-3 mb-4'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-7 text-foreground/90 ">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                </svg>
+                                <h1 className="text-2xl font-semibold text-foreground">Experiences</h1>
                             </div>
+                            {experiences.map((item) => {
+                                const startDate = item.duration.start
+                                const endDate = item.duration.end
+                                return (
+                                    <div class="py-4 px-4" key={item.jobTitle}>
+                                        <div class="h-full flex items-start">
+                                            <div class="w-30 flex-shrink-0 pt-1 flex flex-col text-center leading-none">
+                                                <span class="text-foreground/80  border-gray-200 text-xs font-semibold">{startDate} - {endDate}</span>
+                                            </div>
+                                            <div class="flex-grow pl-8">
+                                                <h1 class="title-font text-xl font-medium text-foreground/85 mb-1">{item.jobTitle}</h1>
+                                                <h2 class="tracking-widest text-xs title-font font-medium text-foreground/60 mb-1">
+                                                    <span className='pr-2'>{item.companyName}</span>
+                                                    <span className="border-l-2 pl-2 border-foreground/40">
+                                                        {item.address}
+                                                    </span>
+                                                </h2>
+                                                <p class="leading-relaxed mb-2 text-sm text-foreground/90">{item.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                        <div className=" pl-20 border-l-2 border-foreground/50">
+                            <div className='flex items-center gap-3 mb-8'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-7 text-foreground/90">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                                </svg>
+                                <h1 className="text-2xl font-semibold text-foreground">Educations</h1>
+                            </div>
+                            {educations.map((item) => {
+                                const startDate = item.duration.start
+                                const endDate = item.duration.end
+                                return (
+                                    <div className="p-4  pl-6 pr-6 flex items-center mt-6 bg-secondary/80 rounded-xl">
+                                        <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500  flex-shrink-0">
+                                            {/* Image à integrer */}
+                                        </div>
+                                        <div className="flex-grow pl-8">
+                                            <p className='text-foreground/60 text-xs mb-0.5'>{startDate} - {endDate}</p>
+                                            <h2 className="text-foreground/90 text-lg title-font font-medium mb-0.5">{item.name}</h2>
+                                            <p className="text-xs font-semibold text-foreground/60 mb-0.5">{item.degree}</p>
+                                            <h3 className="tracking-widest text-xs title-font font-medium text-foreground/60">
+                                                <span className='pr-2'>{item.schoolName}</span>
+                                                <span className="border-l-2 pl-2 border-foreground/40">
+                                                    {item.address}
+                                                </span>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                )
+
+                            })}
                         </div>
 
                     </div>
