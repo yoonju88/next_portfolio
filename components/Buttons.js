@@ -18,7 +18,7 @@ export const ButtonNavigate = ({ href, name, size, variant, children }) => {
     return (
         <div className="flex justify-center">
             <Button variant={variant} size={size}>
-                <Link href='/works/web' className="capitalize flex items-center">
+                <Link href={href} className="capitalize flex items-center">
                     {name}
                 </Link>
                 {children}

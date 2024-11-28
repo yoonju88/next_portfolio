@@ -1,7 +1,13 @@
+import SM from '@/public/sm.jpg'
+import OC from '@/public/OpenClassrooms.png'
+import LF from '@/public/Lignes-formation.png'
+import IF from '@/public/ifalpes.png'
 
-export const experiences = [
+
+export const profileData = [
 
     {
+        type: "experience",
         jobTitle: "Freelance graphic designer",
         companyName: "Creation Fusalp",
         address: 'Annecy le vieux, 74',
@@ -12,6 +18,7 @@ export const experiences = [
         },
     },
     {
+        type: "experience",
         jobTitle: "Graphic designer intern",
         companyName: "Creation fusalp",
         address: 'Annecy le vieux, 74',
@@ -22,6 +29,7 @@ export const experiences = [
         },
     },
     {
+        type: "experience",
         jobTitle: "Trilingual Customer Service",
         companyName: "Planet payment in Bonmarché",
         address: 'Paris 7E',
@@ -32,6 +40,7 @@ export const experiences = [
         },
     },
     {
+        type: "experience",
         jobTitle: "Clothing Vendor",
         companyName: "Michael International",
         address: 'Seoul, Republic of Korea',
@@ -41,20 +50,22 @@ export const experiences = [
             end: "11-2014"
         },
     },
-]
-
-export const educations = [
     {
+        type: "education",
         name: "Intergration web",
         schoolName: "OpenClassRooms",
         address: 'Paris, 75',
-        degree: "RNCP Niveau 5",
+        degree: "RNCP, Niveau 5",
         duration: {
             start: "12-2023",
             end: "09-2024",
         },
+        image: OC,
+        link: "https://openclassrooms.com/fr/",
+
     },
     {
+        type: "education",
         name: "Graphist",
         schoolName: "Lignes et formation",
         address: 'Montrouge, 92',
@@ -63,18 +74,25 @@ export const educations = [
             start: "08-2018",
             end: "07-2020",
         },
+        image: LF,
+        link: "https://www.lignes-formations.com/"
     },
     {
+        type: "education",
         name: "Learning of the French language",
-        schoolName: "Ifalpe",
+        schoolName: "Ifalpes",
         address: 'Annecy, 74',
         degree: "Niveau B+2",
         duration: {
             start: "12-2024",
             end: "09-2015",
         },
+        image: IF,
+        link: "https://ifalpes.com/fr/",
+
     },
     {
+        type: "education",
         name: "Fashion & Textiles",
         schoolName: "Sangmyoung University",
         address: 'Seoul, Republic of Korea',
@@ -83,6 +101,7 @@ export const educations = [
             start: "03-2008",
             end: "08-2012",
         },
+        image: SM,
+        link: "https://www.smu.ac.kr/",
     },
-
 ]
