@@ -28,8 +28,8 @@ export default function WebDetailsPage({ params }) {
                         </Link>
                     </div>
                     <div className="lg:w-1/2 w-full lg:pl-10 lg:py-0 mt-4 lg:mt-0">
-                        <h1 className="title-font font-medium mb-1 text-foreground text-3xl capitalize">{project.title}</h1>
-                        <p className="leading-relaxed text-foreground mt-3 text-sm mb-4">{project.description}</p>
+                        <h1 className="title-font font-medium mb-1 text-3xl capitalize">{project.title}</h1>
+                        <p className="leading-relaxed mt-3 text-sm mb-4">{project.description}</p>
                         <ProjectDetailContainer >
                             <CalculateDays
                                 startDate={project.duration.startDate}
