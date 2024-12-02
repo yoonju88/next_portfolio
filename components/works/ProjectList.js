@@ -15,8 +15,8 @@ export default function ProjectList({ works }) {
                                     <Image alt={item.title} className="object-cover object-center h-full w-full transform transition duration-300 hover:scale-105" src={item.image} />
                                 </Link>
                             </div>
-                            <h2 className="text-xl font-medium title-font text-foreground mt-6 transform transition duration-200 hover:font-semibold">{item.title}</h2>
-                            <p className="text-base leading-relaxed mt-2 text-foreground">
+                            <h2 className="text-xl font-medium title-font mt-6 transform transition duration-200 hover:font-semibold">{item.title}</h2>
+                            <p className="text-base leading-relaxed mt-2 ">
                                 {item.description}
                             </p>
                             <Link className="inline-flex items-center mt-3 text-primary transform transition-all duration-200 hover:font-semibold" href={`/works/web/${item.id}`} >

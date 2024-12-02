@@ -9,7 +9,7 @@ export default function Tags({ name, tags }) {
             <ul className="flex gap-0 items-center ">
                 {tags.map((tag) => {
                     return (
-                        <li key={tag} className={`text-xs text-foreground py-1 px-1.5 font-normal rounded ${animationSet} hover:text-white hover:bg-primary/90`} >{tag}</li>
+                        <li key={tag} className={`text-xs text-secondary-foreground py-1 px-1.5 font-normal rounded ${animationSet} hover:text-white hover:bg-primary/90`} >{tag}</li>
                     )
                 })}
             </ul>
