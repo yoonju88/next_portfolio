@@ -5,7 +5,8 @@ import { profileData, icon } from '@/utils/Profile'
 import ExperienceLists from '@/components/about-me/ExperienceLists'
 import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
-import { ButtonNavigate } from '@/components/Buttons'
+import ContactMe from '@/components/about-me/ContactMe'
+import MySkills from '@/components/about-me/MySkills'
 
 export default function AboutMePage() {
     const experiences = profileData.filter(item => item.type === "experience")
@@ -14,12 +15,12 @@ export default function AboutMePage() {
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
     };
-    const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-gray-100 rounded-xl box-border"
+    const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background border-2 border-foreground/50 rounded-xl box-border"
     return (
         <>
-            <section className="text-gray-600 body-font">
+            <section>
                 <div className="container px-5 pb-8 mx-auto flex flex-col">
-                    <div className="lg:w-[95%] mx-auto">
+                    <div className="lg:w-[90%] mx-auto">
                         <Profile />
                         <div className="py-8 w-[100%] mx-auto flex flex-wrap justify-between">
                             <ContentContainer
@@ -39,16 +40,12 @@ export default function AboutMePage() {
                                 <EducationList data={educations} />
                             </ContentContainer>
                         </div>
-
                     </div>
                 </div>
             </section >
+            <MySkills />
             <Services />
-            <ButtonNavigate
-                name="Go to contact"
-                href="/contact"
-                variant="link"
-            />
+            <ContactMe />
         </>
     )
 }
@@ -61,7 +58,7 @@ const icons = {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-gray-700  "
+            className="size-7 text-foreground/80  "
         >
             <path
                 strokeLinecap="round"
@@ -76,7 +73,7 @@ const icons = {
             fill="none" viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-gray-700 "
+            className="size-7 text-foreground/80"
         >
             <path
                 strokeLinecap="round"
