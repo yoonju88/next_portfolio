@@ -25,7 +25,7 @@ export default function Intro() {
                     </ButtonNavigate>
                     <ButtonNavigate
                         name="graphic project"
-                        href="/works/graphic"
+                        href="/works/design"
                         variant='link'
                         size="sm"
                     >
