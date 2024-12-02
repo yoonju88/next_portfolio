@@ -6,7 +6,7 @@ import ExperienceLists from '@/components/about-me/ExperienceLists'
 import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
-import MySkills from '@/components/about-me/MySkills'
+import MySkills from '@/components/about-me/skills/MySkills'
 
 export default function AboutMePage() {
     const experiences = profileData.filter(item => item.type === "experience")
@@ -19,9 +19,11 @@ export default function AboutMePage() {
     return (
         <>
             <section>
-                <div className="container px-5 pb-8 mx-auto flex flex-col">
+                <div className="container px-5 mx-auto flex flex-col">
                     <div className="lg:w-[90%] mx-auto mt-8">
                         <Profile />
+                        <Services />
+                        <MySkills />
                         <div className="py-8 w-[100%] mt-12 mx-auto flex flex-wrap justify-between">
                             <ContentContainer
                                 title="Experience"
@@ -43,8 +45,6 @@ export default function AboutMePage() {
                     </div>
                 </div>
             </section >
-            <MySkills />
-            <Services />
             <ContactMe />
         </>
     )
