@@ -80,9 +80,13 @@
 
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-foreground
+  @apply text-foreground/80
 }
 
 p {
-  @apply text-foreground/90
+  @apply text-foreground/75
+}
+
+.card-set-shadow {
+  @apply  shadow-none py-4 px-4 rounded-lg transform transition-all duration-300 hover:bg-foreground/5 hover:shadow-gray-400 hover:shadow-md
 }
