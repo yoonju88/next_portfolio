@@ -15,14 +15,14 @@ export default function AboutMePage() {
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
     };
-    const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background border-2 border-foreground/50 rounded-xl box-border"
+    const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background rounded-xl box-border"
     return (
         <>
             <section>
                 <div className="container px-5 pb-8 mx-auto flex flex-col">
-                    <div className="lg:w-[90%] mx-auto">
+                    <div className="lg:w-[90%] mx-auto mt-8">
                         <Profile />
-                        <div className="py-8 w-[100%] mx-auto flex flex-wrap justify-between">
+                        <div className="py-8 w-[100%] mt-12 mx-auto flex flex-wrap justify-between">
                             <ContentContainer
                                 title="Experience"
                                 data={experiences}

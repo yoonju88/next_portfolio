@@ -12,7 +12,7 @@ export default function ServiceList({ data }) {
                                 <h2 className="text-xl text-foreground/80 font-semibold">{item.title}</h2>
                             </div>
                             <div className="flex relative ">
-                                <div className="px-4 py-6 relative z-10 w-full rounded-lg border-4 border-primary/80 bg-background opacity-0 hover:opacity-100">
+                                <div className="px-4 py-6 relative z-10 w-full rounded-lg border-4 border-primary/80 bg-background opacity-0 hover:opacity-100 max-h-[225px] overflow-y-auto">
                                     <h2 className="text-base text-foreground/80 font-semibold">{item.title}</h2>
                                     <p className="leading-relaxed text-foreground/80 text-sm mt-2">{item.description}</p>
                                 </div>
