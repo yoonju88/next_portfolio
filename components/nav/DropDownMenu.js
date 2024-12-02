@@ -19,7 +19,7 @@ export default function DropDownMenu({ links, className }) {
                 </Link>
                 <span className="sr-only">Works</span>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center">
+            <DropdownMenuContent align="center" className="bg-background/50">
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.linkName}>
