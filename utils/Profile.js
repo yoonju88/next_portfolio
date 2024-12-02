@@ -3,9 +3,7 @@ import OC from '@/public/OpenClassrooms.png'
 import LF from '@/public/Lignes-formation.png'
 import IF from '@/public/ifalpes.png'
 
-
 export const profileData = [
-
     {
         type: "experience",
         jobTitle: "Freelance graphic designer",
@@ -103,5 +101,81 @@ export const profileData = [
         },
         image: SM,
         link: "https://www.smu.ac.kr/",
+    },
+]
+
+import { SiJavascript } from "react-icons/si";
+import { SiReact } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobeillustrator } from "react-icons/si";
+import { SiAdobeaftereffects } from "react-icons/si";
+
+export const mySkillsData = [
+    {
+        title: "JavaScript",
+        percentage: "70%",
+        icon: (<SiJavascript className="size-10 rounded-sm " />),
+        color: "hover:text-yellow-400",
+        category: "web",
+    },
+    {
+        title: "React",
+        percentage: "75%",
+        icon: (<SiReact className="size-10 " />),
+        color: "hover:text-cyan-500",
+        category: "web",
+    },
+    {
+        title: "NextJs",
+        percentage: "60%",
+        icon: (<SiNextdotjs className="size-10" />),
+        color: "hover:text-foreground",
+        category: "web",
+    },
+    {
+        title: "TypeScript",
+        percentage: "60%",
+        icon: (<SiTypescript className="size-10 rounded-sm" />),
+        color: "hover:text-blue-600",
+        category: "web",
+    },
+    {
+        title: "TailwindCss",
+        percentage: "75%",
+        icon: (<SiTailwindcss className="size-10" />),
+        color: "hover:text-cyan-500",
+        category: "web",
+    },
+    {
+        title: "Figma",
+        percentage: "70%",
+        icon: (<SiFigma className="size-10" />),
+        color: "hover:text-fuchsia-500",
+        category: "design",
+    },
+    {
+        title: "Photoshop",
+        percentage: "80%",
+        icon: (<SiAdobephotoshop className="size-10" />),
+        color: "hover:text-blue-900",
+        category: "design",
+    },
+    {
+        title: "Illustrator",
+        percentage: "85%",
+        icon: (<SiAdobeillustrator className="size-10" />),
+        color: "hover:text-orange-300",
+        category: "design",
+    },
+    {
+        title: "AfterEffect",
+        percentage: "60%",
+        icon: (<SiAdobeaftereffects className="size-10" />),
+        color: "hover:text-purple-600",
+        category: "design",
     },
 ]
