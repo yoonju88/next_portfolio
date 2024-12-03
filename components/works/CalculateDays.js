@@ -12,7 +12,6 @@ export default function CalculateDays({ startDate, endDate }) {
     const formattedStartDate = formatDate(startDate)
     const formattedEndDate = formatDate(endDate)
 
-
     const calculatedPeriod = (start, end) => {
         const startDateStringArray = start.split('-');
         const endDateStringArray = end.split('-');
