@@ -108,18 +108,18 @@ export const buttonTypes = [
     {
         type: "all",
         name: "All",
-        id: "a14"
+        id: 14,
     },
     {
         type: "web",
         name: "Web development",
-        id: "a15"
+        id: 15,
 
     },
     {
         type: "design",
         name: "Graphic design",
-        id: "a16"
+        id: 16,
     },
 ]
 
@@ -138,54 +138,54 @@ export const mySkillsData = [
         title: "JavaScript",
         icon: Js,
         type: "web",
-        id: "q456",
+        id: 456,
     },
     {
         title: "React",
         icon: React,
         type: "web",
-        id: "q457",
+        id: 457,
     },
     {
         title: "NextJs",
         icon: Next,
         type: "web",
-        id: "q458",
+        id: 458,
     },
     {
         title: "TypeScript",
         icon: Ts,
         category: "web",
-        id: "q459",
+        id: 459,
     },
     {
         title: "TailwindCss",
         icon: Tw,
         type: "web",
-        id: "q460",
+        id: 460,
     },
     {
         title: "Figma",
         icon: Figma,
         type: "design",
-        id: "q461",
+        id: 461,
     },
     {
         title: "Photoshop",
         icon: Ps,
         type: "design",
-        id: "q462",
+        id: 462,
     },
     {
         title: "Illustrator",
         icon: Ai,
         type: "design",
-        id: "q463",
+        id: 463,
     },
     {
         title: "AfterEffect",
         icon: Ae,
         type: "design",
-        id: "q464",
+        id: 464,
     },
 ]
