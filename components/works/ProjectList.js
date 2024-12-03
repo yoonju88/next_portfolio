@@ -5,7 +5,6 @@ import Link from 'next/link'
 export default function ProjectList({ works }) {
     return (
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-
             {
                 works.map((item) => {
                     return (
@@ -28,7 +27,6 @@ export default function ProjectList({ works }) {
                         </div >
                     )
                 })}
-
         </div >
     )
 }
