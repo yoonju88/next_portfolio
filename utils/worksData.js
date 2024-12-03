@@ -3,9 +3,6 @@ import Kasa from '@/public/kasa_v2.png'
 import ArgentBank from '@/public/argentbank-v2.png'
 import Event from '@/public/724events-v2.png'
 
-
-
-
 export const worksData = [
     {
         id: "a15",

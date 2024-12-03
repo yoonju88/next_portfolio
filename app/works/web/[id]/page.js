@@ -19,7 +19,7 @@ export default function WebDetailsPage({ params }) {
     if (!project) { < NotFoundPage /> }
 
     return (
-        <section className="text-gray-600 body-font">
+        <section>
             <div className="container px-5 py-10 mx-auto ">
                 <div className="lg:w-4/5 mx-auto flex flex-wrap overflow-hidden items-center">
                     <div className="overflow-hidden lg:w-1/2 rounded-lg">

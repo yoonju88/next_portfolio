@@ -9,7 +9,6 @@ const worksLinks = [
     { href: '/works/design', linkName: 'graphic design' },
 ]
 export default function header() {
-
     const linkClassName = 'mr-5 capitalize text-foreground  hover:font-medium transition-colors duration-200'
 
     return (

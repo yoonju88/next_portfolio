@@ -23,7 +23,7 @@ export default function DropDownMenu({ links, className }) {
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.linkName}>
-                            <Link href={link.href} >
+                            <Link href={link.href} className="capitalize" >
                                 {link.linkName}
                             </Link>
                         </DropdownMenuItem>

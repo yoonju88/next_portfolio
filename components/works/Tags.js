@@ -5,7 +5,7 @@ export default function Tags({ name, tags }) {
 
     return (
         <>
-            <span class="text-secondary-foreground text-sm capitalize">{name}</span>
+            <span className="text-secondary-foreground text-sm capitalize">{name}</span>
             <ul className="flex gap-0 items-center ">
                 {tags.map((tag) => {
                     return (
