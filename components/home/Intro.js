@@ -1,5 +1,5 @@
 import React from 'react'
-import AnimationCode from './AnimationCode'
+import { AnimationCode } from './DynamicMap'
 import { ButtonNavigate } from '../Buttons'
 
 export default function Intro() {
