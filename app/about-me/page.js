@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
-import { profileData, icon } from '@/utils/Profile'
+import { profileData } from '@/utils/Profile'
 import ExperienceLists from '@/components/about-me/ExperienceLists'
 import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
@@ -11,6 +11,8 @@ import MySkills from '@/components/about-me/skills/MySkills'
 export default function AboutMePage() {
     const experiences = profileData.filter(item => item.type === "experience")
     const educations = profileData.filter(item => item.type === "education")
+
+    if (!profileData) { return null }
 
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
