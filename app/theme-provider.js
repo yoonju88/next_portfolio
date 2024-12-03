@@ -11,6 +11,6 @@ export function ThemeProvider({ children, ...props }) {
     )
 }
 
-ThemeProvider.propTypes = {
+ThemeProvider.PropTypes = {
     children: PropTypes.node.isRequired,
 };

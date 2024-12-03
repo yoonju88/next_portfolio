@@ -2,7 +2,7 @@
 import { ThemeProvider } from "./theme-provider"
 import PropTypes from 'prop-types';
 
-Providers.propTypes = {
+Providers.PropTypes = {
     children: PropTypes.node.isRequired,
 };
 
