@@ -2,13 +2,12 @@
 import React, { useState } from 'react'
 import { mySkillsData, buttonTypes } from '@/utils/Profile'
 import SkillList from '@/components/about-me/skills/SkillList'
-
 import { FilterButton } from '@/components/Buttons';
-
 
 export default function MySkills() {
     const [isFilteredType, setisFilteredType] = useState('all')
     const filteredItems = isFilteredType === 'all' ? mySkillsData : mySkillsData.filter(item => item.type === isFilteredType)
+
     return (
         <section>
             <div className="container px-5 py-14 mx-auto">
@@ -19,11 +18,12 @@ export default function MySkills() {
                         {buttonTypes.map((item) => {
                             return (
                                 <FilterButton
-                                    id={item.id}
+                                    key={item.id}
                                     name={item.name}
                                     active={isFilteredType === item.type}
                                     onClick={() => setisFilteredType(item.type)}
                                 />
+
                             )
                         })}
                     </div>
@@ -31,15 +31,16 @@ export default function MySkills() {
                 <div className="flex flex-wrap -m-4 gap-10 justify-center">
                     {filteredItems.map((item) => {
                         return (
-                            <SkillList
-                                id={item.id}
-                                title={item.title}
-                                icon={item.icon}
-                                color={item.color}
-                            />
+                            <div key={item.id}>
+                                <SkillList
+                                    key={item.id}
+                                    title={item.title}
+                                    icon={item.icon}
+                                    color={item.color}
+                                />
+                            </div>
                         )
                     })}
-
                 </div>
             </div>
         </section >
