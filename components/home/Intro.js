@@ -1,6 +1,7 @@
 import React from 'react'
-import { AnimationCode } from './DynamicMap'
+import { AnimationLottie } from '../animation/DynamicMap'
 import { ButtonNavigate } from '../Buttons'
+import IntroAinimation from '@/public/animation_2.json'
 
 export default function Intro() {
     return (
@@ -36,7 +37,7 @@ export default function Intro() {
                 </div>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <AnimationCode />
+                <AnimationLottie animation={IntroAinimation} />
             </div>
         </>
     )
