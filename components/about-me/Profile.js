@@ -19,11 +19,12 @@ export default function Profile() {
     return (
         <div className="flex flex-wrap items-center justify-center mt-10 p-5 bg-backgroundpy-10">
             <div className="lg:w-[30%] md:w-1/3 lg:mb-0 sm:mb-4 sm:w-[90%] flex items-center justify-center">
-                <div className="w-[210px] h-[210px] rounded-3xl overflow-hidden hover:border-4 hover:border-primary transform transitio-all rotate-6 duration-300 hover:rotate-0 drop-shadow-xl">
+                <div className="w-[210px] h-[210px] rounded-3xl overflow-hidden hover:border-4 hover:border-primary transform transitio-all rotate-6 duration-300 hover:rotate-0 set-shadow">
                     <Image
                         src={data.src}
                         alt="profil-yoonju"
                         className="w-full scale-105"
+                        priority
                     />
                 </div>
             </div>
