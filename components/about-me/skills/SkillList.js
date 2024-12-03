@@ -1,21 +1,16 @@
 import React from 'react'
+import Image from 'next/image'
 
-export default function SkillList({ data }) {
+export default function SkillList({ id, title, icon }) {
     return (
-        <>
-            {data.map((item) => {
-                return (
-                    <div key={item.title} className="flex flex-col items-center">
-                        <div
-                            className={`py-4 px-8 rounded-lg border-2 border-gray-300 flex flex-col justify-center items-center text-foreground/60 relative overflow-hidden hover:border-primary/70 hover:border-4 ${item.color}`}
-                        >
-                            {item.icon}
-                            <p className="text-sm text-foreground/50 font-semibold mt-3">{item.percentage}</p>
-                        </div>
-                        <h4 className="mt-2 text-sm text-foreground font-medium">{item.title}</h4>
-                    </div>
-                )
-            })}
-        </>
+        <div
+            key={id}
+            className="group h-28 w-32 rounded-lg border-2  border-gray-300 flex flex-col justify-center items-center relative overflow-hidden transform transition-all duration-300 
+                hover:border-primary/70 hover:border-4 hover:bg-primary/30 hover:scale-110 set-shadow"
+        >
+            <Image src={icon} alt='icon' width="100" height="100" className="w-11 rounded-sm object-cover grayscale group-hover:grayscale-0
+            " />
+            < h4 className="mt-3 text-sm text-foreground/80 font-sm group-hover:font-semibold">{title}</h4>
+        </div >
     )
 }

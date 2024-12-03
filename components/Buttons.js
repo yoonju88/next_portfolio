@@ -25,6 +25,18 @@ export const ButtonNavigate = ({ href, name, size, variant, children }) => {
             </Button>
         </div>
     )
+}
+
+export const FilterButton = ({ id, active, name, onClick }) => {
+    return (
+        <button
+            key={id}
+            onClick={onClick}
+            className={`capitalize py-1 px-4 border-2 border-foreground/50 rounded-lg transform transition-all duration-300 ${active ? "bg-primary text-white border-primary/80" : "bg-background text-foreground"}`}
+        >
+            {name}
+        </button>
+    )
 
 }
 

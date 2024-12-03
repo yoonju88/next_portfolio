@@ -104,86 +104,88 @@ export const profileData = [
     },
 ]
 
-import { SiJavascript } from "react-icons/si";
-import { SiReact } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiFigma } from "react-icons/si";
-import { SiAdobephotoshop } from "react-icons/si";
-import { SiAdobeillustrator } from "react-icons/si";
-import { SiAdobeaftereffects } from "react-icons/si";
+export const buttonTypes = [
+    {
+        type: "all",
+        name: "All",
+        id: "a14"
+    },
+    {
+        type: "web",
+        name: "Web development",
+        id: "a15"
+
+    },
+    {
+        type: "design",
+        name: "Graphic design",
+        id: "a16"
+    },
+]
+
+import Js from '@/public/js.png'
+import React from '@/public/react.png'
+import Next from '@/public/next.png'
+import Ts from '@/public/ts.png'
+import Tw from '@/public/tw.png'
+import Ps from '@/public/ps.png'
+import Ai from '@/public/ai.png'
+import Ae from '@/public/ae.png'
+import Figma from '@/public/figma.png'
 
 export const mySkillsData = [
     {
         title: "JavaScript",
-        percentage: "70%",
-        icon: (<SiJavascript className="w-10 h-10 rounded-sm" />),
-        color: "hover:text-yellow-400",
-
-        category: "web",
+        icon: Js,
+        type: "web",
+        id: "q456",
     },
     {
         title: "React",
-        percentage: "75%",
-        icon: (<SiReact />),
-        color: "hover:text-cyan-500",
-        size: 'size-10',
-        category: "web",
+        icon: React,
+        type: "web",
+        id: "q457",
     },
     {
         title: "NextJs",
-        percentage: "60%",
-        icon: (<SiNextdotjs />),
-        color: "hover:text-foreground",
-        size: 'size-10',
-        category: "web",
+        icon: Next,
+        type: "web",
+        id: "q458",
     },
     {
         title: "TypeScript",
-        percentage: "60%",
-        icon: (<SiTypescript />),
-        color: "hover:text-blue-600",
-        size: 'size-10 rounded-sm',
+        icon: Ts,
         category: "web",
+        id: "q459",
     },
     {
         title: "TailwindCss",
-        percentage: "75%",
-        icon: (<SiTailwindcss />),
-        color: "hover:text-cyan-500",
-        size: 'size-10',
-        category: "web",
+        icon: Tw,
+        type: "web",
+        id: "q460",
     },
     {
         title: "Figma",
-        percentage: "70%",
-        icon: (<SiFigma />),
-        color: "hover:text-fuchsia-500",
-        category: "design",
+        icon: Figma,
+        type: "design",
+        id: "q461",
     },
     {
         title: "Photoshop",
-        percentage: "80%",
-        icon: (<SiAdobephotoshop />),
-        color: "hover:text-blue-900",
-        size: 'size-10',
-        category: "design",
+        icon: Ps,
+        type: "design",
+        id: "q462",
     },
     {
         title: "Illustrator",
-        percentage: "85%",
-        icon: (<SiAdobeillustrator />),
-        color: "hover:text-orange-300",
-        size: 'size-10',
-        category: "design",
+        icon: Ai,
+        type: "design",
+        id: "q463",
     },
     {
         title: "AfterEffect",
-        percentage: "60%",
-        icon: (<SiAdobeaftereffects />),
-        color: "hover:text-purple-600",
-        size: 'size-10',
-        category: "design",
+        icon: Ae,
+        type: "design",
+        id: "q464",
     },
 ]
