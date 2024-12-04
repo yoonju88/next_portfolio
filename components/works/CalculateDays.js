@@ -28,8 +28,8 @@ export default function CalculateDays({ startDate, endDate }) {
 
     return (
         <>
-            <span class="text-secondary-foreground text-sm">Project duration</span>
-            <span class="ml-auto text-xs text-secondary-foreground">{formattedStartDate} - {formattedEndDate} ({calculatedPeriod(startDate, endDate)} days) </span>
+            <span className="text-secondary-foreground text-sm">Project duration</span>
+            <span className="ml-auto text-xs text-secondary-foreground">{formattedStartDate} - {formattedEndDate} ({calculatedPeriod(startDate, endDate)} days) </span>
         </>
     )
 }
