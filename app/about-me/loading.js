@@ -9,11 +9,11 @@ export default function loading() {
             <div className="w-[30%]">
                 <Skeleton className="h-[200px] w-full" />
             </div>
-            <div className="w-[70%]">
-                <Skeleton className="h-[20px] w-full" />
-                <Skeleton className="h-[10px] w-full" />
-                <Skeleton className="h-[10px] w-full" />
-                <Skeleton className="h-[10px] w-full" />
+            <div className="w-[70%] flex flex-col gap-4 pl-6">
+                <Skeleton className="h-[40px] w-full" />
+                <Skeleton className="h-[30px] w-full" />
+                <Skeleton className="h-[30px] w-full" />
+                <Skeleton className="h-[30px] w-full" />
             </div>
         </div>
     )
