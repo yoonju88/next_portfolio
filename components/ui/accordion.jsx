@@ -24,7 +24,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, ...props }, re
       {...props}>
       {children}
       <ChevronDown
-        className="h-5 w-5 shrink-0 text-muted-foreground transform transition-all duration-300" />
+        className="h-6 w-6 shrink-0 mr-2 text-muted-foreground transform transition-all duration-300" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))

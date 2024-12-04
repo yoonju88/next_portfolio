@@ -57,3 +57,241 @@ export const worksData = [
         description: "I created a dynamic webpage with JavaScript, which includes a login page and a modal for media uploads. I integrated an API for the backend and used Figma to design and implement the layout. Additionally, I utilized Kanban to manage and organize the development process, ensuring efficient task tracking and collaboration."
     },
 ]
+
+export const typeDesigns = [
+    {
+        id: 30,
+        type: "communication",
+    },
+    {
+        id: 31,
+        type: "production",
+    },
+    {
+        id: 32,
+        type: "infographic",
+    },
+
+    {
+        id: 33,
+        type: "print",
+    },
+    {
+        id: 34,
+        type: "logo",
+    },
+    {
+        id: 35,
+        type: "personal project",
+    },
+]
+
+
+export const graphicData = [
+    {
+        id: 20,
+        type: "communication",
+        title: "Invitation",
+        cover: "#",
+        images: ["#", "#"],
+        tags: ["Indesign"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "Creation of web and paper invitations for various events at Fusalp, utilizing images from each season to design the invitations."
+    },
+    {
+        id: 21,
+        type: "communication",
+        title: "Lookbook",
+        cover: "#",
+        images: ["#"],
+        tags: ["Indesign"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "Creation of lookbooks, contributing to the visual representation of the brand’s seasonal collections and helping to promote its launch."
+    },
+    {
+        id: 22,
+        type: "communication",
+        title: "Page Magazine",
+        cover: "#",
+        images: ["#"],
+        tags: ["Indesign"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "Creation of various fashion magazine pages that reflected the brand’s identity, designing visually appealing layouts to capture the readers’ attention."
+    },
+    {
+        id: 22,
+        type: "communication",
+        title: "Communication Press",
+        cover: "#",
+        images: ["#"],
+        tags: ["Indesign"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "creation of visuals for communication press, designing compelling graphics and images to effectively convey the brand’s message to the media and enhance its public presence."
+    },
+    {
+        id: 23,
+        type: "production",
+        title: "Goodies",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator", "Photoshop"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "Design of various promotional and gift products, including a card game design utilizing seasonal images and lookbooks, sticker designs for collaboration with the British ski team, chocolate box designs, water bottle designs, and more. All designs were crafted to align with the brand’s identity while maintaining a sophisticated and stylish aesthetic."
+    },
+    {
+        id: 24,
+        type: "production",
+        title: "Product vector design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator",],
+        creationYear: "2021 - 2023",
+        companyName: "Fusalp",
+        description: "vectorizing products for the new season using Illustrator and continuously updating design modifications throughout the product development process. Additionally, I contributed to the creation of a catalog that lists all the products once the product lineup was finalized."
+    },
+    {
+        id: 25,
+        type: "production",
+        title: "Pattern Design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator",],
+        creationYear: "2021 - 2023",
+        companyName: "Fusalp",
+        description: "Create pattern designs for fabrics that reflect the identity of each season."
+    },
+    {
+        id: 25,
+        type: "production",
+        title: "Creation of technical file",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator",],
+        creationYear: "2021 - 2023",
+        companyName: "Fusalp",
+        description: "Create technical files for the trims used in the products, providing accurate information necessary for the product development and production processes."
+    },
+    {
+        id: 26,
+        type: "infographic",
+        title: "Pictogram Design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator",],
+        creationYear: "2022",
+        companyName: "Dada Sport",
+        description: "Create pictograms for clothing labels, designing icons that clearly communicate washing and care instructions."
+    },
+    {
+        id: 27,
+        type: "infographic",
+        title: "Pictogram Design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator",],
+        creationYear: "2022",
+        companyName: "Fusalp",
+        description: "Create pictograms for Workbook, designing icons that clearly communicate washing and care instructions."
+    },
+    {
+        id: 28,
+        type: "print",
+        title: "Photo frame design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Photoshop", "Indesign"],
+        creationYear: "2023",
+        companyName: "Fusalp",
+        description: "Carefully selected vintage images that aligned with the brand’s identity and carried out the design work of arranging photo frames on the wall."
+    },
+    {
+        id: 29,
+        type: "print",
+        title: "Advertising visuals for the Paris metro",
+        cover: "#",
+        images: ["#"],
+        tags: ["Indesign"],
+        creationYear: "2021-2023",
+        companyName: "Fusalp",
+        description: "Creation of advertising visuals for the Paris metro, designing striking graphics to effectively promote the brand and capture the attention of commuters."
+    },
+    {
+        id: 30,
+        type: "print",
+        title: "Storefront graphics design",
+        cover: "#",
+        images: ["#"],
+        tags: ["Indesign"],
+        creationYear: "2021-2023",
+        companyName: "Fusalp",
+        description: "Development of window graphics for boutiques, incorporating design elements that align with the brand’s seasonal identity and visual language."
+    },
+    {
+        id: 31,
+        type: "personal project",
+        title: "Montages",
+        cover: "#",
+        images: ["#", "#", "#", "#", "#"],
+        tags: ["Photoshop"],
+        creationYear: "2020-2022",
+        description: "I created my own unique visual montage by combining various images."
+    },
+    {
+        id: 32,
+        type: "personal project",
+        title: "Illustration",
+        cover: "#",
+        images: ["#", "#", "#", "#", "#"],
+        tags: ["Illustrator"],
+        creationYear: "2020-2022",
+        description: "I enjoy drawing illustrations, so I created works based on images that inspired me using Illustrator."
+    },
+    {
+        id: 33,
+        type: "personal project",
+        title: "Séoul",
+        cover: "#",
+        images: ["#", "#", "#", "#", "#"],
+        tags: ["After Effect"],
+        creationYear: "2021",
+        description: "I created an animation of the night view of Seoul."
+    },
+    {
+        id: 34,
+        type: "logo",
+        title: "Electricité Logo",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator"],
+        creationYear: "2023",
+        companyName: "Zucher Electricité",
+        description: "I created a logo for the establishment of an electrical company and also worked on vehicle sticker designs."
+    },
+    {
+        id: 35,
+        type: "logo",
+        title: "Fruit Logo",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator"],
+        creationYear: "2023",
+        companyName: "Tasty",
+        description: "Creation of a logo and business card for a food trading company."
+    },
+    {
+        id: 36,
+        type: "logo",
+        title: "Restaurant logo",
+        cover: "#",
+        images: ["#"],
+        tags: ["Illustrator"],
+        creationYear: "2023",
+        companyName: "Insomniac",
+        description: "I re-styled the logo image of the restaurant"
+    },
+]

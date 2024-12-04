@@ -9,22 +9,22 @@ export const serviceData = [
     {
         title: 'Web Development',
         description: "specialize in developing web using React and Next.js, ensuring SEO optimization, fast loading speeds, efficient data management, and seamless user experiences.",
-        icon: (<VscCode className="size-6 text-background" />),
+        icon: (<VscCode className="size-6 text-white" />),
     },
     {
         title: 'Optimization',
         description: "Enhance load speed with code-splitting, lazy loading, image optimization, and improve Lighthouse scores and accessibility through WAI-ARIA compliance.",
-        icon: (<VscSmiley className="size-6 text-background" />),
+        icon: (<VscSmiley className="size-6 text-white" />),
     },
     {
         title: 'UI/UX Design',
         description: "Build reusable component libraries, ensure consistent design systems, and implement responsive Figma/Sketch designs for seamless user experiences across devices.",
-        icon: (<VscEditorLayout className="size-6 text-background" />),
+        icon: (<VscEditorLayout className="size-6 text-white" />),
     },
     {
         title: 'Maintenance',
         description: "Refactor existing code, fix bugs, introduce new features, optimize SEO strategies, and add relevant meta tags to enhance search engine visibility and overall performance.",
-        icon: (<VscDebugRestart className="size-6 text-background" />),
+        icon: (<VscDebugRestart className="size-6 text-white" />),
     },
 ]
 

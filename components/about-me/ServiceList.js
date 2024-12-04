@@ -14,10 +14,10 @@ export default function ServiceList({ data }) {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>
                                 <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
-                                    <span className="p-2 bg-foreground rounded-full animation-set-image group-hover:shadow-primary/30 hover:shadow-lg">
+                                    <span className="p-1 bg-primary rounded-full animation-set-image group-hover:shadow-primary/30 hover:shadow-lg">
                                         {item.icon}
                                     </span>
-                                    <span className="pl-3 text-xl text-center self-center group-hover:font-bold group-hover:text-2xl">
+                                    <span className="pl-3 text-xl text-center self-center group-hover:font-bold">
                                         {item.title}
                                     </span>
                                 </h2>
