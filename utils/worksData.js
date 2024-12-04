@@ -86,14 +86,50 @@ export const typeDesigns = [
     },
 ]
 
+import Invitation from '@/public/design/invitation.png'
+import Invitation2 from '@/public/design/invitation-2.png'
+import Lookbook from '@/public/design/lookbook.png'
+import Magazine from '@/public/design/magazine.png'
+import Press from '@/public/design/press.png'
+import Goodie1 from '@/public/design/card.png'
+import Goodie2 from '@/public/design/bt.png'
+import Goodie3 from '@/public/design/choco.png'
+import Goodie4 from '@/public/design/gb.png'
+import dessin1 from '@/public/design/pd.png'
+import dessin2 from '@/public/design/gant.png'
+import dessin3 from '@/public/design/hat.png'
+import dessin4 from '@/public/design/sac.png'
+import print from '@/public/design/print.png'
+import technic from '@/public/design/technic.png'
+import dada from '@/public/design/picto.png'
+import dadagif from '@/public/design/picto-gif.gif'
+import picto from '@/public/design/picto-2.png'
+import mur from '@/public/design/mur.png'
+import metro from '@/public/design/metro.png'
+import store1 from '@/public/design/vitro-1.png'
+import store2 from '@/public/design/vitro-2.png'
+import enfant from '@/public/design/efant.png'
+import mushroom from '@/public/design/mushroom.png'
+import film from '@/public/design/film.png'
+import see from '@/public/design/see.png'
+import iu from '@/public/design/iu.png'
+import yoonjung from '@/public/design/goyoon.png'
+import moon from '@/public/design/moon.png'
+import fox from '@/public/design/fox.png'
+import seoul from '@/public/design/fox.png'
+import basket from '@/public/design/basket.png'
+import seoulNight from '@/public/design/seoulnight.gif'
+import elec from '@/public/design/elec.png'
+import tasty from '@/public/design/tasty.png'
+import resto from '@/public/design/isomnia.png'
 
 export const graphicData = [
     {
         id: 20,
         type: "communication",
         title: "Invitation",
-        cover: "#",
-        images: ["#", "#"],
+        cover: Invitation,
+        images: [Invitation, Invitation2,],
         tags: ["Indesign"],
         creationYear: "2023",
         companyName: "Fusalp",
@@ -103,8 +139,8 @@ export const graphicData = [
         id: 21,
         type: "communication",
         title: "Lookbook",
-        cover: "#",
-        images: ["#"],
+        cover: Lookbook,
+        images: [Lookbook,],
         tags: ["Indesign"],
         creationYear: "2023",
         companyName: "Fusalp",
@@ -114,8 +150,8 @@ export const graphicData = [
         id: 22,
         type: "communication",
         title: "Page Magazine",
-        cover: "#",
-        images: ["#"],
+        cover: Magazine,
+        images: [Magazine,],
         tags: ["Indesign"],
         creationYear: "2023",
         companyName: "Fusalp",
@@ -125,8 +161,8 @@ export const graphicData = [
         id: 22,
         type: "communication",
         title: "Communication Press",
-        cover: "#",
-        images: ["#"],
+        cover: Press,
+        images: [Press],
         tags: ["Indesign"],
         creationYear: "2023",
         companyName: "Fusalp",
@@ -136,8 +172,8 @@ export const graphicData = [
         id: 23,
         type: "production",
         title: "Goodies",
-        cover: "#",
-        images: ["#"],
+        cover: Goodie1,
+        images: [Goodie1, Goodie2, Goodie3, Goodie4,],
         tags: ["Illustrator", "Photoshop"],
         creationYear: "2023",
         companyName: "Fusalp",
@@ -147,8 +183,8 @@ export const graphicData = [
         id: 24,
         type: "production",
         title: "Product vector design",
-        cover: "#",
-        images: ["#"],
+        cover: dessin3,
+        images: [dessin3, dessin1, dessin2, dessin4,],
         tags: ["Illustrator",],
         creationYear: "2021 - 2023",
         companyName: "Fusalp",
@@ -158,126 +194,126 @@ export const graphicData = [
         id: 25,
         type: "production",
         title: "Pattern Design",
-        cover: "#",
-        images: ["#"],
+        cover: print,
+        images: [print],
         tags: ["Illustrator",],
         creationYear: "2021 - 2023",
         companyName: "Fusalp",
         description: "Create pattern designs for fabrics that reflect the identity of each season."
     },
     {
-        id: 25,
+        id: 26,
         type: "production",
         title: "Creation of technical file",
-        cover: "#",
-        images: ["#"],
+        cover: technic,
+        images: [technic],
         tags: ["Illustrator",],
         creationYear: "2021 - 2023",
         companyName: "Fusalp",
         description: "Create technical files for the trims used in the products, providing accurate information necessary for the product development and production processes."
     },
     {
-        id: 26,
+        id: 27,
         type: "infographic",
         title: "Pictogram Design",
-        cover: "#",
-        images: ["#"],
+        cover: dada,
+        images: [dada, dadagif,],
         tags: ["Illustrator",],
         creationYear: "2022",
         companyName: "Dada Sport",
         description: "Create pictograms for clothing labels, designing icons that clearly communicate washing and care instructions."
     },
     {
-        id: 27,
+        id: 28,
         type: "infographic",
         title: "Pictogram Design",
-        cover: "#",
-        images: ["#"],
+        cover: picto,
+        images: [picto,],
         tags: ["Illustrator",],
         creationYear: "2022",
         companyName: "Fusalp",
         description: "Create pictograms for Workbook, designing icons that clearly communicate washing and care instructions."
     },
     {
-        id: 28,
+        id: 29,
         type: "print",
         title: "Photo frame design",
-        cover: "#",
-        images: ["#"],
+        cover: mur,
+        images: [mur],
         tags: ["Photoshop", "Indesign"],
         creationYear: "2023",
         companyName: "Fusalp",
         description: "Carefully selected vintage images that aligned with the brand’s identity and carried out the design work of arranging photo frames on the wall."
     },
     {
-        id: 29,
+        id: 30,
         type: "print",
         title: "Advertising visuals for the Paris metro",
-        cover: "#",
-        images: ["#"],
+        cover: metro,
+        images: [metro,],
         tags: ["Indesign"],
         creationYear: "2021-2023",
         companyName: "Fusalp",
         description: "Creation of advertising visuals for the Paris metro, designing striking graphics to effectively promote the brand and capture the attention of commuters."
     },
     {
-        id: 30,
+        id: 31,
         type: "print",
         title: "Storefront graphics design",
-        cover: "#",
-        images: ["#"],
+        cover: store1,
+        images: [store1, store2],
         tags: ["Indesign"],
         creationYear: "2021-2023",
         companyName: "Fusalp",
         description: "Development of window graphics for boutiques, incorporating design elements that align with the brand’s seasonal identity and visual language."
     },
     {
-        id: 31,
+        id: 32,
         type: "personal project",
         title: "Montages",
-        cover: "#",
-        images: ["#", "#", "#", "#", "#"],
+        cover: enfant,
+        images: [enfant, see, mushroom, film,],
         tags: ["Photoshop"],
         creationYear: "2020-2022",
         description: "I created my own unique visual montage by combining various images."
     },
     {
-        id: 32,
+        id: 33,
         type: "personal project",
         title: "Illustration",
-        cover: "#",
-        images: ["#", "#", "#", "#", "#"],
+        cover: basket,
+        images: [basket, seoul, yoonjung, iu, fox, moon],
         tags: ["Illustrator"],
         creationYear: "2020-2022",
         description: "I enjoy drawing illustrations, so I created works based on images that inspired me using Illustrator."
     },
     {
-        id: 33,
+        id: 34,
         type: "personal project",
         title: "Séoul",
-        cover: "#",
-        images: ["#", "#", "#", "#", "#"],
+        cover: seoulNight,
+        images: [seoulNight],
         tags: ["After Effect"],
         creationYear: "2021",
         description: "I created an animation of the night view of Seoul."
     },
     {
-        id: 34,
+        id: 35,
         type: "logo",
         title: "Electricité Logo",
-        cover: "#",
-        images: ["#"],
+        cover: elec,
+        images: [elec,],
         tags: ["Illustrator"],
         creationYear: "2023",
         companyName: "Zucher Electricité",
         description: "I created a logo for the establishment of an electrical company and also worked on vehicle sticker designs."
     },
     {
-        id: 35,
+        id: 36,
         type: "logo",
         title: "Fruit Logo",
-        cover: "#",
-        images: ["#"],
+        cover: tasty,
+        images: [tasty],
         tags: ["Illustrator"],
         creationYear: "2023",
         companyName: "Tasty",
@@ -287,8 +323,8 @@ export const graphicData = [
         id: 36,
         type: "logo",
         title: "Restaurant logo",
-        cover: "#",
-        images: ["#"],
+        cover: resto,
+        images: [resto],
         tags: ["Illustrator"],
         creationYear: "2023",
         companyName: "Insomniac",
