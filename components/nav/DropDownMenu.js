@@ -12,7 +12,7 @@ export default function DropDownMenu({ links, className }) {
         <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1">
                 <Link
-                    href='/works'
+                    href='/works/web'
                     className={className}
                 >
                     works
