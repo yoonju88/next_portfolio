@@ -94,3 +94,6 @@ p {
 .set-shadow {
   @apply  shadow-none transform transition-all duration-300 hover:shadow-primary/30 hover:shadow-lg
 }
+.set-bigCardShadow {
+  @apply  shadow-none transform transition-all duration-300 hover:shadow-primary/30 hover:shadow-2xl
+}
