@@ -23,7 +23,6 @@ export default function MySkills() {
                                     active={isFilteredType === item.type}
                                     onClick={() => setisFilteredType(item.type)}
                                 />
-
                             )
                         })}
                     </div>
