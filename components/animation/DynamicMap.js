@@ -4,5 +4,8 @@ import { Skeleton } from "../ui/skeleton";
 
 export const AnimationLottie = dynamic(() => import('./AnimationLottie'), {
     ssr: false,
-    loading: () => <Skeleton className='h-[400px] w-full' />
+    loading: () => <div className="animate-pulse">
+        <Skeleton className='h-[400px] w-full' />
+    </div>
+
 });
