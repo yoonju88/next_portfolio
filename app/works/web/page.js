@@ -10,7 +10,7 @@ export default async function webPage() {
             <div className="container px-5 py-24 mx-auto">
                 <ProjectTitle
                     title="development web"
-                    description="I built creative and functional web applications using modern web technologies such as React, Node.js, HTML, and CSS to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
+                    description="I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
                 />
                 <ProjectList works={worksData} />
             </div>
