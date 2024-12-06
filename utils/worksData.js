@@ -108,6 +108,7 @@ import mur from '@/public/design/mur.png'
 import metro from '@/public/design/metro.png'
 import store1 from '@/public/design/vitro-1.png'
 import store2 from '@/public/design/vitro-2.png'
+import coverEnfant from '@/public/design/cover-enfant.png'
 import enfant from '@/public/design/efant.png'
 import mushroom from '@/public/design/mushroom.png'
 import film from '@/public/design/film.png'
@@ -147,7 +148,7 @@ export const graphicData = [
         description: "Creation of lookbooks, contributing to the visual representation of the brand’s seasonal collections and helping to promote its launch."
     },
     {
-        id: 22,
+        id: 19,
         type: "communication",
         title: "Page Magazine",
         cover: Magazine,
@@ -248,7 +249,7 @@ export const graphicData = [
     {
         id: 30,
         type: "print",
-        title: "Advertising visuals for the Paris metro",
+        title: "Advertising visuals",
         cover: metro,
         images: [metro,],
         tags: ["Indesign"],
@@ -259,7 +260,7 @@ export const graphicData = [
     {
         id: 31,
         type: "print",
-        title: "Storefront graphics design",
+        title: "Storefront design",
         cover: store1,
         images: [store1, store2],
         tags: ["Indesign"],
@@ -271,7 +272,7 @@ export const graphicData = [
         id: 32,
         type: "personal project",
         title: "Montages",
-        cover: enfant,
+        cover: coverEnfant,
         images: [enfant, see, mushroom, film,],
         tags: ["Photoshop"],
         creationYear: "2020-2022",
@@ -320,7 +321,7 @@ export const graphicData = [
         description: "Creation of a logo and business card for a food trading company."
     },
     {
-        id: 36,
+        id: 37,
         type: "logo",
         title: "Restaurant logo",
         cover: resto,
