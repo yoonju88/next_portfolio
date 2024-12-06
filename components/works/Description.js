@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Button } from '../ui/button'
 
-export default function Description({ description, className }) {
+export default function Description({ description }) {
     const [isFullDescriptionShown, setIsDescriptionShown] = useState(false)
     const words = description.split('')
     const isLongDescription = words.length > 150
@@ -13,7 +13,7 @@ export default function Description({ description, className }) {
     const displayedDescription = isLongDescription && !isFullDescriptionShown ? words.splice(0, 120).join('') + '...' : description
 
     return (
-        <p className={className}>
+        <p className={`transition-all duration-300 ${isFullDescriptionShown ? 'max-h-max' : 'max-h-24'}`}>
             {displayedDescription}
             {isLongDescription && (
                 <Button
