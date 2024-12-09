@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function DesignList({ id, cover, name, type }) {
     return (
-        <article className="lg:w-1/3 sm:w-1/2 p-4 ">
+        <article className="lg:w-1/3 md:w-1/2 w-full p-4 ">
             <Link
                 href={`/works/design/${id}`}
                 className="flex relative set-bigCardShadow rounded-lg overflow-hidden"

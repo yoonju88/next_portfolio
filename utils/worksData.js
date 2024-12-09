@@ -161,7 +161,7 @@ export const graphicData = [
     {
         id: 22,
         type: "communication",
-        title: "Communication Press",
+        title: "Communication",
         cover: Press,
         images: [Press],
         tags: ["Indesign"],
@@ -183,7 +183,7 @@ export const graphicData = [
     {
         id: 24,
         type: "production",
-        title: "Product vector design",
+        title: "Product design",
         cover: dessin3,
         images: [dessin3, dessin1, dessin2, dessin4,],
         tags: ["Illustrator",],
@@ -205,7 +205,7 @@ export const graphicData = [
     {
         id: 26,
         type: "production",
-        title: "Creation of technical file",
+        title: "Technical file",
         cover: technic,
         images: [technic],
         tags: ["Illustrator",],
@@ -216,7 +216,7 @@ export const graphicData = [
     {
         id: 27,
         type: "infographic",
-        title: "Pictogram Design",
+        title: "Pictogram",
         cover: dada,
         images: [dada, dadagif,],
         tags: ["Illustrator",],
@@ -227,7 +227,7 @@ export const graphicData = [
     {
         id: 28,
         type: "infographic",
-        title: "Pictogram Design",
+        title: "Pictogram",
         cover: picto,
         images: [picto,],
         tags: ["Illustrator",],
@@ -238,7 +238,7 @@ export const graphicData = [
     {
         id: 29,
         type: "print",
-        title: "Photo frame design",
+        title: "Photo Frame",
         cover: mur,
         images: [mur],
         tags: ["Photoshop", "Indesign"],
@@ -249,7 +249,7 @@ export const graphicData = [
     {
         id: 30,
         type: "print",
-        title: "Advertising visuals",
+        title: "Advertising",
         cover: metro,
         images: [metro,],
         tags: ["Indesign"],
@@ -260,7 +260,7 @@ export const graphicData = [
     {
         id: 31,
         type: "print",
-        title: "Storefront design",
+        title: "Storefront",
         cover: store1,
         images: [store1, store2],
         tags: ["Indesign"],
@@ -301,7 +301,7 @@ export const graphicData = [
     {
         id: 35,
         type: "logo",
-        title: "Electricité Logo",
+        title: "Electricité",
         cover: elec,
         images: [elec,],
         tags: ["Illustrator"],
@@ -312,7 +312,7 @@ export const graphicData = [
     {
         id: 36,
         type: "logo",
-        title: "Fruit Logo",
+        title: "Fruit",
         cover: tasty,
         images: [tasty],
         tags: ["Illustrator"],
@@ -323,7 +323,7 @@ export const graphicData = [
     {
         id: 37,
         type: "logo",
-        title: "Restaurant logo",
+        title: "Restaurant",
         cover: resto,
         images: [resto],
         tags: ["Illustrator"],
