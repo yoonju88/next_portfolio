@@ -49,7 +49,7 @@ export default function ListContainer() {
             </div>
             <div className='flex justify-center pb-10'>
                 {[...Array(pageNumber || 0)].map((_, n) => (
-                    <Link key={n} href="#" onClick={() => setCurrentPage(n + 1)} className={`p-1 ${currentPage ? "font-semibold text-base" : "text-sm"} `}>
+                    <Link key={n} href="#" onClick={() => setCurrentPage(n + 1)} className={`p-1 text-sm text-foreground/60 ${currentPage === n + 1 ? "font-bold text-foreground" : ""}`}>
                         {n + 1}
                     </Link>
                 ))}
