@@ -5,9 +5,8 @@ import { graphicData } from '@/utils/worksData'
 import NotFoundPage from '@/app/not-found'
 import SlideImages from '@/components/works/design/SlideImages'
 import { ReturnButton } from '@/components/Buttons'
-import { Separator } from '@/components/ui/separator'
-
-
+import ToggleProperty from '@/components/works/design/ToggleProperty'
+import Description from '@/components/works/Description'
 
 export default function designDetailsPage({ params }) {
     const { id } = useParams(params)
@@ -17,19 +16,38 @@ export default function designDetailsPage({ params }) {
     if (!property) { <NotFoundPage /> }
 
     const tags = property.tags
-
     return (
-        <section className="text-gray-600 body-font">
-            <ReturnButton href={'/works/design'} />
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center w-full">
-                <SlideImages images={property.images} />
-                <div className="lg:w-1/2 w-full md:w-[90%] lg:pl-10 lg:py-0 mt-10 lg:mt-0 ">
-                    <h2 className='text-primary text-sm uppercase font-medium'>{property.type}</h2>
-                    <h1 className="title-font font-medium mb-1 text-3xl uppercase">{property.title}</h1>
-                    <p className="leading-relaxed mt-3 text-sm mb-4">{property.description}</p>
-
+        <>
+            <section>
+                <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center w-full">
+                    <SlideImages images={property.images} />
+                    <div className="lg:w-[70%] w-full md:w-[90%] lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
+                        <h2 className='text-primary text-sm uppercase font-medium'>{property.type}</h2>
+                        <h1 className="title-font font-medium mb-4 mt-2 text-3xl uppercase">{property.title}</h1>
+                        <Description description={property.description} />
+                        <div className='mt-8'>
+                            <ToggleProperty
+                                title="Program i used ?"
+                                description={tags}
+                            />
+                            <ToggleProperty
+                                title="Creation year?"
+                                description={property.creationYear}
+                            />
+                            {property.companyName ? (
+                                <ToggleProperty
+                                    title="The company i worked at"
+                                    description={property.companyName}
+                                />
+                            ) : ('')}
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section className='fixed right-10 bottom-10'>
+                <ReturnButton href={'/works/design'} />
+            </section>
+        </>
+
     )
 }

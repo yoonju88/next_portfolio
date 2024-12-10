@@ -34,11 +34,11 @@ export default function SlideImages({ images }) {
                 {images.map((image, index) => {
                     return (
                         <CarouselItem key={index}>
-                            <div className="relative overflow-hidden">
+                            <div className="relative max-h-[550px] object-center overflow-hidden">
                                 <Image
                                     src={image}
                                     alt={`project image-${index + 1}`}
-                                    className='relative rounded-lg bg-slate-100 object-cover object-center'
+                                    className='relative rounded-lg bg-slate-100 object-center'
                                     priority
                                 />
                             </div>

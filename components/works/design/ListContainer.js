@@ -2,15 +2,15 @@
 import React, { useState } from 'react'
 import DesignList from './DesignList'
 import SelectSrollable from './SelectSrollable'
-import { typeDesigns, graphicData } from '@/utils/worksData'
+import { typeDesigns } from '@/utils/worksData'
 import Link from 'next/link'
 
 const PER_PAGE = 9;
 
-export default function ListContainer() {
+export default function ListContainer({ data }) {
     const [isFilteredType, setIsFilteredType] = useState()
     const [currentPage, setCurrentPage] = useState(1)
-    const filteredItems = ((!isFilteredType ? graphicData : graphicData.filter(item => item.type === isFilteredType)) || []
+    const filteredItems = ((!isFilteredType ? data : data.filter(item => item.type === isFilteredType)) || []
     ).filter((event, index) => {
         if ((currentPage - 1) * PER_PAGE <= index &&
             PER_PAGE * currentPage > index
@@ -43,6 +43,7 @@ export default function ListContainer() {
                             name={item.title}
                             cover={item.cover}
                             type={item.type}
+                            link={`/works/design/${item.id}`}
                         />
                     )
                 })}

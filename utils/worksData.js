@@ -46,7 +46,7 @@ export const worksData = [
     {
         id: "a12",
         type: "web",
-        title: "Architecture Sophie",
+        title: "Architecture.S",
         tags: ["JavaScript", "CSS", "Nodejs", "API", "Fimga"],
         link: "https://github.com/yoonju88/Architecte-sophie-bluel",
         duration: {
@@ -132,8 +132,8 @@ export const graphicData = [
         cover: Invitation,
         images: [Invitation, Invitation2,],
         tags: ["Indesign"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Creation of web and paper invitations for various events at Fusalp, utilizing images from each season to design the invitations."
     },
     {
@@ -143,19 +143,19 @@ export const graphicData = [
         cover: Lookbook,
         images: [Lookbook,],
         tags: ["Indesign"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Creation of lookbooks, contributing to the visual representation of the brand’s seasonal collections and helping to promote its launch."
     },
     {
         id: 19,
         type: "communication",
-        title: "Page Magazine",
+        title: "Magazine",
         cover: Magazine,
         images: [Magazine,],
         tags: ["Indesign"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Creation of various fashion magazine pages that reflected the brand’s identity, designing visually appealing layouts to capture the readers’ attention."
     },
     {
@@ -165,8 +165,8 @@ export const graphicData = [
         cover: Press,
         images: [Press],
         tags: ["Indesign"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "creation of visuals for communication press, designing compelling graphics and images to effectively convey the brand’s message to the media and enhance its public presence."
     },
     {
@@ -176,30 +176,30 @@ export const graphicData = [
         cover: Goodie1,
         images: [Goodie1, Goodie2, Goodie3, Goodie4,],
         tags: ["Illustrator", "Photoshop"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Design of various promotional and gift products, including a card game design utilizing seasonal images and lookbooks, sticker designs for collaboration with the British ski team, chocolate box designs, water bottle designs, and more. All designs were crafted to align with the brand’s identity while maintaining a sophisticated and stylish aesthetic."
     },
     {
         id: 24,
         type: "production",
-        title: "Product design",
+        title: "Product",
         cover: dessin3,
         images: [dessin3, dessin1, dessin2, dessin4,],
         tags: ["Illustrator",],
-        creationYear: "2021 - 2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "vectorizing products for the new season using Illustrator and continuously updating design modifications throughout the product development process. Additionally, I contributed to the creation of a catalog that lists all the products once the product lineup was finalized."
     },
     {
         id: 25,
         type: "production",
-        title: "Pattern Design",
+        title: "Pattern",
         cover: print,
         images: [print],
         tags: ["Illustrator",],
-        creationYear: "2021 - 2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Create pattern designs for fabrics that reflect the identity of each season."
     },
     {
@@ -209,8 +209,8 @@ export const graphicData = [
         cover: technic,
         images: [technic],
         tags: ["Illustrator",],
-        creationYear: "2021 - 2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Create technical files for the trims used in the products, providing accurate information necessary for the product development and production processes."
     },
     {
@@ -220,7 +220,7 @@ export const graphicData = [
         cover: dada,
         images: [dada, dadagif,],
         tags: ["Illustrator",],
-        creationYear: "2022",
+        creationYear: "This project was created in 2022",
         companyName: "Dada Sport",
         description: "Create pictograms for clothing labels, designing icons that clearly communicate washing and care instructions."
     },
@@ -231,19 +231,19 @@ export const graphicData = [
         cover: picto,
         images: [picto,],
         tags: ["Illustrator",],
-        creationYear: "2022",
-        companyName: "Fusalp",
+        creationYear: "This project was created in 2021",
+        companyName: "Creation Fusalp",
         description: "Create pictograms for Workbook, designing icons that clearly communicate washing and care instructions."
     },
     {
         id: 29,
         type: "print",
-        title: "Photo Frame",
+        title: "Portrait Frame",
         cover: mur,
         images: [mur],
         tags: ["Photoshop", "Indesign"],
-        creationYear: "2023",
-        companyName: "Fusalp",
+        creationYear: "This project was created in 2023",
+        companyName: "Creation Fusalp",
         description: "Carefully selected vintage images that aligned with the brand’s identity and carried out the design work of arranging photo frames on the wall."
     },
     {
@@ -253,8 +253,8 @@ export const graphicData = [
         cover: metro,
         images: [metro,],
         tags: ["Indesign"],
-        creationYear: "2021-2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Creation of advertising visuals for the Paris metro, designing striking graphics to effectively promote the brand and capture the attention of commuters."
     },
     {
@@ -264,18 +264,18 @@ export const graphicData = [
         cover: store1,
         images: [store1, store2],
         tags: ["Indesign"],
-        creationYear: "2021-2023",
-        companyName: "Fusalp",
+        creationYear: "I worked on the same type of tasks from 2021 to 2023.",
+        companyName: "Creation Fusalp",
         description: "Development of window graphics for boutiques, incorporating design elements that align with the brand’s seasonal identity and visual language."
     },
     {
         id: 32,
         type: "personal project",
-        title: "Montages",
+        title: "Montage",
         cover: coverEnfant,
         images: [enfant, see, mushroom, film,],
         tags: ["Photoshop"],
-        creationYear: "2020-2022",
+        creationYear: "I worked on the same type of tasks from 2020 to 2023.",
         description: "I created my own unique visual montage by combining various images."
     },
     {
@@ -285,7 +285,7 @@ export const graphicData = [
         cover: basket,
         images: [basket, seoul, yoonjung, iu, fox, moon],
         tags: ["Illustrator"],
-        creationYear: "2020-2022",
+        creationYear: "I worked on the same type of tasks from 2020 to 2023.",
         description: "I enjoy drawing illustrations, so I created works based on images that inspired me using Illustrator."
     },
     {
@@ -295,7 +295,7 @@ export const graphicData = [
         cover: seoulNight,
         images: [seoulNight],
         tags: ["After Effect"],
-        creationYear: "2021",
+        creationYear: "This project was created in 2022",
         description: "I created an animation of the night view of Seoul."
     },
     {
@@ -305,7 +305,7 @@ export const graphicData = [
         cover: elec,
         images: [elec,],
         tags: ["Illustrator"],
-        creationYear: "2023",
+        creationYear: "This project was created in 2023",
         companyName: "Zucher Electricité",
         description: "I created a logo for the establishment of an electrical company and also worked on vehicle sticker designs."
     },
@@ -316,7 +316,7 @@ export const graphicData = [
         cover: tasty,
         images: [tasty],
         tags: ["Illustrator"],
-        creationYear: "2023",
+        creationYear: "This project was created in 2022",
         companyName: "Tasty",
         description: "Creation of a logo and business card for a food trading company."
     },
@@ -327,7 +327,7 @@ export const graphicData = [
         cover: resto,
         images: [resto],
         tags: ["Illustrator"],
-        creationYear: "2023",
+        creationYear: "This project was created in 2021",
         companyName: "Insomniac",
         description: "I re-styled the logo image of the restaurant"
     },
