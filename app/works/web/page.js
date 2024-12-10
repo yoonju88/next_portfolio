@@ -6,14 +6,12 @@ import { worksData } from '@/utils/worksData'
 
 export default async function webPage() {
     return (
-        <section className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto">
-                <ProjectTitle
-                    title="development web"
-                    description="I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
-                />
-                <ProjectList works={worksData} />
-            </div>
+        <section className="w-[90%]">
+            <ProjectTitle
+                title="development web"
+                description="I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
+            />
+            <ProjectList works={worksData} />
         </section>
     )
 }
