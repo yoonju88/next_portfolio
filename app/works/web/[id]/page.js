@@ -61,7 +61,7 @@ export default function WebDetailsPage({ params }) {
                     </div>
                 </div>
             </section >
-            <div className='fixed right-10 bottom-10'>
+            <div className='fixed right-10 bottom-24'>
                 <ReturnButton href={'/works/web'} />
             </div>
         </>

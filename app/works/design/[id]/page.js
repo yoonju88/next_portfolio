@@ -48,7 +48,7 @@ export default function designDetailsPage({ params }) {
                     </div>
                 </div>
             </section>
-            <section className='fixed right-10 bottom-10'>
+            <section className='fixed right-10 bottom-24'>
                 <ReturnButton href={'/works/design'} />
             </section>
         </>
