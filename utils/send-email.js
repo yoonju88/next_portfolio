@@ -9,6 +9,7 @@ export const sendEmail = async ({ data }) => {
             },
             body: JSON.stringify(data),
         })
+        console.log("Response status: ", res.status);
         if (!res.ok) {
             throw new Error('Failed to send Email')
         }
