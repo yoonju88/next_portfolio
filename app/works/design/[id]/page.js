@@ -7,6 +7,7 @@ import SlideImages from '@/components/works/design/SlideImages'
 import { ReturnButton } from '@/components/Buttons'
 import ToggleProperty from '@/components/works/design/ToggleProperty'
 import Description from '@/components/works/Description'
+import Tags from '@/components/works/Tags'
 
 export default function designDetailsPage({ params }) {
     const { id } = useParams(params)
@@ -28,8 +29,11 @@ export default function designDetailsPage({ params }) {
                         <div className='mt-8'>
                             <ToggleProperty
                                 title="Program i used ?"
-                                description={tags}
-                            />
+                            >
+                                <Tags
+                                    tags={property.tags}
+                                />
+                            </ToggleProperty>
                             <ToggleProperty
                                 title="Creation year?"
                                 description={property.creationYear}

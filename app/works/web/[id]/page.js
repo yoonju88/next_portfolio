@@ -44,7 +44,6 @@ export default function WebDetailsPage({ params }) {
                                 title="Technics i used?"
                             >
                                 <Tags
-                                    name="technics"
                                     tags={project.tags}
                                 />
                             </ToggleProperty>
