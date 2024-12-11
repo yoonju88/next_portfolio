@@ -21,7 +21,7 @@ export const worksData = [
         id: "a14",
         type: "web",
         title: "724 events",
-        tags: ["Debug", "React", "Nodejs", "SEO", "Test unit"],
+        tags: ["React", "Nodejs", "SEO", "Test unit", "Debug",],
         link: "https://github.com/yoonju88/Projet10-724events",
         duration: {
             startDate: "2024-06-15",
@@ -46,7 +46,7 @@ export const worksData = [
     {
         id: "a12",
         type: "web",
-        title: "Architecture.S",
+        title: "Architecture",
         tags: ["JavaScript", "CSS", "Nodejs", "API", "Fimga"],
         link: "https://github.com/yoonju88/Architecte-sophie-bluel",
         duration: {
@@ -96,8 +96,8 @@ import Goodie2 from '@/public/design/bt.png'
 import Goodie3 from '@/public/design/choco.png'
 import Goodie4 from '@/public/design/gb.png'
 import dessin1 from '@/public/design/pd.png'
-import dessin2 from '@/public/design/gant.png'
-import dessin3 from '@/public/design/hat.png'
+import dessin2 from '@/public/design/gant.gif'
+import dessin3 from '@/public/design/hat.gif'
 import dessin4 from '@/public/design/sac.png'
 import print from '@/public/design/print.png'
 import technic from '@/public/design/technic.png'

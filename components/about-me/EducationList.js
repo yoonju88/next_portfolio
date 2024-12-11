@@ -19,7 +19,7 @@ export default function EducationList({ data }) {
                             <p className='text-xs font-semibold mb-0.5'>
                                 {startDate} - {endDate}
                             </p>
-                            <h2 className=" text-base title-font font-semibold mb-0.5 flex flex-wrap items-center">
+                            <h2 className=" text-base title-font font-semibold mb-0.5 flex flex-wrap items-center uppercase">
                                 {item.name}  &nbsp;
                                 <span className="tracking-widest text-xs font-medium" > ({item.degree})</span>
                             </h2>
@@ -27,7 +27,7 @@ export default function EducationList({ data }) {
                                 <Link href={item.link} target="_blank" className='pr-2 hover:font-semibold'>
                                     {item.schoolName}
                                 </Link>
-                                <span className="border-l-2 pl-2 text-wrap">
+                                <span className="border-l-2 pl-2 border-foreground/80 text-wrap">
                                     {item.address}
                                 </span>
                             </h3>

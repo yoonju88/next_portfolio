@@ -13,7 +13,7 @@ export default function ExperienceLists({ data }) {
                             <span className="border-gray-200 text-xs font-semibold text-foreground/75">{startDate} - {endDate}</span>
                         </div>
                         <div className="flex-grow lg:pl-7 md:pl-0 sm:pl-0">
-                            <h1 className="title-font text-base font-semibold mb-1">
+                            <h1 className="title-font text-base font-semibold mb-1 uppercase">
                                 {item.jobTitle}
                             </h1>
                             <h2 className="tracking-widest text-xs title-font font-medium mb-1">
