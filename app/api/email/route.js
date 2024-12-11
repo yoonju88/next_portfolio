@@ -20,7 +20,6 @@ export async function POST(request) {
         subject: `Message from ${name} (${email})`,
         text: message,
     }
-
     try {
         const info = await transport.sendMail(mailOptions)
         console.log('Email sent:', info.response)
