@@ -4,6 +4,8 @@ import Header from '@/components/nav/Header'
 import Footer from '@/components/Footer'
 import Providers from "./providers";
 
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {

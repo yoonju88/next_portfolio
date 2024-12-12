@@ -1,15 +1,21 @@
 'use client'
 import { ThemeProvider } from "./theme-provider"
+import { Toaster } from '@/components/ui/toaster';
+
 
 export default function Providers({ children }) {
     return (
-        <ThemeProvider
-            attribute='class'
-            defaultTheme
-            enableSystem={true}
-            disableTransitionOnChange
-        >
-            {children}
-        </ThemeProvider>
+        <>
+            <Toaster />
+            <ThemeProvider
+                attribute='class'
+                defaultTheme
+                enableSystem={true}
+                disableTransitionOnChange
+            >
+                {children}
+            </ThemeProvider>
+        </>
+
     )
 }

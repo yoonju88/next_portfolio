@@ -3,8 +3,6 @@ import nodemailer from 'nodemailer'
 
 export async function POST(req) {
     const body = await req.json()
-    console.log("request body:", body)
-
     const transport = nodemailer.createTransport({
         service: 'gmail',
         host: process.env.SMTP_HOST, //gmail SMTP server
