@@ -50,9 +50,7 @@ https://developers.notion.com/reference/retrieve-a-database
 
  npm install @notionhq/client
 
- Email contactform using NextJS 
- https://medium.com/@abilsavio/email-contact-form-using-nextjs-app-router-60c29fe70644
-
- myaccount.google.com/apppasswords
+ Email contactform using NextJS With nodemailer 
+https://usmanasifdev.com/blogs/how-to-send-email-using-next-js-app-router-nodemailer-react-hook-form-and-tailwind-css
 
 
