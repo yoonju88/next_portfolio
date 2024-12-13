@@ -117,7 +117,7 @@ import iu from '@/public/design/iu.png'
 import yoonjung from '@/public/design/goyoon.png'
 import moon from '@/public/design/moon.png'
 import fox from '@/public/design/fox.png'
-import seoul from '@/public/design/fox.png'
+import seoul from '@/public/design/soul.png'
 import basket from '@/public/design/basket.png'
 import seoulNight from '@/public/design/seoulnight.gif'
 import elec from '@/public/design/elec.png'
@@ -283,7 +283,7 @@ export const graphicData = [
         type: "personal project",
         title: "Illustration",
         cover: basket,
-        images: [basket, seoul, yoonjung, iu, fox, moon],
+        images: [basket, seoul, yoonjung, moon, fox],
         tags: ["Illustrator"],
         creationYear: "I worked on the same type of tasks from 2020 to 2023.",
         description: "I enjoy drawing illustrations, so I created works based on images that inspired me using Illustrator."
