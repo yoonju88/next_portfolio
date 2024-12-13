@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useToast } from "@/hooks/use-toast"
+import { sendEmail } from '@/utils/api'
+import { ContactSchema } from '@/utils/schema'
 
 
 export default function ContactForm() {
@@ -12,25 +14,12 @@ export default function ContactForm() {
     const onSubmit = async (data) => {
         setIsLoading(true)
         try {
-            const res = await fetch("/api/email", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json, text/plain, */*",
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data)
-            })
+            const res = await sendEmail(ContactSchema, data)
             setIsLoading(false)
             if (res.status === 200) {
                 toast({
                     title: "Success",
                     description: "Your message sent successfully",
-                    duration: 5000,
-                })
-            } else {
-                toast({
-                    title: "Error",
-                    description: "Server issue. please try later",
                 })
             }
         } catch (error) {
@@ -47,7 +36,7 @@ export default function ContactForm() {
             <div className="relative mb-4">
                 <label
                     htmlFor="name"
-                    className="leading-7 text-sm text-foreground/70"
+                    className="leading-7 text-sm text-foreground"
                 >
                     Name
                 </label>
@@ -89,11 +78,10 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={isLoading}
-                className="text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primay/30 rounded text-lg"
+                className={`text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/80 rounded text-lg flex`}
             >
                 {isLoading ? 'Sending...' : 'Send'}
             </button>
-            <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
         </form>
     )
 }
