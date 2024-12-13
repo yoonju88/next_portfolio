@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { mySkillsData, buttonTypes } from '@/utils/Profile'
 import SkillList from '@/components/about-me/skills/SkillList'
-import { FilterButton } from '@/components/Buttons';
+import { FilterButton } from '@/components/form/Buttons';
 
 export default function MySkills() {
     const [isFilteredType, setisFilteredType] = useState('all')

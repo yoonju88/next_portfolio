@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from '@/components/contact/Contact'
+import ContactForm from '@/components/form/Contact'
 
 
 export default function contactPage() {

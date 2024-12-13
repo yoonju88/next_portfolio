@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfileYJ from "@/public/yoonju-profil.jpg"
 import Image from 'next/image'
-import { ButtonLink } from '@/components/Buttons'
+import { ButtonLink } from '@/components/form/Buttons'
 
 
 const profilInfo = [

@@ -1,6 +1,6 @@
 import Intro from '@/components/home/Intro'
 import { Suspense } from 'react';
-import LoadingCard from '@/components/LoadingCard';
+import LoadingCard from '@/components/loading/LoadingCard';
 
 export default function Home() {
   return (

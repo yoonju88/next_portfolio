@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonNavigate } from '../Buttons';
+import { ButtonNavigate } from '../form/Buttons';
 import ContactAnimation from '@/public/animation_3.json'
 import { AnimationLottie } from '../animation/DynamicMap'
 

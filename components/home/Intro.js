@@ -1,6 +1,6 @@
 import React from 'react'
 import { AnimationLottie } from '../animation/DynamicMap'
-import { ButtonNavigate } from '../Buttons'
+import { ButtonNavigate } from '../form/Buttons'
 import IntroAinimation from '@/public/animation_2.json'
 
 export default function Intro() {

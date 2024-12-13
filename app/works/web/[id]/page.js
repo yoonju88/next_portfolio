@@ -6,10 +6,10 @@ import { worksData } from '@/utils/worksData'
 import Image from 'next/image'
 import { IoLogoGithub } from "react-icons/io";
 import Link from "next/link"
-import { ButtonLink } from '@/components/Buttons'
+import { ButtonLink } from '@/components/form/Buttons'
 import CalculateDays from '@/components/works/CalculateDays'
 import Tags from '@/components/works/Tags'
-import { ReturnButton } from '@/components/Buttons'
+import { ReturnButton } from '@/components/form/Buttons'
 import ToggleProperty from '@/components/works/design/ToggleProperty'
 
 export default function WebDetailsPage({ params }) {
