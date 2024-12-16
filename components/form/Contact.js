@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form'
 import { useToast } from "@/hooks/use-toast"
 import { sendEmail } from '@/utils/api'
 import { ContactSchema } from '@/utils/schema'
+import { CgSpinner } from "react-icons/cg"; //  add animate-spin 
 
 
 export default function ContactForm() {
@@ -78,10 +79,16 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={isLoading}
-                className={`text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary/80 rounded text-lg flex`}
+                className={`text-white bg-primary border-0 py-2 pl-4 pr-6 focus:outline-none hover:bg-primary/80 rounded text-lg flex items-center gap-2 ${isLoading ? 'pl-4' : 'pl-6'}`}
             >
-                {isLoading ? 'Sending...' : 'Send'}
+                {isLoading ? (
+                    <>
+                        <CgSpinner className='animate-spin size-6 text-white ' />
+                        Sending...
+                    </>
+                ) : "Send"
+                }
             </button>
-        </form>
+        </form >
     )
 }
