@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import ProjectList from '@/components/works/ProjectList'
 import ProjectTitle from '@/components/works/ProjectTitle'
 import { worksData } from '@/utils/worksData'
+import WorksCardLoading from '@/components/loading/WorksCardLoading'
 
 export default async function webPage() {
     return (

@@ -66,6 +66,21 @@ export default function AboutMePage() {
                                 icon={renderIcon("experience")}
                                 className={styleContainer}
                             >
+                                <div className="flex flex-col lg:gap-4 mb:gap-2 sm:gap-2">
+                                    {experiences.map((item) => {
+                                        return (
+                                            <ExperienceLists
+                                                key={item.jobTitle}
+                                                startDate={item.duration.start}
+                                                endDate={item.duration.end}
+                                                jobTitle={item.jobTitle}
+                                                companyName={item.companyName}
+                                                adress={item.address}
+                                                description={item.description}
+                                            />
+                                        )
+                                    })}
+                                </div>
                                 <ExperienceLists data={experiences} />
                             </ContentContainer>
                             <ContentContainer
@@ -74,11 +89,27 @@ export default function AboutMePage() {
                                 icon={renderIcon("education")}
                                 className={`${styleContainer} lg:mt-0 md:mt-0 sm:mt-10`}
                             >
-                                <EducationList data={educations} />
+                                {educations.map((item) => {
+                                    return (
+                                        <EducationList
+                                            key={item.name}
+                                            startDate={item.duration.start}
+                                            endDate={item.duration.end}
+                                            name={item.name}
+                                            schoolName={item.schoolName}
+                                            link={item.link}
+                                            image={item.image}
+                                            description={item.description}
+                                            address={item.address}
+                                            degree={item.degree}
+                                        />
+                                    )
+                                })}
+
                             </ContentContainer>
                         </div>
                     </div>
-                </div>
+                </div >
                 <ContactMe />
             </section >
 

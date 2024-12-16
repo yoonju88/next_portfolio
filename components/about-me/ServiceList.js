@@ -5,31 +5,26 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
-export default function ServiceList({ data }) {
+export default function ServiceList({ title, icon, description }) {
     return (
-        <div className="flex flex-wrap -m-4 text-center items-center justify-center">
-            {data.map((item) => {
-                return (
-                    <Accordion key={item.title} type="single" collapsible className="lg:w-1/2 md:w-1/2 sm:w-[90%] lg:pl-20 md:pl-10 sm:pl-0">
-                        <AccordionItem value="item-1">
-                            <AccordionTrigger>
-                                <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
-                                    <span className="p-1 bg-primary rounded-full animation-set-image group-hover:shadow-primary/30 hover:shadow-lg">
-                                        {item.icon}
-                                    </span>
-                                    <span className="pl-3 text-xl text-center self-center group-hover:font-bold">
-                                        {item.title}
-                                    </span>
-                                </h2>
-                            </AccordionTrigger>
-                            <AccordionContent>
-                                <p className="leading-relaxed text-foreground/80 text-base mt-2 text-left">{item.description}</p>
-                            </AccordionContent>
-                        </AccordionItem>
-                    </Accordion>
-                )
-            })}
-        </div>
+        <Accordion key={title} type="single" collapsible className="lg:w-1/2 md:w-1/2 sm:w-[90%] lg:pl-20 md:pl-10 sm:pl-0">
+            <AccordionItem value="item-1">
+                <AccordionTrigger>
+                    <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
+                        <span className="p-1 bg-primary rounded-full animation-set-image group-hover:shadow-primary/30 hover:shadow-lg">
+                            {icon}
+                        </span>
+                        <span className="pl-3 text-xl text-center self-center group-hover:font-bold">
+                            {title}
+                        </span>
+                    </h2>
+                </AccordionTrigger>
+                <AccordionContent>
+                    <p className="leading-relaxed text-foreground/80 text-base mt-2 text-left">{description}</p>
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+
     )
 }
 
