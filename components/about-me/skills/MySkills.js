@@ -27,7 +27,7 @@ export default function MySkills() {
                         })}
                     </div>
                 </div>
-                <div className="flex flex-wrap -m-4 gap-10 justify-center">
+                <div className="flex flex-wrap -m-4 gap-10 justify-center ">
                     {filteredItems.map((item) => {
                         return (
                             <div key={item.id}>
@@ -35,7 +35,7 @@ export default function MySkills() {
                                     key={item.id}
                                     title={item.title}
                                     icon={item.icon}
-                                    color={item.color}
+                                    filtered={isFilteredType}
                                 />
                             </div>
                         )
