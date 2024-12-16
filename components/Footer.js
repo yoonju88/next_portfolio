@@ -11,7 +11,7 @@ export default function Footer() {
                     </Link>
                     <p className='text-xs sm: mt-2 text-foreground flex items-center'>
                         <span>©</span>
-                        <span>2024 - Create by TERRENOIRE Yoonju</span>
+                        <span className='capitalize'>2024 all rights reserved by TERRENOIRE Yoonju</span>
                     </p>
                 </div>
             </div>
