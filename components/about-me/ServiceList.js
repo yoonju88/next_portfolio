@@ -7,7 +7,7 @@ import {
 
 export default function ServiceList({ title, icon, description }) {
     return (
-        <Accordion key={title} type="single" collapsible className="w-[100%]  p-4 card-shadow-xl rounded-2xl group">
+        <Accordion key={title} type="single" collapsible className="w-full p-4 card-shadow-xl rounded-2xl group hover:scale-105">
             <AccordionItem value="item-1">
                 <AccordionTrigger>
                     <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center group-hover:text-white">

@@ -99,11 +99,6 @@ p {
 }
 
 
-@layer set-animation {
-.add-transition {
-  transition: all 300ms ease-in-out;
-}
-}
 
 @layer utilities {
   .text-stroke {
@@ -115,5 +110,22 @@ p {
   }
   .text-stroke-lg {
     -webkit-text-stroke-width: 3px;
+  }
+  .add-transition {
+    transition: all 300ms ease-in-out
+
+  }
+  .bg-hover:hover {
+    @apply bg-gradient-to-r from-violet-200 to-primary/70;
+  }
+  .list-hidden {
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+  }
+  .list-visible {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
   }
 }
