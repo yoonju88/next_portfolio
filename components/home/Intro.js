@@ -15,7 +15,7 @@ export default function Intro() {
                 </p>
                 <div className='flex gap-6'>
                     <ButtonNavigate
-                        name="web project"
+                        name="development web"
                         href="/works/web"
                         variant='link'
                         size="sm"
@@ -25,7 +25,7 @@ export default function Intro() {
                         </svg>
                     </ButtonNavigate>
                     <ButtonNavigate
-                        name="graphic project"
+                        name="graphic disign"
                         href="/works/design"
                         variant='link'
                         size="sm"
