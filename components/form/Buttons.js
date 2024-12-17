@@ -31,7 +31,7 @@ export const FilterButton = ({ active, name, onClick }) => {
     return (
         <button
             onClick={onClick}
-            className={`capitalize py-1 px-4 border-2 border-foreground/30 rounded-lg transform transition-all duration-300 ${active ? "bg-primary/80 text-white !border-primary/80" : "bg-background text-foreground"}`}
+            className={`capitalize py-1 px-4 border border-foreground/30 rounded-lg transform transition-all duration-300 hover:bg-primary/80 hover:text-white hover:border-none ${active ? "bg-primary text-white border-none shadow-md shadow-primary/50" : "bg-background text-foreground"}`}
         >
             {name}
         </button>
