@@ -4,18 +4,21 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import Link from 'next/link'
 
 import React from 'react'
 
-export default function ToolTip({ text, children }) {
+export default function ToolTip({ text, children, link, className }) {
     return (
         <TooltipProvider>
             <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger className={className}>
                     {children}
                 </TooltipTrigger>
                 <TooltipContent>
-                    <p>{text}</p>
+                    <Link href={link} target="_blank">
+                        {text}
+                    </Link>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>

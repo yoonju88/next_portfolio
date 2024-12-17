@@ -25,7 +25,7 @@ export default function SkillList({ title, icon, filtered }) {
     return (
         <animated.div
             className="group h-28 w-32 rounded-lg border-2  border-gray-300 flex flex-col justify-center items-center relative overflow-hidden 
-                hover:border-primary/70 hover:bg-gradient-to-r hover:from-teal-400  hover:to-primary/60 set-shadow transform transition-all duration-300 hover:scale-110"
+                hover:border-primary/70 hover:bg-gradient-to-r hover:from-teal-100/60  hover:to-primary/60 set-shadow transform transition-all duration-300 hover:scale-110"
             style={style}
         >
             <Image

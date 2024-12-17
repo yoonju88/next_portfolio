@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function EducationList({ startDate, endDate, link, image, name, schoolName, address, degree }) {
     return (
-        <div className=" w-[98%] flex items-center justify-center  card-set-shadow group">
+        <div className=" w-[98%] flex items-center justify-center card-set-shadow group">
             <div className="w-12 h-12 inline-flex items-center bg-white rounded-full flex-shrink-0 overflow-hidden drop-shadow-md shadow-gray-500">
                 <Link href={link} target="_blank">
                     <Image src={image} alt="school logo" className="w-full object-cover animation-set-image" />

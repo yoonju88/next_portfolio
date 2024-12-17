@@ -75,13 +75,12 @@ export default function AboutMePage() {
                                                 endDate={item.duration.end}
                                                 jobTitle={item.jobTitle}
                                                 companyName={item.companyName}
-                                                adress={item.address}
+                                                address={item.address}
                                                 description={item.description}
                                             />
                                         )
                                     })}
                                 </div>
-                                <ExperienceLists data={experiences} />
                             </ContentContainer>
                             <ContentContainer
                                 title="Education"
@@ -105,14 +104,12 @@ export default function AboutMePage() {
                                         />
                                     )
                                 })}
-
                             </ContentContainer>
                         </div>
                     </div>
                 </div >
                 <ContactMe />
             </section >
-
         </>
     )
 }

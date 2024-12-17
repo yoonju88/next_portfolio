@@ -41,9 +41,6 @@ export default function header() {
                     >
                         contact
                     </Link>
-
-
-
                 </nav>
                 <DarkMode />
             </div>
