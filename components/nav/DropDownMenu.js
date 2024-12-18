@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {
     DropdownMenu,
@@ -7,15 +8,18 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Link from 'next/link'
 
-export default function DropDownMenu({ links, className }) {
+export default function DropDownMenu({ links, name, className, onMouseEnter, onMouseLeave, ref, isActive }) {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="flex items-center gap-1">
                 <Link
                     href='/works/web'
                     className={className}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    ref={ref}
                 >
-                    works
+                    {name}
                 </Link>
                 <span className="sr-only">Works</span>
             </DropdownMenuTrigger>
@@ -23,7 +27,7 @@ export default function DropDownMenu({ links, className }) {
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.linkName}>
-                            <Link href={link.href} className="capitalize" >
+                            <Link href={link.href} className={`capitalize hover:font-semibold ${isActive(link.href) ? 'font-semibold text-primary' : ''}`} >
                                 {link.linkName}
                             </Link>
                         </DropdownMenuItem>
