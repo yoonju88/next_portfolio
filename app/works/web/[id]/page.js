@@ -9,7 +9,7 @@ import Link from "next/link"
 import { ButtonLink } from '@/components/form/Buttons'
 import CalculateDays from '@/components/works/CalculateDays'
 import Tags from '@/components/works/Tags'
-import { ReturnButton } from '@/components/form/Buttons'
+import { IconButton } from '@/components/form/Buttons'
 import ToggleProperty from '@/components/works/design/ToggleProperty'
 
 export default function WebDetailsPage({ params }) {
@@ -51,19 +51,19 @@ export default function WebDetailsPage({ params }) {
                                 <ButtonLink
                                     href={project.link}
                                     name="Go to GitHub"
-                                    variant="link"
-                                    size="sm"
+                                    variant="navigate"
+                                    size="default"
                                 >
-                                    <IoLogoGithub size="22" />
+                                    <IoLogoGithub size="30" />
                                 </ButtonLink>
                             </div>
                         </div>
                     </div>
                 </div>
             </section >
-            <div className='fixed right-10 bottom-24'>
-                <ReturnButton href={'/works/web'} />
-            </div>
+            <span className='fixed right-10 bottom-24'>
+                <IconButton href={'/works/web'} />
+            </span>
         </>
     )
 }

@@ -16,7 +16,8 @@ export default function ContactMe() {
                     <ButtonNavigate
                         name="Contact me today!!"
                         href="/contact"
-                        variant="link"
+                        variant="navigate"
+                        size='lg'
                     />
                 </div>
             </div>

@@ -6,7 +6,7 @@ export const ButtonLink = ({ href, name, size, variant, children }) => {
 
     return (
         <Button variant={variant} size={size} className="mt-1" >
-            <Link href={href} target='_blank' className="flex flex-inline items-center gap-2 text-background">
+            <Link href={href} target='_blank' className="flex flex-inline items-center gap-2">
                 {name}
                 {children}
             </Link>
@@ -29,18 +29,20 @@ export const ButtonNavigate = ({ href, name, size, variant, children }) => {
 
 export const FilterButton = ({ active, name, onClick }) => {
     return (
-        <button
+        <Button
             onClick={onClick}
-            className={`capitalize py-1 px-4 border border-foreground/30 rounded-lg transform transition-all duration-300 hover:bg-primary/80 hover:text-white hover:border-none ${active ? "bg-primary text-white border-none shadow-md shadow-primary/50" : "bg-background text-foreground"}`}
+            className={`${active ? "bg-primary text-white border-none shadow-md shadow-primary/50" : "bg-background text-foreground"}`}
+            variant="navigate"
+            size='default'
         >
             {name}
-        </button>
+        </Button>
     )
 }
 
-export const ReturnButton = ({ href }) => {
+export const IconButton = ({ href }) => {
     return (
-        <Button variant="default" size="sm" className="mt-1" >
+        <Button variant="default" size="icon" className="mt-1" >
             <Link href={href}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />

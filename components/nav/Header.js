@@ -46,7 +46,7 @@ export default function header() {
                             width: underline.width || (isActive(path) ? 'auto' : 0),
                             left: underline.left || (isActive(path) ? 0 : 0),
                         }}
-                    ></div>
+                    />
                     {navLinks.map((nav) => {
                         if (nav.worksLinks) {
                             const worksLinks = nav.worksLinks
@@ -54,7 +54,7 @@ export default function header() {
                                 <DropDownMenu
                                     key={nav.name}
                                     name={nav.name}
-                                    className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold text-primary" : ""}`}
+                                    className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : ""}`}
                                     links={worksLinks}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
@@ -66,7 +66,7 @@ export default function header() {
                                 <Link
                                     key={nav.name}
                                     href={nav.link}
-                                    className={`${linkStyle} ${isActive(nav.link) ? "font-bold text-primary" : ""}`}
+                                    className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : ""}`}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
                                 >

@@ -16,11 +16,11 @@ export default function DarkMode() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant='outline' size='sm' className="h-[2.2rem] w-[2.5rem] flex items-center justify-center">
+                <Button variant='outline' size='icon' className="flex items-center justify-center">
                     {theme === 'dark' ? (
-                        <FaMoon className='absolute h-[1.2rem] w-[1.2rem] text-yellow-400' />
+                        <FaMoon className='text-yellow-400' />
                     ) : (
-                        <MdSunny className='h-[1.2rem] w-[1.2rem] text-orange-500' />
+                        <MdSunny className='text-orange-500' />
                     )}
                     <span className='sr-only'>Toggle theme</span>
                 </Button>

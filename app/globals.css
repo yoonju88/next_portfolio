@@ -40,7 +40,7 @@
     --popover-foreground: 210 40% 98%;
     --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 225 90% 30%;
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 18%;
     --muted-foreground: 215 20.2% 65.1%;
@@ -74,11 +74,6 @@
   }
 }
 
-.animation-set-image {
-  @apply transform transition-all duration-300 hover:scale-110
-}
-
-
 h1, h2, h3, h4, h5, h6 {
   @apply text-foreground/80
 }
@@ -87,23 +82,15 @@ p {
   @apply text-foreground/75
 }
 
-.card-set-shadow {
-  @apply  shadow-none border-background py-4 px-4 rounded-lg transform transition-all duration-200 hover:bg-gradient-to-r hover:from-violet-500  hover:to-primary/70 hover:shadow-primary/30 hover:shadow-lg hover:scale-105
+.hover-effect-card {
+ @apply shadow-none hover:shadow-lg hover:shadow-primary/50 hover:border hover:border-foreground/20
 }
-
-.set-shadow {
-  @apply  shadow-none transform transition-all duration-300 hover:shadow-primary/30 hover:shadow-lg
-}
-.card-shadow-xl {
-  @apply  shadow-none  transform transition-all duration-200 hover:bg-gradient-to-r hover:from-violet-500 hover:to-primary/70 hover:shadow-primary/30 hover:shadow-xl
-}
-
 
 
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: currentColor;
+    -webkit-text-stroke-color: #ADD8E6
   }
   .text-stroke-sm {
     -webkit-text-stroke-width: 1px;
@@ -113,8 +100,5 @@ p {
   }
   .add-transition {
     transition: all 300ms ease-in-out
-  }
-  .bg-hover:hover {
-    @apply bg-gradient-to-r from-violet-500 to-primary/70;
   }
 }

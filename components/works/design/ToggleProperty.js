@@ -7,13 +7,14 @@ import {
 } from "@/components/ui/accordion"
 
 
+
 export default function ToggleProperty({ title, description, children }) {
     const isObject = typeof description === "object" && description !== null && !Array.isArray(description)
 
     return (
         <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
-                <AccordionTrigger>{title}</AccordionTrigger>
+                <AccordionTrigger>&#45; {title}</AccordionTrigger>
                 <AccordionContent>
                     {isObject ? (
                         <div className="flex gap-2">
