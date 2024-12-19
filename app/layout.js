@@ -3,8 +3,7 @@ import "./globals.css";
 import Header from '@/components/nav/Header'
 import Footer from '@/components/Footer'
 import Providers from "./providers";
-
-
+import { ScrollTopButton } from '@/components/form/Buttons';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,6 +24,7 @@ export default function RootLayout({ children }) {
             className="flex min-h-screen flex-col justify-center items-center"
           >
             {children}
+            <ScrollTopButton />
           </main>
           <Footer />
         </Providers>

@@ -1,6 +1,7 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-
+import React, { useState, useEffect } from 'react'
 
 export const ButtonLink = ({ href, name, size, variant, children }) => {
 
@@ -40,15 +41,51 @@ export const FilterButton = ({ active, name, onClick }) => {
     )
 }
 
-export const IconButton = ({ href }) => {
+export const IconButton = ({ href, style }) => {
     return (
-        <Button variant="default" size="icon" className="mt-1" >
+        <Button variant="default" size="icon" className={style} >
             <Link href={href}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white ">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>
             </Link>
         </Button >
+    )
+}
+
+export const ScrollTopButton = () => {
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const toggleVisibility = () => {
+            setIsVisible(window.scrollY > 300)
+        }
+        window.addEventListener("scroll", toggleVisibility)
+        return () => {
+            window.removeEventListener("scroll", toggleVisibility)
+        }
+    }, [])
+
+    const scrollToTop = () => {
+        if (isVisible) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smouth',
+            })
+        }
+    }
+
+    return (
+        <button
+            className={`flex flex-col fixed bottom-28 right-8 py-2 px-2 rounded-lg bg-primary shadow-lg shadow-primary/50 add-transition hover:bg-primary/80 hover:shadow-inner hover:shadow-blue-800 ${isVisible ? "opacity-100 scale-100 animate-bounce" : "opacity-0 scale-0"}`}
+            onClick={scrollToTop}
+            disabled={!isVisible}
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-8 text-white">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+            </svg>
+        </button>
     )
 }
 
