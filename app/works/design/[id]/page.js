@@ -23,7 +23,7 @@ export default function designDetailsPage({ params }) {
                 <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center w-full">
                     <SlideImages images={property.images} />
                     <div className="lg:w-[70%] w-full md:w-[90%] lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
-                        <h2 className='text-primary text-sm uppercase font-semibold'>{property.type}</h2>
+                        <h2 className='text-chart-2 text-md uppercase font-semibold'>{property.type}</h2>
                         <h1 className="title-font font-medium mb-4 mt-1.5 text-3xl uppercase">{property.title}</h1>
                         <Description description={property.description} />
                         <div className='mt-8'>
@@ -47,10 +47,15 @@ export default function designDetailsPage({ params }) {
                         </div>
                     </div>
                 </div>
+
+
             </section>
-            <section className='fixed right-10 bottom-24'>
-                <IconButton href={'/works/design'} />
-            </section>
+            <span>
+                <IconButton
+                    href={'/works/design'}
+                    style="fixed bottom-24 right-6"
+                />
+            </span>
         </>
 
     )

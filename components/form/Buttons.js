@@ -32,7 +32,7 @@ export const FilterButton = ({ active, name, onClick }) => {
     return (
         <Button
             onClick={onClick}
-            className={`${active ? "bg-primary text-white border-none shadow-md shadow-primary/50" : "bg-background text-foreground"}`}
+            className={`${active ? "bg-chart-2 text-white border-none shadow-md shadow-chart-1" : "bg-background text-foreground"}`}
             variant="navigate"
             size='default'
         >
@@ -43,13 +43,13 @@ export const FilterButton = ({ active, name, onClick }) => {
 
 export const IconButton = ({ href, style }) => {
     return (
-        <Button variant="default" size="icon" className={style} >
+        <button className="{`flex flex-col fixed bottom-28 right-8 py-2 px-2 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 animate-bounce" >
             <Link href={href}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-7 text-white ">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>
             </Link>
-        </Button >
+        </button >
     )
 }
 
@@ -77,7 +77,7 @@ export const ScrollTopButton = () => {
 
     return (
         <button
-            className={`flex flex-col fixed bottom-28 right-8 py-2 px-2 rounded-lg bg-primary shadow-lg shadow-primary/50 add-transition hover:bg-primary/80 hover:shadow-inner hover:shadow-blue-800 ${isVisible ? "opacity-100 scale-100 animate-bounce" : "opacity-0 scale-0"}`}
+            className={`flex flex-col fixed bottom-28 right-8 py-2 px-2 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 ${isVisible ? "opacity-100 scale-100 animate-bounce" : "opacity-0 scale-0"}`}
             onClick={scrollToTop}
             disabled={!isVisible}
         >

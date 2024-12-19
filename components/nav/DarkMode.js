@@ -16,7 +16,7 @@ export default function DarkMode() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant='outline' size='icon' className="flex items-center justify-center">
+                <Button variant='outline' size='icon' className="flex items-center justify-center hover:shadow-inner hover:shadow-chart-2/50">
                     {theme === 'dark' ? (
                         <FaMoon className='text-yellow-400' />
                     ) : (

@@ -5,14 +5,14 @@ import { MdAlternateEmail } from "react-icons/md";
 import ToolTip from './ToolTip';
 
 export default function Footer() {
-    const tooltipStyle = "w-5 h-5 add-transition hover:scale-125 text-foreground/80"
+    const tooltipStyle = "w-5 h-5 add-transition hover:scale-125 text-white"
     return (
-        <footer className="bg-secondary/80 px-5 py-6 mx-auto">
+        <footer className="bg-chart-2 px-5 py-6 mx-auto">
             <div className="container flex items-center gap-5 sm:flex-row flex-col">
                 <Link href="/">
-                    <span className="text-2xl text-foreground font-semibold">Yoonju.T </span>
+                    <span className="text-2xl text-white font-semibold">Yoonju.T </span>
                 </Link>
-                <p className='text-sm text-foreground flex items-center capitalize'>
+                <p className='text-sm text-white flex items-center capitalize'>
                     © 2024 all rights reserved by TERRENOIRE Yoonju
                 </p>
                 <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>

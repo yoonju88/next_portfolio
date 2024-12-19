@@ -31,13 +31,13 @@ export default function header() {
     const isDropDownActive = (links) => {
         return links.some(link => path.startsWith(link.href));
     };
-    const linkStyle = "capitalize text-foreground hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
+    const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
     return (
         <header className="text-gray-600 body-font">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <Link href='/' className="flex title-font font-medium items-center mb-4 md:mb-0" >
-                    <span className="ml-3 text-xl text-primary/80  font-semibold" >Yoonju.T</span>
+                    <span className="ml-3 text-2xl text-chart-2 font-semibold" >Yoonju.T</span>
                 </Link>
                 <nav className=" relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                     <div
@@ -54,7 +54,7 @@ export default function header() {
                                 <DropDownMenu
                                     key={nav.name}
                                     name={nav.name}
-                                    className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : ""}`}
+                                    className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : "font-medium"}`}
                                     links={worksLinks}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
@@ -66,7 +66,7 @@ export default function header() {
                                 <Link
                                     key={nav.name}
                                     href={nav.link}
-                                    className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : ""}`}
+                                    className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : "font-medium"}`}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
                                 >

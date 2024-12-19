@@ -11,7 +11,7 @@ export default function ServiceList({ title, icon, description }) {
             <AccordionItem value="item-1">
                 <AccordionTrigger>
                     <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
-                        <span className="p-1.5 bg-primary rounded-full add-transition group-hover:scale-110 group-hover:shadow-primary/50 group-hover:shadow-inner group-hover:bg-white">
+                        <span className="p-1.5 bg-chart-2 shadow-md shadow-chart-2 rounded-full add-transition group-hover:scale-110 group-hover:shadow-chart-2 group-hover:shadow-inner group-hover:bg-white">
                             {icon}
                         </span>
                         <span className="pl-3 text-xl text-center self-center group-hover:font-bold">

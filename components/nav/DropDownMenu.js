@@ -27,7 +27,7 @@ export default function DropDownMenu({ links, name, className, onMouseEnter, onM
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.linkName}>
-                            <Link href={link.href} className={`capitalize hover:font-semibold ${isActive(link.href) ? 'font-semibold text-primary' : ''}`} >
+                            <Link href={link.href} className={`capitalize hover:font-semibold ${isActive(link.href) ? 'font-semibold ' : ''}`} >
                                 {link.linkName}
                             </Link>
                         </DropdownMenuItem>

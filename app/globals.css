@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 50 100% 98%;
     --foreground: 225 90% 15%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -24,11 +24,12 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
-    --chart-1: 228,96.5%,88.8%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
+    --chart-1: 32 46% 93%; /*marron pastel*/
+    --chart-2: 254 44% 60%;/*violet pastel*/
+    --chart-3:  0 0% 99%;/*gris claire pastel*/
+    --chart-4: 43 74% 66%; /* violet*/
     --chart-5: 27 87% 67%;
+
   }
 
   .dark {
@@ -51,8 +52,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
-    --chart-1: 292,91.4%,72.5%;
-    --chart-2: 160 60% 45%;
+    --chart-1: 217.2 91.2% 59.8%;
+    --chart-2: 222 99% 56%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
@@ -75,22 +76,23 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-foreground/80
+  @apply text-foreground/80;
 }
 
 p {
-  @apply text-foreground/75
+  @apply text-foreground/75;
 }
 
 .hover-effect-card {
- @apply shadow-none hover:shadow-lg hover:shadow-primary/50 hover:border hover:border-foreground/20
+ @apply shadow-none hover:border hover:border-chart-1 hover:shadow-lg hover:shadow-chart-1 hover:bg-gradient-to-t hover:from-background hover:to-chart-3/50;
+ 
 }
 
 
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #ADD8E6
+    -webkit-text-stroke-color: #ADD8E6;
   }
   .text-stroke-sm {
     -webkit-text-stroke-width: 1px;

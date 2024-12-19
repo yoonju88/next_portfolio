@@ -16,13 +16,13 @@ const profilInfo = [
 
 export default function Profile() {
     const data = profilInfo[0]
-    const tooltipStyle = "p-2.5 add-transition rounded-full border border-foreground/20 hover:border-none hover:text-white hover:shadow-[inset_0_0_20px_20px] hover:shadow-primary/40"
+    const tooltipStyle = "p-2.5 add-transition rounded-full border border-chart-2/50 hover:border-none hover:text-white hover:shadow-[inset_0_0_20px_20px] hover:shadow-chart-2/50"
     const iconStyle = "size-5 text-foreground"
     return (
         <section className="group flex flex-wrap items-center justify-center mt-10 p-5 py-10 rounded-xl">
             <div className="lg:w-[30%] md:w-1/3 lg:mb-0 sm:mb-4 sm:w-[90%] flex items-center justify-center">
                 <span className="w-[220px] h-[230px] rounded-3xl overflow-hidden shadow-none transform transitio-all rotate-6 duration-300
-                group-hover:border-2 group-hover:border-white group-hover:rotate-0 group-hover:scale-110 group-hover:shadow-primary/50 group-hover:shadow-lg">
+                group-hover:border-2 group-hover:border-white group-hover:rotate-0 group-hover:scale-110 group-hover:shadow-chart-1 group-hover:shadow-lg">
                     <Image
                         src={data.src}
                         alt="profil-yoonju"
@@ -66,7 +66,7 @@ export default function Profile() {
                         </ToolTip>
                     </div>
                 </div>
-                <h3 className="text-base font-semibold text-primary/80 pl-4">{data.jobTitle} | {data.secondJob}</h3>
+                <h3 className="text-base font-semibold text-chart-2 pl-4">{data.jobTitle} | {data.secondJob}</h3>
                 <div className=" relative sm:pl-4 mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                     <p className="leading-relaxed text-base">{data.description}</p>
                     <p className="absolute opacity-0 text-9xl -z-10 -left-10 -top-20 text-transparent text-stroke group-hover:opacity-30 group-hover:animate-bounce">HI</p>

@@ -26,7 +26,7 @@ export default function ToggleProperty({ title, description, children }) {
                         </div>
                     ) : (
                         <>
-                            {description && <p>{description}</p>}
+                            {description && <p className='ml-2'>{description}</p>}
                             {children && <span>{children}</span>}
                         </>
                     )}

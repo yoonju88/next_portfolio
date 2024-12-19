@@ -6,7 +6,7 @@ export default function SkillList({ title, icon, filtered }) {
 
     return (
         <div
-            className="group h-28 w-32 rounded-lg border-2 border-gray-300 flex flex-col justify-center items-center
+            className="group h-28 w-32 rounded-lg border-2 border-chart-2/50 flex flex-col justify-center items-center
                 hover:scale-110 hover-effect-card add-transition"
         >
             <Image
