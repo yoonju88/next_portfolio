@@ -6,7 +6,7 @@ import WorksCardLoading from '@/components/loading/WorksCardLoading'
 
 export default async function webPage() {
     return (
-        <section className="w-[90%]">
+        <section className='flex flex-col justify-center items-center mb-20'>
             <ProjectTitle
                 title="development web"
                 description="I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."

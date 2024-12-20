@@ -9,27 +9,14 @@ import {
 
 
 export default function ToggleProperty({ title, description, children }) {
-    const isObject = typeof description === "object" && description !== null && !Array.isArray(description)
 
     return (
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full hover-effect-card add-transition px-2 py-1 rounded-lg">
             <AccordionItem value="item-1">
-                <AccordionTrigger>&#45; {title}</AccordionTrigger>
+                <AccordionTrigger className="uppercase text-sm pl-2"> {title}</AccordionTrigger>
                 <AccordionContent>
-                    {isObject ? (
-                        <div className="flex gap-2">
-                            {description.map((item, index) => {
-                                return (
-                                    <span key={`${item}-${index}`} className="inline-block" >{item}</span>
-                                )
-                            })}
-                        </div>
-                    ) : (
-                        <>
-                            {description && <p className='ml-2'>{description}</p>}
-                            {children && <span>{children}</span>}
-                        </>
-                    )}
+                    {description && <p className='ml-2 pb-4 pl-2'>{description}</p>}
+                    {children && <div className='ml-2 pb-4'>{children}</div>}
                 </AccordionContent>
             </AccordionItem>
         </Accordion>

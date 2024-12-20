@@ -32,7 +32,7 @@ export default function ListContainer({ data }) {
     const totalPages = Math.ceil(arrayPageNumber.length / PER_PAGE);
 
     return (
-        <>
+        <div className="lg:w-2/3 w-[90%]">
             <div className='flex items-center justify-center mt-10'>
                 <SelectSrollable
                     lists={typeDesigns}
@@ -53,14 +53,14 @@ export default function ListContainer({ data }) {
                     )
                 })}
             </section>
-            <div className='flex justify-center py-10'>
+            <span className='flex justify-center py-10'>
                 <PageNumber
                     data={arrayPageNumber}
                     currentPage={currentPage}
                     setCurrentPage={setCurrentPage}
                     totalPages={totalPages}
                 />
-            </div>
-        </>
+            </span>
+        </div>
     )
 }

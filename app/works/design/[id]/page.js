@@ -28,14 +28,14 @@ export default function designDetailsPage({ params }) {
                         <Description description={property.description} />
                         <div className='mt-8'>
                             <ToggleProperty
-                                title="Program i used ?"
+                                title="Program i used"
                             >
                                 <Tags
                                     tags={property.tags}
                                 />
                             </ToggleProperty>
                             <ToggleProperty
-                                title="Creation year?"
+                                title="Creation year"
                                 description={property.creationYear}
                             />
                             {property.companyName ? (

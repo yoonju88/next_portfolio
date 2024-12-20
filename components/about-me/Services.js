@@ -33,7 +33,7 @@ export default function Services() {
         <section className="text-gray-600 body-font">
             <div className="container lg:w-[90%] px-5 py-24 mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font"> My Services</h1>
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font uppercase"> My Services</h1>
                 </div>
                 <div className="flex flex-wrap -m-4 text-center items-center justify-center gap-2">
                     {serviceData.map((item) => {

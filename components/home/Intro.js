@@ -6,9 +6,8 @@ import IntroAinimation from '@/public/animation_2.json'
 export default function Intro() {
     return (
         <>
-            <section className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-
-                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-foreground animate-pulse "> Hello,
+            <section className="lg:flex-grow md:w-1/2 w-[90%] lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2 animate-pulse "> Hello,
                     I'm yoonju!
                     <br className="hidden lg:inline-block" /> Welcome to My Digital Playground.
                 </h1>

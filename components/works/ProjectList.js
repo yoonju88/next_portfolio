@@ -6,7 +6,7 @@ import DesignList from './design/DesignList'
 
 export default function ProjectList({ works }) {
     return (
-        <div className="flex flex-wrap pt-16 sm:-m-4 -mx-4 -mb-10 -mt-4">
+        <div className="flex flex-wrap pt-16  w-[90%] lg:w-2/3 sm:-m-4 -mx-4 -mb-10 -mt-4">
             {works.map((item) => {
                 return (
                     <DesignList

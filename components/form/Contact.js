@@ -5,6 +5,7 @@ import { useToast } from "@/hooks/use-toast"
 import { sendEmail } from '@/utils/api'
 import { ContactSchema } from '@/utils/schema'
 import { CgSpinner } from "react-icons/cg"; //  add animate-spin 
+import { ButtonSubmit } from './Buttons'
 
 
 export default function ContactForm() {
@@ -45,6 +46,7 @@ export default function ContactForm() {
                     type="text"
                     id='name'
                     {...register('name', { required: true })}
+                    placeholder='Last name, first name'
                     className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-200"
                 />
             </div>
@@ -60,6 +62,7 @@ export default function ContactForm() {
                     id='email'
                     {...register('email', { required: true })}
                     className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-200 "
+                    placeholder='id@email.com'
                 />
             </div>
             <div className="relative mb-4">
@@ -74,21 +77,23 @@ export default function ContactForm() {
                     id='message'
                     {...register('message', { required: true })}
                     className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-foreground py-1 px-3 resize-none leading-6 transition-colors duration-200"
+                    placeholder='Your message...'
                 />
             </div>
-            <button
-                type="submit"
-                disabled={isLoading}
-                className={`text-white bg-primary border-0 py-2 pl-4 pr-6 focus:outline-none hover:bg-primary/80 rounded text-lg flex items-center gap-2 ${isLoading ? 'pl-4' : 'pl-6'}`}
-            >
-                {isLoading ? (
-                    <>
-                        <CgSpinner className='animate-spin size-6 text-white ' />
-                        Sending...
-                    </>
-                ) : "Send"
-                }
-            </button>
+            <div className="flex justify-center">
+                <ButtonSubmit
+                    type="submit"
+                    disabled={isLoading}
+                >
+                    {isLoading ? (
+                        <>
+                            <CgSpinner className='animate-spin size-6 text-white ' />
+                            Sending...
+                        </>
+                    ) : "Send"
+                    }
+                </ButtonSubmit>
+            </div>
         </form >
     )
 }

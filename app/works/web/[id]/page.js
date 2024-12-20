@@ -23,31 +23,31 @@ export default function WebDetailsPage({ params }) {
         <>
             <section>
                 <div className="container px-5 py-10 mx-auto ">
-                    <div className="lg:w-full mx-auto flex flex-wrap overflow-hidden items-center justify-center">
-                        <div className="overflow-hidden lg:w-1/2 rounded-lg">
-                            <Link href={project.link} target="_blank">
-                                <Image alt={project.title} className="w-full lg:h-auto object-cover object-center rounded-lg transform transition-scale duration-300 hover:scale-105" src={project.image} />
-                            </Link>
-                        </div>
+                    <article className="lg:w-full mx-auto flex flex-wrap overflow-hidden items-center justify-center">
+                        <Link href={project.link} target="_blank" className="overflow-hidden lg:w-1/2 rounded-lg">
+                            <Image alt={project.title} className="w-full lg:h-auto object-cover object-center rounded-lg transform transition-scale duration-300 hover:scale-105" src={project.image} />
+                        </Link>
                         <div className="lg:w-1/2 w-full md:w-[90%] lg:pl-10 lg:py-0 mt-10 lg:mt-0 ">
-                            <h1 className="title-font font-medium mb-1 text-3xl capitalize">{project.title}</h1>
-                            <p className="leading-relaxed mt-3 text-sm mb-4">{project.description}</p>
-                            <ToggleProperty
-                                title="Project duration ?"
-                            >
-                                <CalculateDays
-                                    startDate={project.duration.startDate}
-                                    endDate={project.duration.endDate}
-                                />
-                            </ToggleProperty>
-                            <ToggleProperty
-                                title="Technics i used?"
-                            >
-                                <Tags
-                                    tags={project.tags}
-                                />
-                            </ToggleProperty>
-                            <div className=" flex lg:justify-start justify-center mt-8">
+                            <h1 className="title-font font-medium mb-1 text-4xl capitalize">{project.title}</h1>
+                            <p className="leading-relaxed mt-3 text-md mb-4">{project.description}</p>
+                            <div className="flex flex-col gap-2">
+                                <ToggleProperty
+                                    title="Project duration"
+                                >
+                                    <CalculateDays
+                                        startDate={project.duration.startDate}
+                                        endDate={project.duration.endDate}
+                                    />
+                                </ToggleProperty>
+                                <ToggleProperty
+                                    title="Technics i used"
+                                >
+                                    <Tags
+                                        tags={project.tags}
+                                    />
+                                </ToggleProperty>
+                            </div>
+                            <div className=" flex lg:justify-start justify-center mt-8 pl-4">
                                 <ButtonLink
                                     href={project.link}
                                     name="Go to GitHub"
@@ -58,7 +58,7 @@ export default function WebDetailsPage({ params }) {
                                 </ButtonLink>
                             </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </section >
             <span className='fixed right-10 bottom-24'>

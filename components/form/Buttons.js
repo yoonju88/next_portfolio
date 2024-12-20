@@ -70,7 +70,7 @@ export const ScrollTopButton = () => {
         if (isVisible) {
             window.scrollTo({
                 top: 0,
-                behavior: 'smouth',
+                behavior: 'smooth',
             })
         }
     }
@@ -89,3 +89,15 @@ export const ScrollTopButton = () => {
     )
 }
 
+export const ButtonSubmit = ({ type, disabled, children }) => {
+    return (
+        <Button
+            type={type}
+            disabled={disabled}
+            variant="navigate"
+            className="w-[30%] flex justify-center"
+        >
+            {children}
+        </Button>
+    )
+}

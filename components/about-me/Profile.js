@@ -16,7 +16,7 @@ const profilInfo = [
 
 export default function Profile() {
     const data = profilInfo[0]
-    const tooltipStyle = "p-2.5 add-transition rounded-full border border-chart-2/50 hover:border-none hover:text-white hover:shadow-[inset_0_0_20px_20px] hover:shadow-chart-2/50"
+    const tooltipStyle = "p-2.5 add-transition rounded-full border border-chart-2 hover:border-none hover:text-white hover:shadow-[inset_0_0_20px_20px] hover:shadow-chart-2/50"
     const iconStyle = "size-5 text-foreground"
     return (
         <section className="group flex flex-wrap items-center justify-center mt-10 p-5 py-10 rounded-xl">
@@ -33,7 +33,7 @@ export default function Profile() {
             </div>
             <div className=' lg:w-[70%] md:w-2/3 md:pl-6 pt-10 sm:px-6 lg:pt-1 md:pt-1'>
                 <div className="text-left pl-4 pr-8 flex items-center justify-between">
-                    <h1 className="font-semibold title-font text-3xl">
+                    <h1 className="font-semibold title-font text-3xl uppercase">
                         I'm {data.name}
                     </h1>
                     <div className="flex items-center gap-2">

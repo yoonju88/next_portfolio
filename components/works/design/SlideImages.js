@@ -56,7 +56,7 @@ export default function SlideImages({ images }) {
                             return (
                                 <div
                                     key={`dots-${index}`}
-                                    className={`w-3 h-3 rounded-full ${current === index ? "bg-primary shadow-primary/50 shadow-md" : "bg-gray-500/60 "}`}
+                                    className={`w-3 h-3 rounded-full ${current === index ? "bg-chart-2 shadow-md" : "bg-chart-1/80"}`}
                                 />
                             )
                         })}

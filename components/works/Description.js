@@ -20,7 +20,7 @@ export default function Description({ description }) {
                     variant='ghost'
                     onClick={toggleDescription}
                     size="xs"
-                    className='text-primary p-1 py-0.5 font-normal'
+                    className='text-chart-2 p-1 py-0.5 font-normal'
 
                 >
                     {isFullDescriptionShown ? 'Show less' : 'Show more'}

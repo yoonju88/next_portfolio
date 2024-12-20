@@ -34,14 +34,14 @@ export default function header() {
     const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
     return (
-        <header className="text-gray-600 body-font">
+        <header>
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <Link href='/' className="flex title-font font-medium items-center mb-4 md:mb-0" >
                     <span className="ml-3 text-2xl text-chart-2 font-semibold" >Yoonju.T</span>
                 </Link>
                 <nav className=" relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                     <div
-                        className='absolute bottom-0 h-[2px] bg-foreground transtion-all duration-500'
+                        className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
                         style={{
                             width: underline.width || (isActive(path) ? 'auto' : 0),
                             left: underline.left || (isActive(path) ? 0 : 0),

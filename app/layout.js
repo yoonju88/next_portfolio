@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Providers from "./providers";
 import { ScrollTopButton } from '@/components/form/Buttons';
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased bg-background text-foreground`}
+        className={`${inter.className} antialiased bg-background`}
       >
         <Providers >
           <Header />
