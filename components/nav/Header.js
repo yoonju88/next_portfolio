@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import DarkMode from './DarkMode'
@@ -9,6 +9,17 @@ import { navLinks } from '@/utils/navLinks'
 export default function header() {
     const path = usePathname() // Current page path
     const [underline, setUnderline] = useState({ width: 0, left: 0 })
+    useEffect(() => {
+        const activeLink = document.querySelector(`[data-active="true"]`);
+        if (activeLink) {
+            setUnderline({
+                width: activeLink.offsetWidth,
+                left: activeLink.offsetLeft,
+            });
+        } else {
+            setUnderline({ width: 0, left: 0 });
+        }
+    }, [path]);
 
     //handle mouse enter to set underline position
     const handleMouseEnter = (e) => {
@@ -20,7 +31,15 @@ export default function header() {
     }
     //reset underline on mouse leave
     const handleMouseLeave = () => {
-        setUnderline({})
+        const activeLink = document.querySelector(`[data-active="true"]`);
+        if (activeLink) {
+            setUnderline({
+                width: activeLink.offsetWidth,
+                left: activeLink.offsetLeft,
+            });
+        } else {
+            setUnderline({ width: 0, left: 0 });
+        }
     }
     //check if the given link is the active page
     const isActive = (href) => {
@@ -33,6 +52,7 @@ export default function header() {
     };
     const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
+
     return (
         <header>
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -43,8 +63,8 @@ export default function header() {
                     <div
                         className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
                         style={{
-                            width: underline.width || (isActive(path) ? 'auto' : 0),
-                            left: underline.left || (isActive(path) ? 0 : 0),
+                            width: underline.width,
+                            left: underline.left,
                         }}
                     />
                     {navLinks.map((nav) => {
@@ -56,7 +76,16 @@ export default function header() {
                                     name={nav.name}
                                     className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : "font-medium"}`}
                                     links={worksLinks}
-                                    onMouseEnter={handleMouseEnter}
+                                    onMouseEnter={(e) => {
+                                        handleMouseEnter(e);
+                                        const trigger = e.currentTarget;
+                                        if (isDropDownActive(worksLinks)) {
+                                            setUnderline({
+                                                width: underline.width,
+                                                left: underline.left,
+                                            });
+                                        }
+                                    }}
                                     onMouseLeave={handleMouseLeave}
                                     isActive={isActive}
                                 />
@@ -69,6 +98,7 @@ export default function header() {
                                     className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : "font-medium"}`}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
+                                    data-active={isActive(nav.link)}
                                 >
                                     {nav.name}
                                 </Link>

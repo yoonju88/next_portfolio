@@ -9,15 +9,19 @@ import {
 import Link from 'next/link'
 
 export default function DropDownMenu({ links, name, className, onMouseEnter, onMouseLeave, ref, isActive }) {
+
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1">
+            <DropdownMenuTrigger
+                className="flex items-center gap-1"
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+            >
                 <Link
-                    href='/works/web'
+                    href='#'
                     className={className}
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
                     ref={ref}
+                    data-active={links.some(link => isActive(link.href))}
                 >
                     {name}
                 </Link>
@@ -27,7 +31,11 @@ export default function DropDownMenu({ links, name, className, onMouseEnter, onM
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.linkName}>
-                            <Link href={link.href} className={`capitalize hover:font-semibold ${isActive(link.href) ? 'font-semibold ' : ''}`} >
+                            <Link
+                                href={link.href}
+                                className={`capitalize hover:font-semibold ${isActive(link.href) ? 'font-semibold ' : ''}`}
+                                data-active={isActive(link.href)}
+                            >
                                 {link.linkName}
                             </Link>
                         </DropdownMenuItem>
