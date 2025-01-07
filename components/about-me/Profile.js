@@ -39,7 +39,7 @@ export default function Profile() {
                     <div className="flex items-center gap-2">
                         <ToolTip
                             text="Go to my GitHub"
-                            link="#"
+                            link="https://github.com/yoonju88"
                             className={tooltipStyle}
                         >
                             <IoLogoGithub className={iconStyle} />
