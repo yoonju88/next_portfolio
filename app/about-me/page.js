@@ -16,7 +16,7 @@ const icons = {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-foreground/80 "
+            className="size-7 text-foreground/80 hover:text-chart-2 hover:scale-105 add-transition"
         >
             <path
                 strokeLinecap="round"
@@ -31,7 +31,7 @@ const icons = {
             fill="none" viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-foreground/80"
+            className="size-7 text-foreground/80 hover:text-chart-2 hover:scale-105 add-transition "
         >
             <path
                 strokeLinecap="round"
