@@ -53,7 +53,7 @@ export default function designDetailsPage({ params }) {
             <span>
                 <IconButton
                     href={'/works/design'}
-                    style="fixed bottom-24 right-6"
+                    style="bottom-32"
                 />
             </span>
         </>
