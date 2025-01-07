@@ -59,7 +59,7 @@ export default function header() {
                 <Link href='/' className="flex title-font font-medium items-center mb-4 md:mb-0" >
                     <span className="ml-3 text-2xl text-chart-2 font-semibold" >Yoonju.T</span>
                 </Link>
-                <nav className=" relative md:ml-auto flex flex-wrap items-center text-base justify-center mr-2">
+                <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center mr-2 ">
                     <div
                         className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
                         style={{
@@ -106,7 +106,11 @@ export default function header() {
                         }
                     })}
                 </nav>
-                <DarkMode />
+                <div className="lg:mt-0 md:mt-0 mt-6">
+                    <DarkMode />
+                </div>
+
+
             </div>
         </header>
     )
