@@ -7,7 +7,6 @@ import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
 import MySkills from '@/components/about-me/skills/MySkills'
-import { ScrollTopButton } from '@/components/form/Buttons'
 
 const icons = {
     experience: (
@@ -53,20 +52,20 @@ export default function AboutMePage() {
     };
     const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background rounded-xl box-border"
     return (
-        <div>
+        <>
             <div className="container px-5 mx-auto flex flex-col">
                 <div className="lg:w-[90%] mx-auto mt-8">
                     <Profile />
                     <Services />
                     <MySkills />
-                    <div className="py-8 w-[100%] mt-12 mx-auto flex flex-wrap justify-between">
+                    <div className="py-8 w-full container mt-12 mx-auto flex flex-wrap justify-between">
                         <ContentContainer
                             title="Experience"
                             data={experiences}
                             icon={renderIcon("experience")}
                             className={styleContainer}
                         >
-                            <div className="flex flex-col lg:gap-4 mb:gap-2 sm:gap-2">
+                            <div className="flex flex-col items-center lg:gap-4 mb:gap-2 sm:gap-2">
                                 {experiences.map((item) => {
                                     return (
                                         <ExperienceLists
@@ -88,27 +87,29 @@ export default function AboutMePage() {
                             icon={renderIcon("education")}
                             className={`${styleContainer} lg:mt-0 md:mt-0 sm:mt-10`}
                         >
-                            {educations.map((item) => {
-                                return (
-                                    <EducationList
-                                        key={item.name}
-                                        startDate={item.duration.start}
-                                        endDate={item.duration.end}
-                                        name={item.name}
-                                        schoolName={item.schoolName}
-                                        link={item.link}
-                                        image={item.image}
-                                        description={item.description}
-                                        address={item.address}
-                                        degree={item.degree}
-                                    />
-                                )
-                            })}
+                            <div className="flex flex-col items-center gap-4 ">
+                                {educations.map((item) => {
+                                    return (
+                                        <EducationList
+                                            key={item.name}
+                                            startDate={item.duration.start}
+                                            endDate={item.duration.end}
+                                            name={item.name}
+                                            schoolName={item.schoolName}
+                                            link={item.link}
+                                            image={item.image}
+                                            description={item.description}
+                                            address={item.address}
+                                            degree={item.degree}
+                                        />
+                                    )
+                                })}
+                            </div>
                         </ContentContainer>
                     </div>
                 </div>
             </div >
             <ContactMe />
-        </div >
+        </>
     )
 }

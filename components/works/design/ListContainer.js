@@ -32,13 +32,13 @@ export default function ListContainer({ data }) {
     const totalPages = Math.ceil(arrayPageNumber.length / PER_PAGE);
 
     return (
-        <div className="lg:w-2/3 w-[90%]">
-            <div className='flex items-center justify-center mt-10'>
+        <>
+            <span className='flex items-center justify-center mt-10'>
                 <SelectSrollable
                     lists={typeDesigns}
                     onClick={handleClick}
                 />
-            </div>
+            </span>
             <section className="flex flex-wrap pt-10">
                 {filteredItems.map((item) => {
                     return (
@@ -53,7 +53,7 @@ export default function ListContainer({ data }) {
                     )
                 })}
             </section>
-            <span className='flex justify-center py-10'>
+            <span className='flex justify-center py-8'>
                 <PageNumber
                     data={arrayPageNumber}
                     currentPage={currentPage}
@@ -61,6 +61,6 @@ export default function ListContainer({ data }) {
                     totalPages={totalPages}
                 />
             </span>
-        </div>
+        </>
     )
 }

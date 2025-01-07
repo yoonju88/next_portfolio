@@ -69,7 +69,7 @@ export default function Profile() {
                 <h3 className="text-base font-semibold text-chart-2 pl-4">{data.jobTitle} | {data.secondJob}</h3>
                 <div className=" relative sm:pl-4 mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                     <p className="leading-relaxed text-base">{data.description}</p>
-                    <p className="absolute opacity-0 text-9xl -z-10 -left-10 -top-20 text-transparent text-stroke group-hover:opacity-30 group-hover:animate-bounce">HI</p>
+                    <p className="absolute opacity-0 text-9xl -z-10 md:-left-10 md:-top-20 -top-40 text-transparent text-stroke group-hover:opacity-30 group-hover:animate-bounce">HI</p>
                 </div>
             </div>
         </section>

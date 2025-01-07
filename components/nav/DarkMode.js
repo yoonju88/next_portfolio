@@ -14,7 +14,6 @@ import {
 
 export default function DarkMode() {
     const { theme, resolvedTheme, setTheme } = useTheme()
-    if (!resolvedTheme) return system
 
     return (
         <DropdownMenu>

@@ -18,45 +18,39 @@ export default function designDetailsPage({ params }) {
 
     const tags = property.tags
     return (
-        <>
-            <section>
-                <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center w-full">
-                    <SlideImages images={property.images} />
-                    <div className="lg:w-[70%] w-full md:w-[90%] lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
-                        <h2 className='text-chart-2 text-md uppercase font-semibold'>{property.type}</h2>
-                        <h1 className="title-font font-medium mb-4 mt-1.5 text-3xl uppercase">{property.title}</h1>
-                        <Description description={property.description} />
-                        <div className='mt-8'>
-                            <ToggleProperty
-                                title="Program i used"
-                            >
-                                <Tags
-                                    tags={property.tags}
-                                />
-                            </ToggleProperty>
-                            <ToggleProperty
-                                title="Creation year"
-                                description={property.creationYear}
+        <section className="container w-[96%]">
+            <div className="mx-auto flex flex-col lg:flex-row items-center justify-center py-20">
+                <SlideImages images={property.images} />
+                <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
+                    <h2 className='text-chart-2 text-md uppercase font-semibold'>{property.type}</h2>
+                    <h1 className="title-font font-medium mb-4 mt-1.5 text-3xl uppercase">{property.title}</h1>
+                    <Description description={property.description} />
+                    <div className='mt-8'>
+                        <ToggleProperty
+                            title="Program i used"
+                        >
+                            <Tags
+                                tags={property.tags}
                             />
-                            {property.companyName ? (
-                                <ToggleProperty
-                                    title="The company i worked at"
-                                    description={property.companyName}
-                                />
-                            ) : ('')}
-                        </div>
+                        </ToggleProperty>
+                        <ToggleProperty
+                            title="Creation year"
+                            description={property.creationYear}
+                        />
+                        {property.companyName ? (
+                            <ToggleProperty
+                                title="The company i worked at"
+                                description={property.companyName}
+                            />
+                        ) : ('')}
                     </div>
                 </div>
-
-
-            </section>
-            <span>
+            </div>
+            <span className="fixed top-10 left-20">
                 <IconButton
                     href={'/works/design'}
-                    style="bottom-32"
                 />
             </span>
-        </>
-
+        </section>
     )
 }

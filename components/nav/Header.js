@@ -57,7 +57,7 @@ export default function header() {
         <header>
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center mt-2">
                 <Link href='/' className="flex title-font font-medium items-center mb-6 md:mb-0" >
-                    <span className="ml-3 text-2xl text-chart-2 font-semibold" >Yoonju.T</span>
+                    <span className="ml-3 text-2xl text-chart-2 font-extrabold" >Yoonju.T</span>
                 </Link>
                 <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                     <div

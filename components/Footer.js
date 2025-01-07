@@ -10,7 +10,7 @@ export default function Footer() {
         <footer className="bg-chart-2 px-5 py-6 mx-auto">
             <div className="container flex items-center gap-5 sm:flex-row flex-col">
                 <Link href="/">
-                    <span className="text-2xl text-white font-semibold">Yoonju.T </span>
+                    <span className="text-2xl text-white font-extrabold">Yoonju.T </span>
                 </Link>
                 <p className='text-sm text-white flex items-center capitalize'>
                     © 2025 all rights reserved by TERRENOIRE Yoonju
