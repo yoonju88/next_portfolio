@@ -1,8 +1,10 @@
 'use client'
+import * as React from "react"
 import { useTheme } from 'next-themes'
 import { FaMoon } from "react-icons/fa";
 import { Button } from "@/components/ui/button"
 import { MdSunny } from "react-icons/md";
+import { BiLoader } from 'react-icons/bi'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,16 +13,20 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export default function DarkMode() {
-    const { theme, setTheme } = useTheme()
+    const { theme, resolvedTheme, setTheme } = useTheme()
+    if (!resolvedTheme) return system
 
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant='outline' size='icon' className="flex items-center justify-center hover:shadow-inner hover:shadow-chart-2/50">
-                    {theme === 'dark' ? (
-                        <FaMoon className='text-amber-300' />
+                <Button variant='outline' size='icon' className="hover:shadow-inner hover:shadow-chart-2/50">
+                    {!resolvedTheme ? (
+                        <BiLoader className="h-5 w-5 animate-spin text-gray-400" />
                     ) : (
-                        <MdSunny className='text-orange-500' />
+                        <>
+                            <MdSunny className={`text-orange-500  add-transition ${theme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
+                            <FaMoon className={`text-amber-300 absolute  add-transition ${theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
+                        </>
                     )}
                     <span className='sr-only'>Toggle theme</span>
                 </Button>
