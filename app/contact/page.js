@@ -14,7 +14,7 @@ export default function contactPage() {
                 <div className=" relative lg:w-[40%] w-full bg-background border-4 border-chart-2/50 rounded-lg p-8 flex flex-col mt-10 shadow-md">
                     <PersonalInfo
                         name="Email"
-                        position="-top-14 right-8"
+                        style="cursor-pointer flex gap-2 px-3 py-1.5 bg-chart-2/80 rounded-t-xl absolute -top-14 right-8"
                         description="yoonju.t@gmail.com"
                         imageTitle="Address"
                     >
