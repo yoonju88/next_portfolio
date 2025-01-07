@@ -77,7 +77,7 @@ export const ScrollTopButton = () => {
 
     return (
         <button
-            className={`flex flex-col fixed bottom-24 right-8 py-1.5 px-1.5 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 ${isVisible ? "opacity-100 scale-100 animate-pulse" : "opacity-0 scale-0"}`}
+            className={`flex flex-col fixed bottom-52 right-8 py-1.5 px-1.5 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 ${isVisible ? "opacity-100 scale-100 animate-pulse" : "opacity-0 scale-0"}`}
             onClick={scrollToTop}
             disabled={!isVisible}
         >

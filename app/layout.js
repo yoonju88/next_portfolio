@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <Providers >
           <Header />
           <main
-            className="flex min-h-screen flex-col justify-center items-center"
+            className="container flex min-h-screen flex-col justify-center items-center"
           >
             {children}
             <ScrollTopButton />
