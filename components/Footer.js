@@ -13,7 +13,7 @@ export default function Footer() {
                     <span className="text-2xl text-white font-semibold">Yoonju.T </span>
                 </Link>
                 <p className='text-sm text-white flex items-center capitalize'>
-                    © 2024 all rights reserved by TERRENOIRE Yoonju
+                    © 2025 all rights reserved by TERRENOIRE Yoonju
                 </p>
                 <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>
                     <ToolTip
