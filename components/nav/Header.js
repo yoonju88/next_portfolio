@@ -55,11 +55,11 @@ export default function header() {
 
     return (
         <header>
-            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <Link href='/' className="flex title-font font-medium items-center mb-4 md:mb-0" >
+            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center mt-2">
+                <Link href='/' className="flex title-font font-medium items-center mb-6 md:mb-0" >
                     <span className="ml-3 text-2xl text-chart-2 font-semibold" >Yoonju.T</span>
                 </Link>
-                <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center mr-2 ">
+                <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                     <div
                         className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
                         style={{
@@ -106,11 +106,9 @@ export default function header() {
                         }
                     })}
                 </nav>
-                <div className="lg:mt-0 md:mt-0 mt-6">
+                <div className="md:mt-0 mt-6 md:ml-3 ml-0">
                     <DarkMode />
                 </div>
-
-
             </div>
         </header>
     )
