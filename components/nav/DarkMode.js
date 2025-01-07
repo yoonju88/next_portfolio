@@ -18,12 +18,12 @@ export default function DarkMode() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant='outline' size='icon' className="hover:shadow-inner hover:shadow-chart-2/50">
+                <Button variant='outline' size='icon' className="hover:shadow-inner hover:shadow-chart-2/50 px-3.5">
                     {!resolvedTheme ? (
                         <BiLoader className="h-5 w-5 animate-spin text-gray-400" />
                     ) : (
                         <>
-                            <MdSunny className={`text-orange-500  add-transition ${theme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
+                            <MdSunny className={`text-orange-500 add-transition ${theme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
                             <FaMoon className={`text-amber-300 absolute  add-transition ${theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
                         </>
                     )}
