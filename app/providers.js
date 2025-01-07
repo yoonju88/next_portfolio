@@ -9,8 +9,8 @@ export default function Providers({ children }) {
             <Toaster />
             <ThemeProvider
                 attribute='class'
-                defaultTheme
-                enableSystem={true}
+                defaultTheme='system'
+                enableSystem
                 disableTransitionOnChange
             >
                 {children}
