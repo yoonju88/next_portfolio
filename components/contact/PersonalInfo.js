@@ -54,7 +54,6 @@ export default function PersonalInfo({ children, style, imageTitle }) {
             </Dialog>
         )
     }
-
     return (
         <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>

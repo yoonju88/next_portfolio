@@ -18,24 +18,27 @@ export default function Footer() {
                 <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>
                     <ToolTip
                         text="Go to LinkedIn"
-                        link="www.linkedin.com/in/yoonju-t"
                     >
-                        <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className={tooltipStyle} viewBox="0 0 24 24">
-                            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                        </svg>
+                        <Link href="https://www.linkedin.com/in/yoonju-t" target="_blank">
+                            <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className={tooltipStyle} viewBox="0 0 24 24">
+                                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </Link>
                     </ToolTip>
                     <ToolTip
                         text="Go to my GitHub"
-                        link="https://github.com/yoonju88"
                     >
-                        <IoLogoGithub className={tooltipStyle} />
+                        <Link href="https://github.com/yoonju88" target="_blank">
+                            <IoLogoGithub className={tooltipStyle} />
+                        </Link>
                     </ToolTip>
                     <ToolTip
                         text="Send me an email"
-                        link="mailto:hoyoonju2@gmail.com"
                     >
-                        <MdAlternateEmail className={tooltipStyle} />
+                        <Link href="mailto:hoyoonju2@gmail.com" target="_blank">
+                            <MdAlternateEmail className={tooltipStyle} />
+                        </Link>
                     </ToolTip>
                 </span>
             </div>
