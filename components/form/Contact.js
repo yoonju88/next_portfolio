@@ -84,11 +84,12 @@ export default function ContactForm() {
                 <ButtonSubmit
                     type="submit"
                     disabled={isLoading}
+                    loading={isLoading}
                 >
                     {isLoading ? (
                         <>
-                            <CgSpinner className='animate-spin size-6 text-white ' />
-                            Sending...
+                            <CgSpinner className='animate-spin size-7 text-white ' />
+                            <span className="text-white">Sending...</span>
                         </>
                     ) : "Send"
                     }

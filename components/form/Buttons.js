@@ -89,13 +89,13 @@ export const ScrollTopButton = () => {
     )
 }
 
-export const ButtonSubmit = ({ type, disabled, children }) => {
+export const ButtonSubmit = ({ type, disabled, children, loading }) => {
     return (
         <Button
             type={type}
             disabled={disabled}
             variant="navigate"
-            className="w-[30%] flex justify-center"
+            className={`min-w-[120px] flex justify-center ${loading ? "bg-chart-2" : "bg-background"}`}
         >
             {children}
         </Button>
