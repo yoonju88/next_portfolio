@@ -19,7 +19,7 @@ export default function DarkMode() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant='outline' size='icon' className="hover:shadow-inner hover:shadow-chart-2/50 px-3.5">
-                    {!resolvedTheme ? (
+                    {typeof window !== 'undefined' && !resolvedTheme ? (
                         <BiLoader className="h-5 w-5 animate-spin text-gray-400" />
                     ) : (
                         <>
