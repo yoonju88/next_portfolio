@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function DesignList({ cover, name, type, link }) {
     return (
-        <article className="lg:w-1/3 md:w-1/2 w-full h-64 p-4">
+        <article className="lg:w-[335px] md:min-w-[310px] w-full h-64 p-4">
             <Link
                 href={link}
                 className="group flex relative rounded-lg overflow-hidden h-full"
