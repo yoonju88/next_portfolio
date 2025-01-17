@@ -238,7 +238,7 @@ export const graphicData = [
     {
         id: 29,
         type: "print",
-        title: "Portrait Frame",
+        title: "Frames",
         cover: mur,
         images: [mur],
         tags: ["Photoshop", "Indesign"],

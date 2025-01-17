@@ -46,11 +46,11 @@ export default function designDetailsPage({ params }) {
                     </div>
                 </div>
             </div>
-            <span className="fixed top-40 left-20">
+            {/* <span className="fixed top-40 left-20">
                 <IconButton
                     href={'/works/design'}
                 />
-            </span>
+            </span> */}
         </section>
     )
 }

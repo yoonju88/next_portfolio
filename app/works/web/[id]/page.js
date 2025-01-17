@@ -57,11 +57,11 @@ export default function WebDetailsPage({ params }) {
                     </div>
                 </div>
             </article>
-            <span className="fixed top-20 left-20">
+            {/* <span className="fixed top-20 left-20">
                 <IconButton
                     href={'/works/web'}
                 />
-            </span>
+            </span> */}
         </section >
     )
 }
