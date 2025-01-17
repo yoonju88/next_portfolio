@@ -48,7 +48,7 @@ export default function pageNumber({ data, currentPage, setCurrentPage, totalPag
                     <PaginationNext
                         href="#"
                         onClick={handleNext}
-                        disabled={currentPage === totalPages + 1}
+                        disabled={currentPage === totalPages}
                     />
                 </PaginationItem>
             </PaginationContent>

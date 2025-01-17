@@ -12,14 +12,11 @@ export default function ListContainer({ data }) {
     const [isFilteredType, setIsFilteredType] = useState()
     const [currentPage, setCurrentPage] = useState(1)
     const filteredItems = ((!isFilteredType ? data : data.filter(item => item.type === isFilteredType)) || [])
-        .filter((event, index) => {
-            if ((currentPage - 1) * PER_PAGE <= index &&
-                PER_PAGE * currentPage > index
-            ) {
-                return true
-            }
-            return false
-        })
+    const paginatedItems = filteredItems.slice(
+        (currentPage - 1) * PER_PAGE,
+        currentPage * PER_PAGE
+    )
+
 
     const handleClick = (type) => {
         setIsFilteredType(type)
@@ -28,8 +25,8 @@ export default function ListContainer({ data }) {
     }
 
     const pageNumber = Math.floor((filteredItems?.length || 0) / PER_PAGE) + 1
-    const arrayPageNumber = [...Array(pageNumber || 0)]
-    const totalPages = Math.ceil(arrayPageNumber.length / PER_PAGE);
+    const totalPages = Math.ceil(filteredItems.length / PER_PAGE);
+    const arrayPageNumber = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     return (
         <div>
@@ -40,7 +37,7 @@ export default function ListContainer({ data }) {
                 />
             </span>
             <section className="flex flex-wrap pt-10 justify-center">
-                {filteredItems.map((item) => {
+                {paginatedItems.map((item) => {
                     return (
                         <DesignList
                             key={item.id}
