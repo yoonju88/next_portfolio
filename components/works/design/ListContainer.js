@@ -32,14 +32,14 @@ export default function ListContainer({ data }) {
     const totalPages = Math.ceil(arrayPageNumber.length / PER_PAGE);
 
     return (
-        <>
+        <div>
             <span className='flex items-center justify-center mt-10'>
                 <SelectSrollable
                     lists={typeDesigns}
                     onClick={handleClick}
                 />
             </span>
-            <section className="flex flex-wrap pt-10">
+            <section className="flex flex-wrap pt-10 justify-center">
                 {filteredItems.map((item) => {
                     return (
                         <DesignList
@@ -61,6 +61,6 @@ export default function ListContainer({ data }) {
                     totalPages={totalPages}
                 />
             </span>
-        </>
+        </div>
     )
 }
