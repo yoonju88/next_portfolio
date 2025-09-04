@@ -1,21 +1,26 @@
-import React from 'react'
+'use client'
+import { useTranslations, useLocale } from 'next-intl';
 import { AnimationLottie } from '../animation/DynamicMap'
 import { ButtonNavigate } from '../form/Buttons'
 import IntroAinimation from '@/public/animation_2.json'
 
-export default function Intro({ title, subt, description }) {
+
+export default function Intro() {
+    const t = useTranslations();
+    const locale = useLocale();
+
     return (
         <>
             <section className="lg:flex-grow md:w-1/2 w-[90%] lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2 animate-pulse "> Hello,
-                    {title}
-                    <br className="hidden lg:inline-block" /> {subt}
+                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2 animate-pulse ">
+                    {t('home.title')}
+                    <br className="hidden lg:inline-block" /> {t('home.subt')}
                 </h1>
-                <p className="mb-7 leading-relaxed text-foreground">{description}</p>
+                <p className="mb-7 leading-relaxed text-foreground">{t('home.description')}</p>
                 <div className='flex gap-6'>
                     <ButtonNavigate
-                        name="development web"
-                        href="/works/web"
+                        name={t('home.button1')}
+                        href={`/${locale}/works/web`}
                         variant="navigate"
                         size="default"
                     >
@@ -24,8 +29,8 @@ export default function Intro({ title, subt, description }) {
                         </svg>
                     </ButtonNavigate>
                     <ButtonNavigate
-                        name="graphic disign"
-                        href="/works/design"
+                        name={t('home.button2')}
+                        href={`/${locale}/works/design`}
                         variant="navigate"
                         size="default"
                     >

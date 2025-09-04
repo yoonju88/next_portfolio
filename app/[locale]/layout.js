@@ -13,29 +13,25 @@ const inter = Inter({ subsets: ['latin'] })
 
 // 로케일별 정적 경로 생성
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'fr' }];
+  return locales.map(l => ({ locale: l }));
 }
 
 // (선택) hreflang/SEO
-export function generateMetadata({ params }) {
-  return {
-    title: 'Yoonju Portfolio by NextJs',
-    description:
-      "With a wide range of services including web development, design, and content creation, I provide creative and efficient solutions. Check out my work and let’s start a project together.",
-    alternates: { languages: { en: '/en', fr: '/fr' } }
-  };
+export async function generateMetadata({ params }) {
+  const { locale } = params;
+  return { alternates: { languages: { en: '/en', fr: '/fr' } } };
 }
 
 export default async function RootLayout({ children, params }) {
   const { locale } = params;
   setRequestLocale(locale);
-  const messages = await getMessages()
+  const messages = await getMessages({ locale });
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased bg-background`}
       >
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers >
             <div className="pt-4 pr-10 ml-0 flex justify-end">
               <LocaleSwitcher />

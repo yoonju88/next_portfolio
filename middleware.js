@@ -1,15 +1,15 @@
-import { NextResponse } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
 import { locales, defaultLocale } from './i18n/routing';
 
-export function middleware(req) {
-    const { pathname } = req.nextUrl;
-    if (pathname.startsWith('/en') || pathname.startsWith('/fr') ||
-        pathname.startsWith('/_next') || pathname.includes('.')) {
-        return;
-    }
-    return NextResponse.redirect(new URL(`/en${pathname}`, req.url));
-}
+export default createMiddleware({
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+    // URL에 항상 /en, /fr를 붙여 쓰는 경우:
+    localePrefix: 'always'
+});
 
 export const config = {
-    matcher: ['/((?!api).*)']
+    matcher: [
+        '/((?!_next|_vercel|.*\\..*).*)' // _next, 정적 파일 등 제외
+    ]
 };

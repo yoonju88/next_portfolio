@@ -5,10 +5,12 @@ import Link from 'next/link'
 import DarkMode from './DarkMode'
 import DropDownMenu from './DropDownMenu'
 import { navLinks } from '@/utils/navLinks'
+import { useLocale } from 'next-intl'
 
 
 export default function header() {
     const path = usePathname() // Current page path
+    const locale = useLocale()
     const [underline, setUnderline] = useState({ width: 0, left: 0 })
     useEffect(() => {
         const activeLink = document.querySelector(`[data-active="true"]`);
@@ -44,19 +46,20 @@ export default function header() {
     }
     //check if the given link is the active page
     const isActive = (href) => {
-        if (href === '/') { return path === '/' }
-        return path.startsWith(href);
+        const localizedHref = `/${locale}${href === '/' ? '' : href}`
+        if (localizedHref === `/${locale}`) { return path === `/${locale}` }
+        return path.startsWith(localizedHref);
     };
     // check if any of the links in a dropdown are active
     const isDropDownActive = (links) => {
-        return links.some(link => path.startsWith(link.href));
+        return links.some(link => isActive(link.href));
     };
     const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
 
     return (
         <header className="px-10 flex flex-wrap flex-col md:flex-row items-center mt-4">
-            <Link href='/' className="flex title-font font-medium items-center mb-6 md:mb-0" >
+            <Link href={`/${locale}`} className="flex title-font font-medium items-center mb-6 md:mb-0" >
                 <span className="ml-3 text-4xl text-chart-2 font-extrabold" >Yoonju.T</span>
             </Link>
             <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -69,7 +72,7 @@ export default function header() {
                 />
                 {navLinks.map((nav) => {
                     if (nav.worksLinks) {
-                        const worksLinks = nav.worksLinks
+                        const worksLinks = nav.worksLinks.map(w => ({ ...w, href: `/${locale}${w.href}` }))
                         return (
                             <DropDownMenu
                                 key={nav.name}
@@ -87,18 +90,19 @@ export default function header() {
                                     }
                                 }}
                                 onMouseLeave={handleMouseLeave}
-                                isActive={isActive}
+                                isActive={(href) => path.startsWith(href)}
                             />
                         )
                     } else {
+                        const href = `/${locale}${nav.link === '/' ? '' : nav.link}`
                         return (
                             <Link
                                 key={nav.name}
-                                href={nav.link}
-                                className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : "font-medium"}`}
+                                href={href}
+                                className={`${linkStyle} ${path.startsWith(href) ? "font-bold" : "font-medium"}`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
-                                data-active={isActive(nav.link)}
+                                data-active={path.startsWith(href)}
                             >
                                 {nav.name}
                             </Link>
