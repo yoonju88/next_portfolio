@@ -19,12 +19,12 @@ export function generateStaticParams() {
 
 // (선택) hreflang/SEO
 export async function generateMetadata({ params }) {
-  const { locale } = params;
+  const { locale } = await params;
   return { alternates: { languages: { en: '/en', fr: '/fr' } } };
 }
 
 export default async function RootLayout({ children, params }) {
-  const { locale } = params;
+  const { locale } = await params;
   setRequestLocale(locale);
   const messages = await getMessages({ locale });
   return (
