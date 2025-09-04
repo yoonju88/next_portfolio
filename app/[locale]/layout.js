@@ -39,13 +39,12 @@ export default async function RootLayout({ children, params }) {
                 <LocaleSwitcher />
               </Suspense>
             </div>
-            <LocaleProbe />
-            <Suspense fallback={null}>
-              <Header />
-            </Suspense>
+            <Header />
             <main className="flex min-h-screen flex-col justify-center items-center">
-              {children}
-              <ScrollTopButton />
+              <Suspense fallback={null}>
+                {children}
+                <ScrollTopButton />
+              </Suspense>
             </main>
             <Footer />
           </Providers>
