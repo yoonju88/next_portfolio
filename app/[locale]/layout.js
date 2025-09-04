@@ -8,6 +8,7 @@ import { setRequestLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { locales } from '@/i18n/routing';
 import LocaleSwitcher from '@/components/LocaleSwitcher'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,9 +35,14 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers >
             <div className="pt-4 pr-10 ml-0 flex justify-end">
-              <LocaleSwitcher />
+              <Suspense fallback={null}>
+                <LocaleSwitcher />
+              </Suspense>
             </div>
-            <Header />
+            <LocaleProbe />
+            <Suspense fallback={null}>
+              <Header />
+            </Suspense>
             <main className="flex min-h-screen flex-col justify-center items-center">
               {children}
               <ScrollTopButton />
