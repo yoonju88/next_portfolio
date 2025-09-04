@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
 import { profileData } from '@/utils/Profile'
@@ -57,57 +57,67 @@ export default function AboutMePage() {
         <>
             <div className="container px-5 mx-auto flex flex-col">
                 <div className="lg:w-[90%] mx-auto mt-8">
-                    <Profile />
-                    <Services />
-                    <MySkills />
+                    <Suspense fallback={null}>
+                        <Profile />
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <Services />
+                    </Suspense>
+                    <Suspense fallback={null}>
+                        <MySkills />
+                    </Suspense>
                     <div className="py-8 w-full container mt-12 mx-auto flex flex-wrap justify-between">
-                        <ContentContainer
-                            title="Experience"
-                            data={experiences}
-                            icon={renderIcon("experience")}
-                            className={styleContainer}
-                        >
-                            <div className="flex flex-col items-center lg:gap-4 mb:gap-2 sm:gap-2">
-                                {experiences.map((item) => {
-                                    return (
-                                        <ExperienceLists
-                                            key={item.jobTitle}
-                                            startDate={item.duration.start}
-                                            endDate={item.duration.end}
-                                            jobTitle={item.jobTitle}
-                                            companyName={item.companyName}
-                                            address={item.address}
-                                            description={item.description}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        </ContentContainer>
-                        <ContentContainer
-                            title="Education"
-                            data={educations}
-                            icon={renderIcon("education")}
-                            className={`${styleContainer} lg:mt-0 md:mt-0 sm:mt-10`}
-                        >
-                            <div className="flex flex-col items-center gap-4 ">
-                                {educations.map((item) => {
-                                    return (
-                                        <EducationList
-                                            key={item.name}
-                                            startDate={item.duration.start}
-                                            endDate={item.duration.end}
-                                            name={item.name}
-                                            schoolName={item.schoolName}
-                                            link={item.link}
-                                            image={item.image}
-                                            description={item.description}
-                                            address={item.address}
-                                            degree={item.degree}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        </ContentContainer>
+                        <Suspense fallback={null}>
+                            <ContentContainer
+                                title="Experience"
+                                data={experiences}
+                                icon={renderIcon("experience")}
+                                className={styleContainer}
+                            >
+                                <div className="flex flex-col items-center lg:gap-4 mb:gap-2 sm:gap-2">
+                                    {experiences.map((item) => {
+                                        return (
+                                            <ExperienceLists
+                                                key={item.jobTitle}
+                                                startDate={item.duration.start}
+                                                endDate={item.duration.end}
+                                                jobTitle={item.jobTitle}
+                                                companyName={item.companyName}
+                                                address={item.address}
+                                                description={item.description}
+                                            />
+                                        )
+                                    })}
+                                </div>
+                            </ContentContainer>
+                        </Suspense>
+                        <Suspense fallback={null}>
+                            <ContentContainer
+                                title="Education"
+                                data={educations}
+                                icon={renderIcon("education")}
+                                className={`${styleContainer} lg:mt-0 md:mt-0 sm:mt-10`}
+                            >
+                                <div className="flex flex-col items-center gap-4 ">
+                                    {educations.map((item) => {
+                                        return (
+                                            <EducationList
+                                                key={item.name}
+                                                startDate={item.duration.start}
+                                                endDate={item.duration.end}
+                                                name={item.name}
+                                                schoolName={item.schoolName}
+                                                link={item.link}
+                                                image={item.image}
+                                                description={item.description}
+                                                address={item.address}
+                                                degree={item.degree}
+                                            />
+                                        )
+                                    })}
+                                </div>
+                            </ContentContainer>
+                        </Suspense>
                     </div>
                 </div>
             </div >
