@@ -6,6 +6,7 @@ import DarkMode from './DarkMode'
 import DropDownMenu from './DropDownMenu'
 import { navLinks } from '@/utils/navLinks'
 
+
 export default function header() {
     const path = usePathname() // Current page path
     const [underline, setUnderline] = useState({ width: 0, left: 0 })
@@ -54,61 +55,59 @@ export default function header() {
 
 
     return (
-        <header>
-            <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center mt-2">
-                <Link href='/' className="flex title-font font-medium items-center mb-6 md:mb-0" >
-                    <span className="ml-3 text-2xl text-chart-2 font-extrabold" >Yoonju.T</span>
-                </Link>
-                <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <div
-                        className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
-                        style={{
-                            width: underline.width,
-                            left: underline.left,
-                        }}
-                    />
-                    {navLinks.map((nav) => {
-                        if (nav.worksLinks) {
-                            const worksLinks = nav.worksLinks
-                            return (
-                                <DropDownMenu
-                                    key={nav.name}
-                                    name={nav.name}
-                                    className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : "font-medium"}`}
-                                    links={worksLinks}
-                                    onMouseEnter={(e) => {
-                                        handleMouseEnter(e);
-                                        const trigger = e.currentTarget;
-                                        if (isDropDownActive(worksLinks)) {
-                                            setUnderline({
-                                                width: underline.width,
-                                                left: underline.left,
-                                            });
-                                        }
-                                    }}
-                                    onMouseLeave={handleMouseLeave}
-                                    isActive={isActive}
-                                />
-                            )
-                        } else {
-                            return (
-                                <Link
-                                    key={nav.name}
-                                    href={nav.link}
-                                    className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : "font-medium"}`}
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                    data-active={isActive(nav.link)}
-                                >
-                                    {nav.name}
-                                </Link>
-                            )
-                        }
-                    })}
-                </nav>
-                <div className="md:mt-0 mt-6 md:ml-3 ml-0">
-                    <DarkMode />
-                </div>
+        <header className="px-10 flex flex-wrap flex-col md:flex-row items-center mt-4">
+            <Link href='/' className="flex title-font font-medium items-center mb-6 md:mb-0" >
+                <span className="ml-3 text-4xl text-chart-2 font-extrabold" >Yoonju.T</span>
+            </Link>
+            <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <div
+                    className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
+                    style={{
+                        width: underline.width,
+                        left: underline.left,
+                    }}
+                />
+                {navLinks.map((nav) => {
+                    if (nav.worksLinks) {
+                        const worksLinks = nav.worksLinks
+                        return (
+                            <DropDownMenu
+                                key={nav.name}
+                                name={nav.name}
+                                className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : "font-medium"}`}
+                                links={worksLinks}
+                                onMouseEnter={(e) => {
+                                    handleMouseEnter(e);
+                                    const trigger = e.currentTarget;
+                                    if (isDropDownActive(worksLinks)) {
+                                        setUnderline({
+                                            width: underline.width,
+                                            left: underline.left,
+                                        });
+                                    }
+                                }}
+                                onMouseLeave={handleMouseLeave}
+                                isActive={isActive}
+                            />
+                        )
+                    } else {
+                        return (
+                            <Link
+                                key={nav.name}
+                                href={nav.link}
+                                className={`${linkStyle} ${isActive(nav.link) ? "font-bold" : "font-medium"}`}
+                                onMouseEnter={handleMouseEnter}
+                                onMouseLeave={handleMouseLeave}
+                                data-active={isActive(nav.link)}
+                            >
+                                {nav.name}
+                            </Link>
+                        )
+                    }
+                })}
+            </nav>
+            <div className="md:mt-0 mt-6 md:ml-3 ml-0">
+                <DarkMode />
             </div>
         </header>
     )

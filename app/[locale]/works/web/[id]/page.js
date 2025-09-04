@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useParams } from 'next/navigation'
-import NotFoundPage from '@/app/not-found'
+import NotFoundPage from '@/app/[locale]/not-found'
 import { worksData } from '@/utils/worksData'
 import Image from 'next/image'
 import { IoLogoGithub } from "react-icons/io";

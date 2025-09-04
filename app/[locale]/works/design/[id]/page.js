@@ -2,7 +2,7 @@
 import React from 'react'
 import { useParams } from 'next/navigation'
 import { graphicData } from '@/utils/worksData'
-import NotFoundPage from '@/app/not-found'
+import NotFoundPage from '@/app/[locale]/not-found'
 import SlideImages from '@/components/works/design/SlideImages'
 import { IconButton } from '@/components/form/Buttons'
 import ToggleProperty from '@/components/works/design/ToggleProperty'
