@@ -8,6 +8,8 @@ import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
 import MySkills from '@/components/about-me/skills/MySkills'
 
+export const dynamic = 'force-dynamic'
+
 const icons = {
     experience: (
         <svg
