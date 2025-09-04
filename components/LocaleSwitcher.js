@@ -9,19 +9,24 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import ReactCountryFlag from 'react-country-flag';
+import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const LOCALES = ['en', 'fr']
 
 const OPTIONS = [
-    { code: 'en', label: 'English', flagCode: "GB" },
-    { code: 'fr', label: 'French', flagCode: "FR" }
+    { code: 'en', label: 'locale.english', flagCode: "GB" },
+    { code: 'fr', label: 'locale.french', flagCode: "FR" }
 ];
 
 export default function LocaleSwitcher() {
     const { locale } = useParams();
+    const [open, setOpen] = useState(false)
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const router = useRouter();
+    const t = useTranslations();
 
     const current = OPTIONS.find(l => l.code === locale) || OPTIONS[0];
 
@@ -44,22 +49,24 @@ export default function LocaleSwitcher() {
     }
 
     return (
-        <DropdownMenu>
+        <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                <Button variant="outline" size="default" className="flex items-center gap-2">
                     <ReactCountryFlag countryCode={current.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} />
-                    <span>{current.code.toUpperCase()}</span>
+                    <span>{t(current.label)}</span>
+                    <ChevronDown className={`transform transition-all duration-500 text-foreground delay-150 ease-in-out ${open ? 'rotate-180' : 'rotate-0'}`} />
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-36">
+            <DropdownMenuContent className="w-36 bg-background">
                 {OPTIONS.map(opt => (
                     <DropdownMenuItem
+
                         key={opt.code}
                         onClick={() => switchTo(opt.code)}
                         className="flex items-center gap-2"
                     >
                         <ReactCountryFlag countryCode={opt.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} />
-                        <span>{opt.label}</span>
+                        <span>{t(opt.label)}</span>
                     </DropdownMenuItem>
                 ))}
             </DropdownMenuContent>

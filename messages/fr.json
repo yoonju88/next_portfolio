@@ -5,5 +5,9 @@
         "description" : "Ici, vous trouverez les travaux que j’ai réalisés jusqu’à présent et les possibilités infinies qui s’ouvrent devant moi. De nouveaux projets et défis m’apportent toujours de l’enthousiasme et de l’inspiration. J’attends toujours avec impatience des collaborations qui repoussent les limites grâce à des technologies innovantes. Créons ensemble quelque chose d’extraordinaire !",
         "button1" : "Development Web",
         "button2" :"Design Graphique"
-    }
+    }, 
+    "locale": {
+    "english": "Anglais",
+    "french": "Français"
+  }
 }
