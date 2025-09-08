@@ -46,7 +46,30 @@
         "s4" : "Print",
         "s5" : "Logo",
         "s6" : "Personal Project"
-        }
+    },
+
+    "worksweb" : {
+        "a15": {
+            "title": "ArgentBank",
+            "tags": ["React", "Node.js", "Redux", "MongoDB", "API", "Swagger"],
+            "description": "I created a responsive dashboard and managed the application’s global state using React and Redux, integrating the back end through REST API calls. I defined the API endpoints with Swagger and used Node.js to handle the server."
+            },
+        "a14": {
+            "title": "724 events",
+            "tags": ["React", "Node.js", "SEO", "Unit testing", "Debug"],
+            "description": "I reviewed and fixed bugs using Chrome DevTools and React Developer Tools. I resolved issues with JavaScript and React, implemented unit and functional tests, and used Yarn and Node.js for dependency management and test execution."
+            },
+        "a13": {
+            "title": "Kasa",
+            "tags": ["React", "Figma"],
+            "description": "I developed a responsive web application using React. I set up navigation between pages with React Router and built the interface using reusable React components."
+            },
+        "a12": {
+            "title": "Architecture",
+            "tags": ["JavaScript", "CSS", "Node.js", "API", "Figma"],
+            "description": "I created a dynamic webpage in JavaScript, including a login page and a modal for media uploads. I integrated a backend API and used Figma for layout and implementation. I also used Kanban for efficient task tracking and collaboration."
+            }
+    }
 
 }
 

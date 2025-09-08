@@ -38,7 +38,7 @@
     "title" : "Design Graphic",
     "description" : "Fort de plus de trois ans d’expérience, j’ai acquis une expertise approfondie dans des domaines allant au-delà du design graphique, tels que le développement d’identités visuelles, l’illustration et la création de contenus marketing. Pour chaque projet, je propose des solutions visuelles créatives et pertinentes, fidèles à la vision et aux objectifs du client, tout en veillant à renforcer la valeur et l’impact de sa marque."
   }, 
-  
+
   "selection" : {
       "title" : "Sélectionnez une catégorie",
       "s1" : "Communication",
@@ -47,5 +47,28 @@
       "s4" : "Impression",
       "s5" : "Logo",
       "s6" : "Projet personnel"
+    }, 
+
+  "worksweb": {
+    "a15": {
+      "title": "ArgentBank",
+      "tags": ["React", "Node.js", "Redux", "MongoDB", "API", "Swagger"],
+      "description": "J’ai conçu un tableau de bord responsive et géré l’état global de l’application avec React et Redux, tout en intégrant le back-end via des appels REST. J’ai défini les endpoints avec Swagger et utilisé Node.js pour la partie serveur."
+    },
+    "a14": {
+      "title": "724 events",
+      "tags": ["React", "Node.js", "SEO", "Tests unitaires", "Débogage"],
+      "description": "J’ai analysé et corrigé des anomalies avec Chrome DevTools et React Developer Tools. J’ai résolu des problèmes JavaScript/React, mis en place des tests unitaires et fonctionnels, et utilisé Yarn et Node.js pour la gestion des dépendances et l’exécution des tests."
+    },
+    "a13": {
+       "title": "Kasa",
+      "tags": ["React", "Figma"],
+      "description": "J’ai développé une application web responsive avec React. J’ai configuré la navigation entre les pages avec React Router et construit l’interface à l’aide de composants réutilisables."
+    },
+    "a12": {
+      "title": "Architecture",
+      "tags": ["JavaScript", "CSS", "Node.js", "API", "Figma"],
+      "description": "J’ai créé une page web dynamique en JavaScript, incluant une page de connexion et une modale d’upload. J’ai intégré une API back-end et utilisé Figma pour la conception et la mise en page. J’ai également adopté une gestion Kanban pour un suivi efficace des tâches."
     }
+  }
 }
