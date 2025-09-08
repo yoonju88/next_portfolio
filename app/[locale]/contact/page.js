@@ -6,12 +6,12 @@ import PersonalInfo from '@/components/contact/PersonalInfo'
 
 export default function contactPage() {
     return (
-        <section className="w-5/6 flex justify-center items-center mt-20 mb-24">
-            <div className="py-8 flex flex-wrap justify-around items-center">
-                <span className="lg:w-[35%] w-[50%] bg-background rounded-lg overflow-hidden flex flex-col justify-center items-center">
+        <section className="mt-20 mb-24 px-10">
+            <div className="py-10 flex flex-wrap justify-center gap-20">
+                <span className="pl-14 lg:w-[40%] w-[70%] bg-background rounded-lg overflow-hidden flex flex-col justify-center items-center">
                     <AnimationLottie animation={emailAnimation} />
                 </span>
-                <div className="lg:w-[40%] w-full bg-background border-4 border-chart-2/50 rounded-lg p-8 flex flex-col mt-10 shadow-md">
+                <div className="lg:w-[50%] w-full bg-background border-4 border-chart-2/50 rounded-lg p-8 flex flex-col mt-10 shadow-md">
                     <div className="flex items-center justify-between mb-4">
                         <h1 className="text-3xl font-medium title-font">Contact Me</h1>
                         <PersonalInfo

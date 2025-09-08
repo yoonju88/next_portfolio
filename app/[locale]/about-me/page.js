@@ -53,12 +53,15 @@ export default function AboutMePage() {
     const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background rounded-xl box-border"
     return (
         <>
-            <div className="container px-5 mx-auto flex flex-col">
-                <div className="lg:w-[90%] mx-auto mt-8">
+            <div className="px-5 mx-auto flex flex-col">
+                <div className="mx-auto mt-8 px-10">
                     <Profile />
+                    <div className='border-t-2 border-foreground/20 mt-10 mx-10' />
                     <Services />
+                    <div className='border-t-2 border-foreground/20 mb-10 mx-10' />
                     <MySkills />
-                    <div className="py-8 w-full container mt-12 mx-auto flex flex-wrap justify-between">
+                    <div className='border-t-2 border-foreground/20 mt-10 mx-10' />
+                    <div className="py-8 w-full mt-12 mx-auto flex flex-wrap justify-between">
                         <ContentContainer
                             title="Experience"
                             data={experiences}
@@ -109,6 +112,7 @@ export default function AboutMePage() {
                     </div>
                 </div>
             </div >
+            <div className='border-t-2 border-foreground/20 mb-10 mx-10' />
             <ContactMe />
         </>
     )

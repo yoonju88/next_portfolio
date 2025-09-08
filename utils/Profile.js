@@ -112,13 +112,13 @@ export const buttonTypes = [
     },
     {
         type: "web",
-        name: "Web development",
+        name: "Web tool",
         id: 15,
 
     },
     {
         type: "design",
-        name: "Graphic design",
+        name: "Graphic tool",
         id: 16,
     },
 ]
@@ -132,6 +132,10 @@ import Ps from '@/public/ps.png'
 import Ai from '@/public/ai.png'
 import Ae from '@/public/ae.png'
 import Figma from '@/public/figma.png'
+import Fb from '@/public/firebase-logo.png'
+import St from '@/public/stripe.jpeg'
+import Sh from '@/public/shadcn.png'
+import Cv from '@/public/canva.jpg'
 
 export const mySkillsData = [
     {
@@ -155,7 +159,7 @@ export const mySkillsData = [
     {
         title: "TypeScript",
         icon: Ts,
-        category: "web",
+        type: "web",
         id: 459,
     },
     {
@@ -165,10 +169,34 @@ export const mySkillsData = [
         id: 460,
     },
     {
+        title: "Firebase",
+        icon: Fb,
+        type: "web",
+        id: 455,
+    },
+    {
+        title: "Stripe",
+        icon: St,
+        type: "web",
+        id: 454,
+    },
+    {
+        title: "Shadcn/ui",
+        icon: Sh,
+        type: "web",
+        id: 453,
+    },
+    {
         title: "Figma",
         icon: Figma,
         type: "design",
         id: 461,
+    },
+    {
+        title: "Canva",
+        icon: Cv,
+        type: "design",
+        id: 465,
     },
     {
         title: "Photoshop",

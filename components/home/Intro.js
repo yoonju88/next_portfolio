@@ -10,9 +10,9 @@ export default function Intro() {
     const locale = useLocale();
 
     return (
-        <>
-            <section className="lg:flex-grow md:w-1/2 w-[90%] lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2 animate-pulse ">
+        <div className="flex flex-col md:flex-row items-center">
+            <section className=" order-2 md:order-1 w-full lg:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2">
                     {t('home.title')}
                     <br className="hidden lg:inline-block" /> {t('home.subt')}
                 </h1>
@@ -40,9 +40,9 @@ export default function Intro() {
                     </ButtonNavigate>
                 </div>
             </section>
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <div className="order-1 md:order-2 w-full lg:w-1/2 mb-10 md:mb-0 flex justify-center">
                 <AnimationLottie animation={IntroAinimation} />
             </div>
-        </>
+        </ div>
     )
 }

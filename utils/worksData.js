@@ -319,16 +319,5 @@ export const graphicData = [
         creationYear: "This project was created in 2022",
         companyName: "Tasty",
         description: "Creation of a logo and business card for a food trading company."
-    },
-    {
-        id: 37,
-        type: "logo",
-        title: "Restaurant",
-        cover: resto,
-        images: [resto],
-        tags: ["Illustrator"],
-        creationYear: "This project was created in 2021",
-        companyName: "Insomniac",
-        description: "I re-styled the logo image of the restaurant"
-    },
+    }
 ]

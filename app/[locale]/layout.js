@@ -42,7 +42,7 @@ export default async function RootLayout({ children, params }) {
             <Suspense fallback={null}>
               <Header />
             </Suspense>
-            <main className="flex min-h-screen flex-col justify-center items-center">
+            <main className="flex min-h-screen flex-col justify-center">
               {children}
               <ScrollTopButton />
             </main>
