@@ -6,9 +6,32 @@
         "button1" : "Web Development",
         "button2" :"Graphic Design"
     },
+
     "locale" : {
-    "english": "English",
-    "french": "French"
+        "english": "English",
+        "french": "French"
+    },
+
+    "menu" :{
+        "home" : "Home",
+        "works": {
+            "label": "Works",
+            "web": "Web",
+            "design": "Design"
+        },
+        "aboutme": "About me",
+        "contact" : "Contact"
+    },
+
+    "theme": {
+        "light": "Light",
+        "dark": "Dark",
+        "toggle": "Toggle theme"
+    },
+
+    "web" : {
+        "title" : "Web Development",
+        "description" : "I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
     }
 }
 

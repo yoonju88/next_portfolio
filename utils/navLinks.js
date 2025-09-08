@@ -1,11 +1,12 @@
+
 export const navLinks = [
-    { name: "home", link: '/' },
+    { key: "menu.home", link: '/' },
     {
-        name: "works", worksLinks: [
-            { href: '/works/web', linkName: 'developement web' },
-            { href: '/works/design', linkName: 'graphic design' },
+        key: "menu.works.label", worksLinks: [
+            { href: '/works/web', key: 'menu.works.web' },
+            { href: '/works/design', key: 'menu.works.design' },
         ]
     },
-    { name: "about me", link: '/about-me' },
-    { name: "contact", link: '/contact' }
+    { key: "menu.aboutme", link: '/about-me' },
+    { key: "menu.contact", link: '/contact' }
 ]

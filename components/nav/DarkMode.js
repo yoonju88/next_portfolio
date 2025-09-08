@@ -11,9 +11,11 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useTranslations } from "next-intl";
 
 export default function DarkMode() {
     const { theme, resolvedTheme, setTheme } = useTheme()
+    const t = useTranslations("theme")
 
     return (
         <DropdownMenu>
@@ -27,15 +29,15 @@ export default function DarkMode() {
                             <FaMoon className={`text-amber-300 absolute  add-transition ${theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
                         </>
                     )}
-                    <span className='sr-only'>Toggle theme</span>
+                    <span className='sr-only'>{t("toggle")}</span>
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end' className="bg-background/50">
                 <DropdownMenuItem onClick={() => setTheme('light')}>
-                    Light
+                    {t("light")}
                 </DropdownMenuItem>
                 <DropdownMenuItem onClick={() => setTheme('dark')}>
-                    Dark
+                    {t("dark")}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

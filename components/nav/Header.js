@@ -1,17 +1,32 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { usePathname } from 'next/navigation'
+import { useLocale, useTranslations } from "next-intl";
 import Link from 'next/link'
 import DarkMode from './DarkMode'
 import DropDownMenu from './DropDownMenu'
 import { navLinks } from '@/utils/navLinks'
-import { useLocale } from 'next-intl'
 
+const SUPPORTED_LOCALES = ["en", "fr"];
 
 export default function header() {
     const path = usePathname() // Current page path
-    const locale = useLocale()
+    const rawLocale = useLocale()
+    const locale = SUPPORTED_LOCALES.includes(rawLocale) ? rawLocale : "en";
+    const t = useTranslations()
     const [underline, setUnderline] = useState({ width: 0, left: 0 })
+
+    const withLocale = (href) => `/${locale}${href === "/" ? "" : href}`
+
+    const tf = (key) => {
+        const fallback = key?.split(".").pop() || key || "";
+        try {
+            return t(key, { default: fallback })
+        } catch {
+            return fallback
+        }
+    }
+
     useEffect(() => {
         const activeLink = document.querySelector(`[data-active="true"]`);
         if (activeLink) {
@@ -46,7 +61,7 @@ export default function header() {
     }
     //check if the given link is the active page
     const isActive = (href) => {
-        const localizedHref = `/${locale}${href === '/' ? '' : href}`
+        const localizedHref = withLocale(href);
         if (localizedHref === `/${locale}`) { return path === `/${locale}` }
         return path.startsWith(localizedHref);
     };
@@ -56,6 +71,20 @@ export default function header() {
     };
     const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
+    const localizedNav = useMemo(
+        () =>
+            navLinks.map((nav) => ({
+                ...nav,
+                label: tf(nav.key),
+                href: nav.link ? withLocale(nav.link) : undefined,
+                worksLinks: nav.worksLinks?.map((v) => ({
+                    ...v,
+                    label: tf(v.key),
+                    href: withLocale(v.href),
+                })),
+            })),
+        [t, locale]
+    )
 
     return (
         <header className="px-10 flex flex-wrap flex-col md:flex-row items-center mt-4">
@@ -70,23 +99,20 @@ export default function header() {
                         left: underline.left,
                     }}
                 />
-                {navLinks.map((nav) => {
+                {localizedNav.map((nav) => {
                     if (nav.worksLinks) {
-                        const worksLinks = nav.worksLinks.map(w => ({ ...w, href: `/${locale}${w.href}` }))
                         return (
                             <DropDownMenu
-                                key={nav.name}
-                                name={nav.name}
-                                className={`${linkStyle} ${isDropDownActive(worksLinks) ? "font-bold" : "font-medium"}`}
-                                links={worksLinks}
+                                key={nav.key}
+                                name={nav.label}
+                                className={`${linkStyle} ${isDropDownActive(nav.worksLinks) ? "font-bold" : "font-medium"
+                                    }`}
+                                links={nav.worksLinks}
                                 onMouseEnter={(e) => {
                                     handleMouseEnter(e);
                                     const trigger = e.currentTarget;
-                                    if (isDropDownActive(worksLinks)) {
-                                        setUnderline({
-                                            width: underline.width,
-                                            left: underline.left,
-                                        });
+                                    if (isDropDownActive(nav.worksLinks)) {
+                                        setUnderline((u) => ({ ...u }));
                                     }
                                 }}
                                 onMouseLeave={handleMouseLeave}
@@ -94,17 +120,19 @@ export default function header() {
                             />
                         )
                     } else {
-                        const href = `/${locale}${nav.link === '/' ? '' : nav.link}`
+                        const href = nav.href;
+                        const active = path.startsWith(href)
+
                         return (
                             <Link
-                                key={nav.name}
+                                key={nav.key}
                                 href={href}
-                                className={`${linkStyle} ${path.startsWith(href) ? "font-bold" : "font-medium"}`}
+                                className={`${linkStyle} ${active ? "font-bold" : "font-medium"}`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                                 data-active={path.startsWith(href)}
                             >
-                                {nav.name}
+                                {nav.label}
                             </Link>
                         )
                     }
