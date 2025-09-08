@@ -61,28 +61,34 @@ export const worksData = [
 export const typeDesigns = [
     {
         id: 30,
-        type: "communication",
+        key: "selection.s1",
+        value: "communication"
     },
     {
         id: 31,
-        type: "production",
+        key: "selection.s2",
+        value: "production"
     },
     {
         id: 32,
-        type: "infographic",
+        key: "selection.s3",
+        value: "infographic"
     },
 
     {
         id: 33,
-        type: "print",
+        key: "selection.s4",
+        value: "print"
     },
     {
         id: 34,
-        type: "logo",
+        key: "selection.s5",
+        value: "logo"
     },
     {
         id: 35,
-        type: "personal project",
+        key: "selection.s6",
+        value: "personal project"
     },
 ]
 

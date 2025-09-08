@@ -32,5 +32,20 @@
   "web" : {
     "title" : "Development Web",
     "description" : "J’ai conçu et développé des applications web créatives et performantes en m’appuyant sur des technologies modernes telles que React et Next.js, afin de proposer des interfaces ergonomiques et intuitives. Mon travail s’est axé sur l’intégration de différentes API et bases de données, dans le but d’optimiser les performances globales et d’enrichir l’expérience utilisateur."
-  }
+  },
+
+  "design" : {
+    "title" : "Design Graphic",
+    "description" : "Fort de plus de trois ans d’expérience, j’ai acquis une expertise approfondie dans des domaines allant au-delà du design graphique, tels que le développement d’identités visuelles, l’illustration et la création de contenus marketing. Pour chaque projet, je propose des solutions visuelles créatives et pertinentes, fidèles à la vision et aux objectifs du client, tout en veillant à renforcer la valeur et l’impact de sa marque."
+  }, 
+  
+  "selection" : {
+      "title" : "Sélectionnez une catégorie",
+      "s1" : "Communication",
+      "s2" : "Production",
+      "s3" : "Infographie",
+      "s4" : "Impression",
+      "s5" : "Logo",
+      "s6" : "Projet personnel"
+    }
 }

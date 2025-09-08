@@ -32,7 +32,22 @@
     "web" : {
         "title" : "Web Development",
         "description" : "I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
-    }
+    },
+
+    "design" : {
+        "title" : "Graphic Design",
+        "description" : "With over 3 years of experience, I have gained extensive expertise in various fields beyond graphic design, including brand identity development, illustration, and marketing content creation. For each project, I provide creative and effective visual solutions that reflect the client’s vision and goals, focusing on delivering designs that maximize the value of their brand."
+    },
+    "selection" : {
+        "title" : "select a category",
+        "s1" : "Communication",
+        "s2" : "Production",
+        "s3" : "Infographic",
+        "s4" : "Print",
+        "s5" : "Logo",
+        "s6" : "Personal Project"
+        }
+
 }
 
 

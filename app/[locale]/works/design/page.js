@@ -3,14 +3,16 @@ import ProjectTitle from '@/components/works/ProjectTitle'
 import ListContainer from '@/components/works/design/ListContainer'
 import { graphicData } from '@/utils/worksData'
 import WorksCardLoading from '@/components/loading/WorksCardLoading'
+import { getTranslations } from 'next-intl/server'
 
-
-export default function DesignPage() {
+export default async function DesignPage({ params }) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale })
     return (
         <section className="flex flex-col justify-center mt-20 mb-20 w-full">
             <ProjectTitle
-                title="graphic design"
-                description="With over 3 years of experience, I have gained extensive expertise in various fields beyond graphic design, including brand identity development, illustration, and marketing content creation. For each project, I provide creative and effective visual solutions that reflect the client’s vision and goals, focusing on delivering designs that maximize the value of their brand."
+                title={t("design.title")}
+                description={t("design.description")}
             />
             <Suspense fallback={<WorksCardLoading />}>
                 <ListContainer data={graphicData} />
