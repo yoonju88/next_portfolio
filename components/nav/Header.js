@@ -9,7 +9,7 @@ import { navLinks } from '@/utils/navLinks'
 
 const SUPPORTED_LOCALES = ["en", "fr"];
 
-export default function header() {
+export default function Header() {
     const path = usePathname() // Current page path
     const rawLocale = useLocale()
     const locale = SUPPORTED_LOCALES.includes(rawLocale) ? rawLocale : "en";
@@ -21,7 +21,7 @@ export default function header() {
     const tf = (key) => {
         const fallback = key?.split(".").pop() || key || "";
         try {
-            return t(key, { default: fallback })
+            return t(key)
         } catch {
             return fallback
         }
@@ -59,17 +59,16 @@ export default function header() {
             setUnderline({ width: 0, left: 0 });
         }
     }
-    //check if the given link is the active page
-    const isActive = (href) => {
-        const localizedHref = withLocale(href);
+    // Determine active state from a LOCALIZED href
+    const isPathActive = (localizedHref) => {
         if (localizedHref === `/${locale}`) { return path === `/${locale}` }
         return path.startsWith(localizedHref);
     };
     // check if any of the links in a dropdown are active
     const isDropDownActive = (links) => {
-        return links.some(link => isActive(link.href));
+        return links.some(link => isPathActive(link.href));
     };
-    const linkStyle = "capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
+    const linkStyle = "inline-block capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer"
 
     const localizedNav = useMemo(
         () =>
@@ -93,7 +92,7 @@ export default function header() {
             </Link>
             <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <div
-                    className='absolute bottom-0 h-[2px] bg-foreground/80 transtion-all duration-500'
+                    className='absolute bottom-0 h-[2px] bg-foreground/80 transition-all duration-500'
                     style={{
                         width: underline.width,
                         left: underline.left,
@@ -116,12 +115,12 @@ export default function header() {
                                     }
                                 }}
                                 onMouseLeave={handleMouseLeave}
-                                isActive={(href) => path.startsWith(href)}
+                                isActive={(href) => isPathActive(href)}
                             />
                         )
                     } else {
                         const href = nav.href;
-                        const active = path.startsWith(href)
+                        const active = isPathActive(href)
 
                         return (
                             <Link
@@ -130,7 +129,7 @@ export default function header() {
                                 className={`${linkStyle} ${active ? "font-bold" : "font-medium"}`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
-                                data-active={path.startsWith(href)}
+                                data-active={active}
                             >
                                 {nav.label}
                             </Link>
