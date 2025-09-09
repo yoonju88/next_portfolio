@@ -7,7 +7,7 @@ import DarkMode from './DarkMode'
 import DropDownMenu from './DropDownMenu'
 import { navLinks } from '@/utils/navLinks'
 
-const SUPPORTED_LOCALES = ["en", "fr"];
+const SUPPORTED_LOCALES = ["en", "fr", "ko"];
 
 export default function Header() {
     const path = usePathname() // Current page path

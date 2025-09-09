@@ -1,10 +1,10 @@
 { 
   "home" : {
-        "title": "Bonjour, je suis Yoonju!",
-        "subt" :"Bienvenue dans mon univers créatif numérique",
-        "description" : "Découvrez un aperçu de mes réalisations et des perspectives infinies qui s’ouvrent à l’ère du numérique. Chaque projet constitue une occasion d’allier rigueur et créativité, et de transformer les défis en sources d’innovation. J’accorde une importance particulière aux collaborations ambitieuses qui repoussent les limites et exploitent pleinement le potentiel des technologies émergentes. Ensemble, donnons vie à des projets remarquables et porteurs de sens.",
-        "button1" : "Development Web",
-        "button2" :"Design Graphique"
+    "title": "Bonjour, je suis Yoonju!",
+    "subt" :"Bienvenue dans mon univers créatif numérique",
+    "description" : "Découvrez un aperçu de mes réalisations et des perspectives infinies qui s’ouvrent à l’ère du numérique. Chaque projet constitue une occasion d’allier rigueur et créativité, et de transformer les défis en sources d’innovation. J’accorde une importance particulière aux collaborations ambitieuses qui repoussent les limites et exploitent pleinement le potentiel des technologies émergentes. Ensemble, donnons vie à des projets remarquables et porteurs de sens.",
+    "button1" : "Development Web",
+    "button2" :"Design Graphique"
     }, 
 
   "locale": {
@@ -32,22 +32,21 @@
 
   "web" : {
     "title" : "Development Web",
-    "description" : "J’ai conçu et développé des applications web créatives et performantes en m’appuyant sur des technologies modernes telles que React et Next.js, afin de proposer des interfaces ergonomiques et intuitives. Mon travail s’est axé sur l’intégration de différentes API et bases de données, dans le but d’optimiser les performances globales et d’enrichir l’expérience utilisateur."
+    "description" : "J’ai développé des applications web en utilisant des technologies modernes telles que React et Next.js. Au-delà de la simple fonctionnalité, j’ai conçu des interfaces claires et faciles à utiliser, avec des mises en page responsives adaptées à tous les appareils. J’ai intégré plusieurs API et bases de données afin d’offrir de bonnes performances et une expérience fluide pour l’utilisateur. En structurant le code sous forme de composants réutilisables, j’ai facilité la maintenance et l’évolution des projets. J’ai également appliqué les dernières tendances du web et les normes d’accessibilité pour garantir une utilisation confortable par tous. Grâce à une expérience couvrant la planification, le design et le développement, j’ai acquis la capacité d’écrire un code propre et de collaborer efficacement des compétences directement applicables en entreprise."
   },
-
   "design" : {
     "title" : "Design Graphic",
-    "description" : "Fort de plus de trois ans d’expérience, j’ai acquis une expertise approfondie dans des domaines allant au-delà du design graphique, tels que le développement d’identités visuelles, l’illustration et la création de contenus marketing. Pour chaque projet, je propose des solutions visuelles créatives et pertinentes, fidèles à la vision et aux objectifs du client, tout en veillant à renforcer la valeur et l’impact de sa marque."
+    "description" : "Fort de plus de trois ans d’expérience, j’ai développé une expertise en identité de marque, illustration et création de contenus marketing. Au-delà de la réalisation visuelle, j’interviens dès la phase de conception pour traduire la vision et les objectifs des clients en design efficace. En alliant couleurs, typographie et images, je renforce la valeur de la marque et propose des solutions créatives et durables."
   }, 
 
   "selection" : {
-      "title" : "Sélectionnez une catégorie",
+      "title" : "Sélection de catégorie",
       "s1" : "Communication",
-      "s2" : "Production",
-      "s3" : "Infographie",
-      "s4" : "Impression",
-      "s5" : "Logo",
-      "s6" : "Projet personnel"
+      "s2" : "Design produits",
+      "s3" : "Design infographie",
+      "s4" : "Design imprimé",
+      "s5" : "Logo & Identité visuelle",
+      "s6" : "Projets personnels"
     }, 
 
   "worksweb": {
@@ -71,5 +70,127 @@
       "tags": ["JavaScript", "CSS", "Node.js", "API", "Figma"],
       "description": "J’ai créé une page web dynamique en JavaScript, incluant une page de connexion et une modale d’upload. J’ai intégré une API back-end et utilisé Figma pour la conception et la mise en page. J’ai également adopté une gestion Kanban pour un suivi efficace des tâches."
     }
-  }
+  },
+
+  "weblabels" : {
+      "duration" : "Durée du project",
+      "techs" : "Outils et technologies",
+      "link" : "Voir sur GitHub",
+      "days" : "jours"
+  },
+  "designlabels" : {
+    "program" : "Logiciel utilisés",
+    "cy" : "Année de création",
+    "company" : "Entreprise collaboratrice"
+  },
+  "worksgraphic": {
+    "b20": {
+      "title": "Invitation",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Conception et réalisation d’invitations web et imprimées pour divers événements de Fusalp, en intégrant l’identité saisonnière et les éléments visuels de la marque dans le design global. Plus qu’un simple support de communication, chaque invitation a été pensée dans le choix des couleurs, de la typographie et de la mise en page afin de transmettre efficacement l’image et le message de la marque, contribuant ainsi à renforcer la cohérence visuelle et l’expérience globale de l’événement.",
+      "tags": ["Indesign"]
+    },
+    "b21": {
+      "title": "Lookbook",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de lookbooks, contribuant à la représentation visuelle des collections saisonnières de la marque et à la promotion de leurs lancements.",
+      "tags": ["Indesign"]
+    },
+    "b19": {
+      "title": "Magazine",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de pages de magazines de mode reflétant l’identité de la marque, avec des mises en page visuelles attractives pour capter l’attention des lecteurs.",
+      "tags": ["Indesign"]
+    },
+    "b22": {
+      "title": "Communication",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de visuels de presse, conception de graphiques et d’images percutants pour transmettre efficacement le message de la marque aux médias et renforcer sa présence publique.",
+      "tags": ["Indesign"]
+    },
+    "b23": {
+      "title": "Goodies",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Conception de divers produits promotionnels et cadeaux, dont un jeu de cartes utilisant des images saisonnières et lookbooks, des autocollants pour une collaboration avec l’équipe britannique de ski, des boîtes de chocolats, des bouteilles d’eau, etc. Tous les designs ont été réalisés dans le respect de l’identité de la marque, avec une esthétique sophistiquée et élégante.",
+      "tags": ["Illustrator", "Photoshop"]
+    },
+    "b24": {
+      "title": "Produit",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Vectorisation de produits pour la nouvelle saison avec Illustrator et mise à jour continue des modifications de design tout au long du processus de développement. Contribution également à la création d’un catalogue listant tous les produits une fois la gamme finalisée.",
+      "tags": ["Illustrator"]
+    },
+    "b25": {
+      "title": "Motif",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de motifs pour tissus reflétant l’identité de chaque saison.",
+      "tags": ["Illustrator"]
+    },
+    "b26": {
+      "title": "Fiche technique",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de fiches techniques pour les accessoires utilisés dans les produits, fournissant des informations précises nécessaires au développement et à la production.",
+      "tags": ["Illustrator"]
+    },
+    "b27": {
+      "title": "Pictogramme",
+      "cy": "Ce projet a été réalisé en 2022.",
+      "description": "Création de pictogrammes pour les étiquettes de vêtements, avec des icônes claires pour communiquer les instructions de lavage et d’entretien.",
+      "tags": ["Illustrator"]
+    },
+    "b28": {
+      "title": "Pictogramme",
+      "cy": "Ce projet a été réalisé en 2021.",
+      "description": "Création de pictogrammes pour un Workbook, avec des icônes claires pour communiquer les instructions de lavage et d’entretien.",
+      "tags": ["Illustrator"]
+    },
+    "b29": {
+      "title": "Cadres",
+      "cy": "Ce projet a été réalisé en 2023.",
+      "description": "Sélection d’images vintage en accord avec l’identité de la marque et création d’une mise en page murale de cadres photos.",
+      "tags": ["Photoshop", "Indesign"]
+    },
+    "b30": {
+      "title": "Publicité",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Création de visuels publicitaires pour le métro parisien, avec des graphismes percutants afin de promouvoir efficacement la marque et capter l’attention des voyageurs.",
+      "tags": ["Indesign"]
+    },
+    "b31": {
+      "title": "Vitrine",
+      "cy": "J’ai travaillé sur ce type de tâches de 2021 à 2023.",
+      "description": "Conception de graphismes pour les vitrines de boutiques, intégrant des éléments en accord avec l’identité visuelle et saisonnière de la marque.",
+      "tags": ["Indesign"]
+    },
+    "b32": {
+      "title": "Montage",
+      "cy": "J’ai travaillé sur ce type de tâches de 2020 à 2023.",
+      "description": "Création d’un montage visuel unique en combinant diverses images.",
+      "tags": ["Photoshop"]
+    },
+    "b33": {
+      "title": "Illustration",
+      "cy": "J’ai travaillé sur ce type de tâches de 2020 à 2023.",
+      "description": "Passionné par l’illustration, j’ai créé des œuvres inspirées d’images en utilisant Illustrator.",
+      "tags": ["Illustrator"]
+    },
+    "b34": {
+      "title": "Séoul",
+      "cy": "Ce projet a été réalisé en 2022.",
+      "description": "Création d’une animation de la vue nocturne de Séoul.",
+      "tags": ["After Effect"]
+    },
+    "b35": {
+      "title": "Électricité",
+      "cy": "Ce projet a été réalisé en 2023.",
+      "description": "Création d’un logo pour une entreprise d’électricité ainsi que des autocollants pour véhicules.",
+      "tags": ["Illustrator"]
+    },
+    "b36": {
+      "title": "Fruit",
+      "cy": "Ce projet a été réalisé en 2022.",
+      "description": "Création d’un logo et d’une carte de visite pour une société de commerce alimentaire.",
+      "tags": ["Illustrator"]
+    }
+  } 
 }

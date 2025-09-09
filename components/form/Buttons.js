@@ -58,7 +58,7 @@ export const ScrollTopButton = () => {
 
     useEffect(() => {
         const toggleVisibility = () => {
-            setIsVisible(window.scrollY > 300)
+            setIsVisible(window.scrollY > 350)
         }
         window.addEventListener("scroll", toggleVisibility)
         return () => {
@@ -77,7 +77,7 @@ export const ScrollTopButton = () => {
 
     return (
         <button
-            className={`flex flex-col fixed bottom-52 right-8 py-1.5 px-1.5 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 hover:animate-none ${isVisible ? "opacity-100 scale-100 animate-bounce" : "opacity-0 scale-0"}`}
+            className={`flex flex-col fixed bottom-36 right-8 py-1.5 px-1.5 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 hover:animate-none ${isVisible ? "opacity-100 scale-100 animate-bounce" : "opacity-0 scale-0"}`}
             onClick={scrollToTop}
             disabled={!isVisible}
         >

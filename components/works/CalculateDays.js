@@ -1,5 +1,5 @@
 'use client'
-export default function CalculateDays({ startDate, endDate }) {
+export default function CalculateDays({ startDate, endDate, days }) {
     const formatDate = (date) => {
         const d = new Date(date);
         return d.toLocaleDateString('en-EU', {
@@ -24,7 +24,7 @@ export default function CalculateDays({ startDate, endDate }) {
 
     return (
         <>
-            <span className="ml-2 text-foreground/75">{formattedStartDate} - {formattedEndDate} ({caculatedPeriodWorksDays} days) </span>
+            <span className="ml-2 text-foreground/75">{formattedStartDate} - {formattedEndDate} ({caculatedPeriodWorksDays} {days}) </span>
         </>
     )
 }

@@ -1,4 +1,4 @@
-{ 
+{
     "home" : {
         "title": "Hello, I'm yoonju!",
         "subt" : "Welcome to My Digital Playground.",
@@ -32,21 +32,21 @@
 
     "web" : {
         "title" : "Web Development",
-        "description" : "I built creative and functional web applications using modern web technologies such as React, Nextjs to design user-friendly interfaces. I focused on integrating various APIs and databases to enhance the performance and user experience of the web applications."
+        "description" : "I have built web applications using modern technologies such as React and Next.js. Rather than just focusing on functionality, I designed clear and user-friendly interfaces with responsive layouts that work smoothly across devices. I integrated multiple APIs and databases to deliver fast performance and a seamless user experience. By organizing code into reusable components, I made projects easier to maintain and expand. I also applied the latest web trends and accessibility standards so that anyone can use the applications comfortably. Through experience in planning, design, and development, I developed the ability to write clean code and collaborate effectively skills that can be applied directly in real-world projects."
     },
 
     "design" : {
         "title" : "Graphic Design",
-        "description" : "With over 3 years of experience, I have gained extensive expertise in various fields beyond graphic design, including brand identity development, illustration, and marketing content creation. For each project, I provide creative and effective visual solutions that reflect the client’s vision and goals, focusing on delivering designs that maximize the value of their brand."
+        "description" : "With over three years of experience, I have built expertise in brand identity, illustration, and marketing content. Beyond creating visuals, I engage from the planning stage to translate clients’ visions and goals into effective design. By harmonizing color, typography, and imagery, I strengthen brand value and deliver creative, sustainable solutions that stand out."
     },
     "selection" : {
-        "title" : "select a category",
-        "s1" : "Communication",
-        "s2" : "Production",
-        "s3" : "Infographic",
-        "s4" : "Print",
-        "s5" : "Logo",
-        "s6" : "Personal Project"
+        "title" : "Select Discipline",
+        "s1" : "Brand Communication",
+        "s2" : "Product Design",
+        "s3" : "Infographic Design",
+        "s4" : "Print Design",
+        "s5" : "Logo & Identity",
+        "s6" : "Personal Projects"
     },
 
     "worksweb" : {
@@ -70,8 +70,129 @@
             "tags": ["JavaScript", "CSS", "Node.js", "API", "Figma"],
             "description": "I created a dynamic webpage in JavaScript, including a login page and a modal for media uploads. I integrated a backend API and used Figma for layout and implementation. I also used Kanban for efficient task tracking and collaboration."
             }
-    }
+    },
 
+    "weblabels" : {
+        "duration" : "Project duration",
+        "techs" : "Tools & Technologies",
+        "link" : "View on GitHub",
+        "days" : "days"
+    },
+    "designlabels" : {
+        "program" : "Tools & Software Used",
+        "cy" : " Year of Creation",
+        "company" : "Collaborating Company"
+    },
+    "worksgraphic" : {
+        "b20": {
+            "title": "Invitation",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Designed and produced web and print invitations for various Fusalp events, taking charge of incorporating the brand’s seasonal identity and visual elements into the overall design. Beyond simply creating event materials, I carefully considered color palettes, typography, and layout to effectively communicate the brand’s image and message, thereby reinforcing both brand consistency and the overall event experience.",
+            "tags": ["Indesign"]
+        },
+        "b21": {
+            "title": "Lookbook",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Creation of lookbooks, contributing to the visual representation of the brand’s seasonal collections and helping to promote its launch.",
+            "tags": ["Indesign"]
+        },
+        "b19": {
+            "title": "Magazine",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Creation of various fashion magazine pages that reflected the brand’s identity, designing visually appealing layouts to capture the readers’ attention.",
+            "tags": ["Indesign"]
+        },
+        "b22": {
+            "title": "Communication",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Creation of visuals for communication press, designing compelling graphics and images to effectively convey the brand’s message to the media and enhance its public presence.",
+            "tags": ["Indesign"]
+        },
+        "b23": {
+            "title": "Goodies",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Design of various promotional and gift products, including a card game design utilizing seasonal images and lookbooks, sticker designs for collaboration with the British ski team, chocolate box designs, water bottle designs, and more. All designs were crafted to align with the brand’s identity while maintaining a sophisticated and stylish aesthetic.",
+            "tags": ["Illustrator", "Photoshop"]
+        },
+        "b24": {
+            "title": "Product",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Vectorizing products for the new season using Illustrator and continuously updating design modifications throughout the product development process. Additionally, I contributed to the creation of a catalog that lists all the products once the product lineup was finalized.",
+            "tags": ["Illustrator"]
+        },
+        "b25": {
+            "title": "Pattern",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Create pattern designs for fabrics that reflect the identity of each season.",
+            "tags": ["Illustrator"]
+        },
+        "b26": {
+            "title": "Technical file",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Create technical files for the trims used in the products, providing accurate information necessary for the product development and production processes.",
+            "tags": ["Illustrator"]
+        },
+        "b27": {
+            "title": "Pictogram",
+            "cy": "This project was created in 2022",
+            "description": "Create pictograms for clothing labels, designing icons that clearly communicate washing and care instructions.",
+            "tags": ["Illustrator"]
+        },
+        "b28": {
+            "title": "Pictogram",
+            "cy": "This project was created in 2021",
+            "description": "Create pictograms for Workbook, designing icons that clearly communicate washing and care instructions.",
+            "tags": ["Illustrator"]
+        },
+        "b29": {
+            "title": "Frames",
+            "cy": "This project was created in 2023",
+            "description": "Carefully selected vintage images that aligned with the brand’s identity and carried out the design work of arranging photo frames on the wall.",
+            "tags": ["Photoshop", "Indesign"]
+        },
+        "b30": {
+            "title": "Advertising",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Creation of advertising visuals for the Paris metro, designing striking graphics to effectively promote the brand and capture the attention of commuters.",
+            "tags": ["Indesign"]
+        },
+        "b31": {
+            "title": "Storefront",
+            "cy": "I worked on the same type of tasks from 2021 to 2023.",
+            "description": "Development of window graphics for boutiques, incorporating design elements that align with the brand’s seasonal identity and visual language.",
+            "tags": ["Indesign"]
+        },
+        "b32": {
+            "title": "Montage",
+            "cy": "I worked on the same type of tasks from 2020 to 2023.",
+            "description": "I created my own unique visual montage by combining various images.",
+            "tags": ["Photoshop"]
+        },
+        "b33": {
+            "title": "Illustration",
+            "cy": "I worked on the same type of tasks from 2020 to 2023.",
+            "description": "I enjoy drawing illustrations, so I created works based on images that inspired me using Illustrator.",
+            "tags": ["Illustrator"]
+        },
+        "b34": {
+            "title": "Séoul",
+            "cy": "This project was created in 2022",
+            "description": "I created an animation of the night view of Seoul.",
+            "tags": ["After Effect"]
+        },
+        "b35": {
+            "title": "Electricité",
+            "cy": "This project was created in 2023",
+            "description": "I created a logo for the establishment of an electrical company and also worked on vehicle sticker designs.",
+            "tags": ["Illustrator"]
+        },
+        "b36": {
+            "title": "Fruit",
+            "cy": "This project was created in 2022",
+            "description": "Creation of a logo and business card for a food trading company.",
+            "tags": ["Illustrator"]
+        }
+    }
 }
 
 
