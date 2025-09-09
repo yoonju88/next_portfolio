@@ -9,7 +9,8 @@
 
     "locale" : {
         "english": "English",
-        "french": "French"
+        "french": "French",
+        "korean": "한국어"
     },
 
     "menu" :{

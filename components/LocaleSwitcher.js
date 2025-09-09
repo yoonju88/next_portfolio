@@ -13,11 +13,12 @@ import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-const LOCALES = ['en', 'fr']
+const LOCALES = ['en', 'fr', 'ko']
 
 const OPTIONS = [
     { code: 'en', label: 'locale.english', flagCode: "GB" },
-    { code: 'fr', label: 'locale.french', flagCode: "FR" }
+    { code: 'fr', label: 'locale.french', flagCode: "FR" },
+    { code: 'ko', label: 'locale.korean', flagCode: "KR" }
 ];
 
 export default function LocaleSwitcher() {

@@ -6,20 +6,20 @@ import IntroAinimation from '@/public/animation_2.json'
 
 
 export default function Intro() {
-    const t = useTranslations();
+    const t = useTranslations('home');
     const locale = useLocale();
 
     return (
         <div className="flex flex-col md:flex-row items-center">
             <section className=" order-2 md:order-1 w-full lg:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                 <h1 className="title-font lg:text-4xl md:text-3xl text-3xl mb-6 font-medium text-chart-2">
-                    {t('home.title')}
-                    <br className="hidden lg:inline-block" /> {t('home.subt')}
+                    {t('title')}
+                    <br className="hidden lg:inline-block" /> {t('subt')}
                 </h1>
-                <p className="mb-7 leading-relaxed text-foreground">{t('home.description')}</p>
+                <p className="mb-7 leading-relaxed text-foreground">{t('description')}</p>
                 <div className='flex gap-6'>
                     <ButtonNavigate
-                        name={t('home.button1')}
+                        name={t('button1')}
                         href={`/${locale}/works/web`}
                         variant="navigate"
                         size="default"
@@ -29,7 +29,7 @@ export default function Intro() {
                         </svg>
                     </ButtonNavigate>
                     <ButtonNavigate
-                        name={t('home.button2')}
+                        name={t('button2')}
                         href={`/${locale}/works/design`}
                         variant="navigate"
                         size="default"

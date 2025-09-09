@@ -1,0 +1,77 @@
+{ 
+  "home": {
+    "title": "안녕하세요, 윤주입니다!",
+    "subt": "제 디지털 놀이터에 오신 것을 환영합니다.",
+    "description": "여기에서는 지금까지 제가 해온 작업과 앞으로 펼쳐질 무한한 가능성을 만나보실 수 있어요. 새로운 프로젝트와 도전은 늘 저에게 영감과 설렘을 줍니다. 혁신적인 기술로 한계를 확장하는 협업을 언제나 기대하고 있어요. 함께 멋진 무언가를 만들어봐요!",
+    "button1": "웹 개발",
+    "button2": "그래픽 디자인"
+  },
+  
+  "locale": {
+    "english": "English",
+    "french": "French",
+    "korean": "한국어"
+  },
+
+  "menu": {
+    "home": "홈",
+    "works": {
+      "label": "작업물",
+      "web": "웹",
+      "design": "디자인"
+    },
+    "aboutme": "소개",
+    "contact": "문의"
+  },
+
+  "theme": {
+    "light": "라이트",
+    "dark": "다크",
+    "toggle": "테마 전환"
+  },
+
+  "web": {
+    "title": "웹 개발",
+    "description": "React와 Next.js 등 현대적인 웹 기술을 사용해 창의적이고 기능적인 웹 애플리케이션을 개발했습니다. 사용자 친화적인 인터페이스 설계에 중점을 두고, 다양한 API와 데이터베이스를 연동해 성능과 사용자 경험을 향상시켰습니다."
+  },
+
+  "design": {
+    "title": "그래픽 디자인",
+    "description": "3년 이상의 경험을 바탕으로 브랜드 아이덴티티, 일러스트레이션, 마케팅 콘텐츠 제작 등 그래픽 디자인을 넘어 다양한 분야에서 전문성을 쌓았습니다. 각 프로젝트마다 클라이언트의 비전과 목표를 반영한 창의적이고 효과적인 시각 솔루션을 제공합니다."
+  },
+
+  "selection": {
+    "title": "카테고리를 선택하세요",
+    "s1": "커뮤니케이션",
+    "s2": "프로덕션",
+    "s3": "인포그래픽",
+    "s4": "인쇄",
+    "s5": "로고",
+    "s6": "개인 프로젝트"
+  },
+
+  "worksweb": {
+    "a15": {
+      "title": "ArgentBank",
+      "tags": ["React", "Node.js", "Redux", "MongoDB", "API", "Swagger"],
+      "description": "React와 Redux로 반응형 대시보드를 구현하고 전역 상태를 관리했으며, REST API 호출로 백엔드를 연동했습니다. Swagger로 API 엔드포인트를 정의하고 Node.js로 서버를 구성했습니다."
+    },
+    "a14": {
+      "title": "724 events",
+      "tags": ["React", "Node.js", "SEO", "단위 테스트", "디버깅"],
+      "description": "Chrome DevTools와 React Developer Tools를 사용해 버그를 분석 및 수정했습니다. JavaScript/React 문제를 해결하고 단위/기능 테스트를 구현했으며, Yarn과 Node.js로 의존성 관리와 테스트 실행을 진행했습니다."
+    },
+    "a13": {
+      "title": "Kasa",
+      "tags": ["React", "Figma"],
+      "description": "React로 반응형 웹 애플리케이션을 개발했습니다. React Router로 페이지 간 내비게이션을 구성하고 재사용 가능한 컴포넌트로 인터페이스를 구축했습니다."
+    },
+    "a12": {
+      "title": "Architecture",
+      "tags": ["JavaScript", "CSS", "Node.js", "API", "Figma"],
+      "description": "JavaScript로 동적 웹페이지를 구현했으며, 로그인 페이지와 업로드 모달을 포함합니다. 백엔드 API를 연동하고 Figma로 레이아웃을 설계했습니다. 또한 Kanban 방식으로 작업을 효율적으로 관리했습니다."
+    }
+  }
+}
+
+
