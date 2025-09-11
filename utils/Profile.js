@@ -6,10 +6,10 @@ import IF from '@/public/ifalpes.png'
 export const profileData = [
     {
         type: "experience",
-        jobTitle: "Freelance graphic designer",
+        jobTitle: "title1",
         companyName: "Creation Fusalp",
-        address: 'Annecy le vieux, 74',
-        description: "Création de contenus variés pour le marketing suivi des produits graphiques.",
+        address: 'office1',
+        description: "des1",
         duration: {
             start: "02-2021",
             end: "06-2023"
@@ -17,10 +17,10 @@ export const profileData = [
     },
     {
         type: "experience",
-        jobTitle: "Graphic designer intern",
+        jobTitle: "title2",
         companyName: "Creation fusalp",
-        address: 'Annecy le vieux, 74',
-        description: "Création de contenus variés pour le marketing suivi des produits graphiques.",
+        address: 'office2',
+        description: "des2",
         duration: {
             start: "10-2020",
             end: "02-2021"
@@ -28,10 +28,10 @@ export const profileData = [
     },
     {
         type: "experience",
-        jobTitle: "Trilingual Customer Service",
+        jobTitle: "title3",
         companyName: "Planet payment in Bonmarché",
-        address: 'Paris 7E',
-        description: "Customer reception, creation and management of customer files, daily summary.",
+        address: 'office3',
+        description: "des3",
         duration: {
             start: "06-2016",
             end: "11-2021"
@@ -39,10 +39,10 @@ export const profileData = [
     },
     {
         type: "experience",
-        jobTitle: "Clothing Vendor",
+        jobTitle: "title4",
         companyName: "Michael International",
-        address: 'Seoul, Republic of Korea',
-        description: "Ordering of raw materials, quality control of products, monitoring and verification of manufacturing processes.",
+        address: 'office4',
+        description: "des4",
         duration: {
             start: "11-2012",
             end: "11-2014"
@@ -50,10 +50,10 @@ export const profileData = [
     },
     {
         type: "education",
-        name: "Intergration web",
-        schoolName: "OpenClassRooms",
-        address: 'Paris, 75',
-        degree: "RNCP, Niveau 5",
+        name: "title1",
+        schoolName: "name1",
+        address: 'location1',
+        degree: "degree1",
         duration: {
             start: "12-2023",
             end: "09-2024",
@@ -64,10 +64,10 @@ export const profileData = [
     },
     {
         type: "education",
-        name: "Graphist",
-        schoolName: "Lignes et formation",
-        address: 'Montrouge, 92',
-        degree: "bac+2",
+        name: "title2",
+        schoolName: "name2",
+        address: 'location2',
+        degree: "degree2",
         duration: {
             start: "08-2018",
             end: "07-2020",
@@ -77,10 +77,10 @@ export const profileData = [
     },
     {
         type: "education",
-        name: "Learning of the French language",
-        schoolName: "Ifalpes",
-        address: 'Annecy, 74',
-        degree: "Niveau B+2",
+        name: "title3",
+        schoolName: "name3",
+        address: 'location3',
+        degree: "degree3",
         duration: {
             start: "12-2024",
             end: "09-2015",
@@ -91,10 +91,10 @@ export const profileData = [
     },
     {
         type: "education",
-        name: "Fashion & Textiles",
-        schoolName: "Sangmyoung University",
-        address: 'Seoul, Republic of Korea',
-        degree: "Bachelor of Science, Licence",
+        name: "title4",
+        schoolName: "name4",
+        address: 'location4',
+        degree: "degree4",
         duration: {
             start: "03-2008",
             end: "08-2012",
@@ -107,18 +107,18 @@ export const profileData = [
 export const buttonTypes = [
     {
         type: "all",
-        name: "All",
+        name: "all",
         id: 14,
     },
     {
         type: "web",
-        name: "Web tool",
+        name: "webtool",
         id: 15,
 
     },
     {
         type: "design",
-        name: "Graphic tool",
+        name: "designtool",
         id: 16,
     },
 ]
@@ -215,5 +215,42 @@ export const mySkillsData = [
         icon: Ae,
         type: "design",
         id: 464,
+    },
+]
+
+import {
+    VscCode,
+    VscEditorLayout,
+    VscSmiley,
+    VscDebugRestart,
+    VscRocket
+} from "react-icons/vsc";
+
+
+export const serviceData = [
+    {
+        title: "web",
+        description: "webdes",
+        icon: (<VscCode className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+    },
+    {
+        title: "optimization",
+        description: "optdes",
+        icon: (<VscSmiley className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+    },
+    {
+        title: "ui",
+        description: "uides",
+        icon: (<VscEditorLayout className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+    },
+    {
+        title: "maintenance",
+        description: "maindes",
+        icon: (<VscDebugRestart className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+    },
+    {
+        title: "deploying",
+        description: "deployingdes",
+        icon: (<VscRocket className="size-6 text-white group-hover:text-chart-2 add-transition" />),
     },
 ]

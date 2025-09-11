@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
@@ -7,6 +8,7 @@ import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
 import MySkills from '@/components/about-me/skills/MySkills'
+import { useTranslations } from 'next-intl'
 
 const icons = {
     experience: (
@@ -46,6 +48,8 @@ export default function AboutMePage() {
     if (!profileData) { return null }
     const experiences = profileData.filter(item => item.type === "experience")
     const educations = profileData.filter(item => item.type === "education")
+    const t = useTranslations("experience")
+    const et = useTranslations("education")
 
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
@@ -53,32 +57,32 @@ export default function AboutMePage() {
     const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background rounded-xl box-border"
     return (
         <>
-            <div className="px-5 mx-auto flex flex-col">
-                <div className="mx-auto mt-8 px-10">
+            <div className="px-10 mx-auto flex flex-col">
+                <div className="mx-auto mt-8 space-y-20">
                     <Profile />
-                    <div className='border-t-2 border-foreground/20 mt-10 mx-10' />
+                    {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
                     <Services />
-                    <div className='border-t-2 border-foreground/20 mb-10 mx-10' />
+                    {/* <div className='border-t-2 border-foreground/20 mb-10 mx-10' /> */}
                     <MySkills />
-                    <div className='border-t-2 border-foreground/20 mt-10 mx-10' />
-                    <div className="py-8 w-full mt-12 mx-auto flex flex-wrap justify-between">
+                    {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
+                    <div className="py-20 w-full mx-auto flex flex-wrap justify-between">
                         <ContentContainer
                             title="Experience"
                             data={experiences}
                             icon={renderIcon("experience")}
                             className={styleContainer}
                         >
-                            <div className="flex flex-col items-center lg:gap-4 mb:gap-2 sm:gap-2">
+                            <div className="flex flex-col items-left lg:gap-4 mb:gap-2 sm:gap-2">
                                 {experiences.map((item) => {
                                     return (
                                         <ExperienceLists
                                             key={item.jobTitle}
                                             startDate={item.duration.start}
                                             endDate={item.duration.end}
-                                            jobTitle={item.jobTitle}
+                                            jobTitle={t(item.jobTitle)}
                                             companyName={item.companyName}
-                                            address={item.address}
-                                            description={item.description}
+                                            address={t(item.address)}
+                                            description={t(item.description)}
                                         />
                                     )
                                 })}
@@ -97,13 +101,12 @@ export default function AboutMePage() {
                                             key={item.name}
                                             startDate={item.duration.start}
                                             endDate={item.duration.end}
-                                            name={item.name}
-                                            schoolName={item.schoolName}
+                                            name={et(item.name)}
+                                            schoolName={et(item.schoolName)}
                                             link={item.link}
                                             image={item.image}
-                                            description={item.description}
-                                            address={item.address}
-                                            degree={item.degree}
+                                            address={et(item.address)}
+                                            degree={et(item.degree)}
                                         />
                                     )
                                 })}
@@ -112,7 +115,7 @@ export default function AboutMePage() {
                     </div>
                 </div>
             </div >
-            <div className='border-t-2 border-foreground/20 mb-10 mx-10' />
+            {/* <div className='border-t-2 border-foreground/20 mb-10 mx-10' /> */}
             <ContactMe />
         </>
     )

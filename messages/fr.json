@@ -192,5 +192,90 @@
       "description": "Création d’un logo et d’une carte de visite pour une société de commerce alimentaire.",
       "tags": ["Illustrator"]
     }
-  } 
+  },
+  "aboutme" : {
+    "title" : "Grandir en transformant les idées en réalité.",
+    "job":"Développeuse Web Frontend (React/Next.js)",
+    "description" : "C’est en travaillant dans le design graphique que je me suis naturellement intéressé au design web puis plus largement au développement web. Après avoir suivi une formation d’Intégrateur Web en France j’ai continué à me former de manière régulière et j’ai évolué avec un fort accent sur le développement frontend. Grâce à l’utilisation de Next.js j’ai acquis non seulement une expertise en frontend mais aussi la capacité de gérer certaines fonctionnalités backend lorsque nécessaire développant ainsi des compétences full-stack. De plus même si mon axe principal reste le frontend j’ai également acquis de l’expérience en développement full-stack en utilisant des services backend comme Firebase. Aujourd’hui je cherche à rejoindre des projets en tant que développeur frontend afin d’y participer activement, progresser davantage et y apporter ma contribution.",
+    "link1" : "Accèder à mon GitHub",
+    "cv" : "Télécharger mon CV"
+  },
+  "services": {
+    "title":"Mes Services",
+    "web": "Développement Web",
+    "webdes": "Je développe des services web avec React et Next.js en mettant l’accent sur l’optimisation SEO la rapidité de chargement une gestion fiable des données et des interfaces responsives pour offrir une expérience utilisateur intuitive et immersive.",
+    "optimization": "Optimisation",
+    "optdes": "Grâce au code splitting, au lazy loading et à l’optimisation des images j’améliore les performances tout en respectant les normes d’accessibilité WAI-ARIA afin d’obtenir de meilleurs scores Lighthouse et de garantir un environnement web inclusif.",
+    "ui": "Conception UI/UX",
+    "uides": "Je conçois des composants réutilisables et des systèmes de design cohérents en utilisant des bibliothèques modernes comme shadcn/ui et NextUI pour créer des interfaces responsives. Cela assure une expérience utilisateur fluide et homogène sur tous les appareils.",
+    "maintenance": "Maintenance",
+    "maindes": "Je refactore le code existant, corrige les bugs et intègre en continu de nouvelles fonctionnalités ainsi que des stratégies SEO afin d’améliorer la stabilité, la visibilité et les performances à long terme du site.",
+    "deploying" : "Déploiement et Hébergement",
+    "deployingdes": "Je déploie efficacement les projets avec Vercel en tirant parti d’un environnement serverless pour offrir des services web rapides et stables."
+  },
+  "skills": {
+    "title": "Stack Technique & Outils de Design",
+    "description": "Découvrez les technologies et outils que j’utilise pour le développement web et le design.",
+    "all": "Tout",
+    "webtool": "Outils de Web",
+    "designtool": "Outils de Design"
+  },
+  "experience": {
+    "title1": "Graphiste Indépendante",
+    "des1": "Création de contenus visuels pour le marketing : réseaux sociaux, lookbooks, illustrations produits, photographie et publicités.",
+    "office1": "Annecy-le-Vieux (74), France",
+
+    "title2": "Graphiste (Stagiaire)",
+    "des2": "Conception et production de contenus en accord avec la stratégie marketing.",
+    "office2": "Annecy-le-Vieux (74), France",
+
+    "title3": "Service Client Trilingue (Coréen · Anglais · Français)",
+    "des3": "Accueil clients pour remboursements de taxe, gestion des données et rapports quotidiens.",
+    "office3": "Paris (7e), France",
+
+    "title4": "Sourcing & Fourniture d’Habillement (Vendor)",
+    "des4": "Support aux commandes, contrôle qualité, gestion des échantillons et suivi des délais.",
+    "office4": "Séoul, Corée du Sud"
+  },
+  "education": {
+    "title1": "Intégration Web",
+    "degree1": "RNCP, niveau 5",
+    "location1": "Paris, France",
+    "name1": "OpenClassRooms",
+
+    "title2": "Design Graphique",
+    "degree2": "Bac+2, Formation certifiée Qualiopi",
+    "location2": "Montrouge, France",
+    "name2": "Lignes et Formation",
+
+    "title3": "Études de Langue Française",
+    "degree3": "Niveau B2, CECRL",
+    "location3": "Annecy, France",
+    "name3": "Ifalpes",
+
+    "title4": "Mode & Textiles",
+    "degree4": "Licence en Sciences",
+    "location4": "Séoul, Corée du Sud",
+    "name4": "Université Sangmyung"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "des1": "Envie de lancer un projet web ensemble ? Si vous avez des idées ou des questions n’hésitez pas à me contacter par email.",
+    "des2": "Réalisons ensemble votre beau projet.",
+    "bt1": "Me Contacter",
+    "name": "Nom",
+    "np": "Nom, prénom",
+    "email": "Email",
+    "message": "Message",
+    "mp": "Votre message...",
+    "bt2": "Envoyer",
+    "loading" : "Envoi en cours…",
+    "address": "Adresse"
+  },
+  "footer": {
+    "des" : "© 2025 Tous droits réservés par TERRENOIRE Yoonju",
+    "linkedin":"Voir mon LinkedIn",
+    "github" : "Voir mon GitHub",
+    "email" : "Envoyer un E-mail"
+    }
 }

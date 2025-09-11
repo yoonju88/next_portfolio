@@ -4,12 +4,14 @@ import React from 'react'
 
 export default function loading() {
     return (
-        <div className='animate-pulse flex flex-wrap justify-center items-center w-[90%]'>
+        <div className='animate-pulse gap-10 flex flex-wrap justify-center items-center px-10'>
             <div className="w-[30%]">
-                <Skeleton className="h-[200px] w-full" />
+                <Skeleton className="h-[300px] w-full" />
             </div>
-            <div className="w-[70%] flex flex-col gap-4 pl-6">
-                <Skeleton className="h-[40px] w-full" />
+            <div className="w-[65%] flex flex-col gap-4 pl-6">
+                <Skeleton className="h-[50px] w-full mb-4" />
+                <Skeleton className="h-[30px] w-full" />
+                <Skeleton className="h-[30px] w-full" />
                 <Skeleton className="h-[30px] w-full" />
                 <Skeleton className="h-[30px] w-full" />
                 <Skeleton className="h-[30px] w-full" />

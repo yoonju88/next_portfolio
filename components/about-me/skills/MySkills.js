@@ -3,23 +3,25 @@ import React, { useState } from 'react'
 import { mySkillsData, buttonTypes } from '@/utils/Profile'
 import SkillList from '@/components/about-me/skills/SkillList'
 import { FilterButton } from '@/components/form/Buttons';
+import { useTranslations } from 'next-intl';
 
 export default function MySkills() {
     const [isFilteredType, setisFilteredType] = useState('all')
+    const t = useTranslations("skills")
     const filteredItems = isFilteredType === 'all' ? mySkillsData : mySkillsData.filter(item => item.type === isFilteredType)
 
     return (
         <section>
-            <div className="container py-14 mx-auto">
+            <div className="mx-auto">
                 <div className="flex flex-col text-center w-full mb-20">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 uppercase">My Skills</h1>
-                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-2">Here you can explore the skills I bring to web development and design.</p>
+                    <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 uppercase">{t("title")}</h1>
+                    <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-2">{t("description")}</p>
                     <div className='flex flex-wrap mt-10 justify-center gap-2'>
                         {buttonTypes.map((item) => {
                             return (
                                 <FilterButton
                                     key={item.id}
-                                    name={item.name}
+                                    name={t(item.name)}
                                     active={isFilteredType === item.type}
                                     onClick={() => setisFilteredType(item.type)}
                                 />

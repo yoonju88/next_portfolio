@@ -1,10 +1,14 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
 import { IoLogoGithub } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ToolTip from './ToolTip';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+    const t = useTranslations("footer")
+
     const tooltipStyle = "w-5 h-5 add-transition hover:scale-125 text-white"
     return (
         <footer className="bg-chart-2 px-10 py-6 mx-auto">
@@ -13,11 +17,11 @@ export default function Footer() {
                     <span className="text-2xl text-white font-extrabold">Yoonju.T </span>
                 </Link>
                 <p className='text-sm text-white flex items-center capitalize'>
-                    © 2025 all rights reserved by TERRENOIRE Yoonju
+                    {t("des")}
                 </p>
                 <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>
                     <ToolTip
-                        text="Go to LinkedIn"
+                        text={t("linkedin")}
                     >
                         <Link href="https://www.linkedin.com/in/yoonju-t" target="_blank">
                             <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className={tooltipStyle} viewBox="0 0 24 24">
@@ -27,14 +31,14 @@ export default function Footer() {
                         </Link>
                     </ToolTip>
                     <ToolTip
-                        text="Go to my GitHub"
+                        text={t("github")}
                     >
                         <Link href="https://github.com/yoonju88" target="_blank">
                             <IoLogoGithub className={tooltipStyle} />
                         </Link>
                     </ToolTip>
                     <ToolTip
-                        text="Send me an email"
+                        text={t("email")}
                     >
                         <Link href="mailto:hoyoonju2@gmail.com" target="_blank">
                             <MdAlternateEmail className={tooltipStyle} />

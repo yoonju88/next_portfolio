@@ -8,7 +8,7 @@ import { CgSpinner } from "react-icons/cg"; //  add animate-spin
 import { ButtonSubmit } from './Buttons'
 
 
-export default function ContactForm() {
+export default function ContactForm({ name, namePh, email, message, messagePh, bt, loading }) {
     const { toast } = useToast()
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const [isLoading, setIsLoading] = useState(false)
@@ -40,13 +40,13 @@ export default function ContactForm() {
                     htmlFor="name"
                     className="leading-7 text-sm text-foreground"
                 >
-                    Name
+                    {name}
                 </label>
                 <input
                     type="text"
                     id='name'
                     {...register('name', { required: true })}
-                    placeholder='Last name, first name'
+                    placeholder={namePh}
                     className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-200"
                 />
             </div>
@@ -55,7 +55,7 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="leading-7 text-sm text-foreground"
                 >
-                    Email
+                    {email}
                 </label>
                 <input
                     type="email"
@@ -70,14 +70,14 @@ export default function ContactForm() {
                     htmlFor="message"
                     className="leading-7 text-sm text-foreground"
                 >
-                    Message
+                    {message}
                 </label>
                 <textarea
                     rows={4}
                     id='message'
                     {...register('message', { required: true })}
                     className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-foreground py-1 px-3 resize-none leading-6 transition-colors duration-200"
-                    placeholder='Your message...'
+                    placeholder={messagePh}
                 />
             </div>
             <div className="flex justify-center">
@@ -89,9 +89,9 @@ export default function ContactForm() {
                     {isLoading ? (
                         <>
                             <CgSpinner className='animate-spin size-7 text-white ' />
-                            <span className="text-white">Sending...</span>
+                            <span className="text-white">{loading}</span>
                         </>
-                    ) : "Send"
+                    ) : <>{bt}</>
                     }
                 </ButtonSubmit>
             </div>

@@ -192,6 +192,91 @@
             "description": "Creation of a logo and business card for a food trading company.",
             "tags": ["Illustrator"]
         }
+    }, 
+    "aboutme" : {
+        "title" : "Growing by building ideas into reality.",
+        "job":"Frontend Web Developer (React/Next.js)",
+        "description" : "First became interested in web design naturally while working in graphic design and this led me to develop a deeper passion for web development. After completing an Integrator Web training program in France I continued studying consistently and have since grown with a strong focus on frontend development. In particular, by working with Next.js. I have gained not only frontend expertise but also the ability to handle backend features when needed giving me full-stack capabilities. In addition, while my main focus remains frontend i have also built full-stack development experience using backend services such as Firebase. Moving forward, I am seeking opportunities as a frontend web developer to actively participate in real projects, grow further and contribute meaningfully.",
+        "link1" : "Go to my GitHub",
+        "cv" : "Download my CV"
+  }, 
+  "services": {
+        "title": "My expertise",
+        "web": "Web Development",
+        "webdes": "I build web services using React and Next.js, focusing on SEO optimization, fast loading speeds, stable data handling and responsive UI to deliver intuitive and immersive user experiences.",
+        "optimization": "Optimization",
+        "optdes": "By applying code splitting, lazy loading, and image optimization, I improve performance while adhering to WAI-ARIA accessibility standards to achieve higher Lighthouse scores and provide an inclusive web environment.",
+        "ui": "UI/UX Design",
+        "uides": "I create reusable components and consistent design systems leveraging modern UI libraries such as shadcn/ui and NextUI to implement responsive interfaces. This ensures a seamless and consistent user experience across all devices.",
+        "maintenance": "Maintenance",
+        "maindes": "I refactor existing code, fix bugs and continuously integrate new features and SEO strategies to enhance stability, visibility and long-term performance of the web.",
+        "deploying" : "Deployment & Hosting",
+        "deployingdes": "I deploy projects efficiently using Vercel leveraging a serverless environment to deliver stable and fast web services."
+    },
+    "skills": {
+        "title": "Tech Stack & Design Tools",
+        "description": "Explore the technologies and tools I use across web development and design.",
+        "all": "All",
+        "webtool": "Web Tools",
+        "designtool": "Design Tools"
+    },
+    "experience": {
+        "title1": "Freelance Graphic Designer",
+        "des1": "Created visual content for marketing: social media, lookbooks, product illustrations, photography and advertising.",
+        "office1": "Annecy-le-Vieux (74), France",
+
+        "title2": "Graphic Design Intern",
+        "des2": "Planned and produced content aligned with marketing strategies.",
+        "office2": "Annecy-le-Vieux (74), France",
+
+        "title3": "Trilingual Customer Service (Korean · English · French)",
+        "des3": "Handled tax refund services, data management and daily reporting.",
+        "office3": "Paris (7e), France",
+
+        "title4": "Apparel Sourcing & Supply (Vendor)",
+        "des4": "Supported raw material orders, quality control, sample management and delivery schedules.",
+        "office4": "Seoul, South Korea"
+    },
+    "education": {
+        "title1": "Web Integration",
+        "degree1": "French RNCP Level 5 – Associate Degree equivalent",
+        "location1": "Paris, France",
+        "name1": "OpenClassRooms",
+
+        "title2": "Graphic Design",
+        "degree2": "Bac +2, Associate Degree",
+        "location2": "Montrouge, France",
+        "name2": "Lignes et Formation",
+
+        "title3": "French Language Studies",
+        "degree3": "Level B2, CECRL",
+        "location3": "Annecy, France",
+        "name3": "Ifalpes",
+
+        "title4": "Fashion & Textiles",
+        "degree4": "Bachelor of Science",
+        "location4": "Seoul, South Korea",
+        "name4": "Sangmyung University"
+    },
+     "contact" :{
+        "title" : "Contact Me",
+        "des1": "Interested in starting a web project together? If you have any ideas or questions don’t hesitate to contact me by email",
+        "des2" : "Let’s build your great project together.",
+        "bt1": "Contact me today!!",
+        "name": "Name",
+        "np": "Last name, first name",
+        "email": "Email",
+        "message":"Message",
+        "mp": "Your message...",
+        "bt2": "Send",
+        "loading" : "Sending...",
+        "address": "Address"
+    },
+    "footer": {
+        "des" : "2025 all rights reserved by TERRENOIRE Yoonju",
+        "linkedin":"See my LinkedIn",
+        "github" : "See my GitHub",
+        "email" : "Send E-mail"
     }
 }
 

@@ -7,7 +7,7 @@ import { getWorks } from '@/lib/getWorks'
 
 export default async function webPage({ params }) {
     const { locale } = await params;
-    const t = await getTranslations("web")
+    const t = await getTranslations({ locale, namespace: "web" })
     const items = await getWorks(params.locale)
 
     return (

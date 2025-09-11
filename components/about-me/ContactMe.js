@@ -1,10 +1,13 @@
+'use client'
 import React from 'react'
 import { ButtonNavigate } from '../form/Buttons';
 import ContactAnimation from '@/public/animation_3.json'
 import { AnimationLottie } from '../animation/DynamicMap'
+import { useTranslations } from 'next-intl';
 
 
 export default function ContactMe() {
+    const t = useTranslations('contact')
     return (
         <section>
             <div className="container px-5 pb-24 mx-auto">
@@ -12,9 +15,9 @@ export default function ContactMe() {
                     <div className="w-32 mb-4">
                         <AnimationLottie animation={ContactAnimation} />
                     </div>
-                    <p className="leading-relaxed text-lg text-foreground/80 mb-8">I combine technical expertise and design to deliver an outstanding web experience. Reach out for a discussion about your project!</p>
+                    <p className="leading-relaxed text-lg text-foreground/80 mb-8">{t("des2")}</p>
                     <ButtonNavigate
-                        name="Contact me today!!"
+                        name={t("bt1")}
                         href="/contact"
                         variant="navigate"
                         size='lg'
