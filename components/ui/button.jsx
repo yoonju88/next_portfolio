@@ -10,22 +10,27 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-chart-2 text-primary-foreground shadow hover:bg-chart-2/70 hover:shadow-inner hover:shadow-violet-900 hover:scale-110 add-transition",
+          "bg-chart-2 text-primary-foreground shadow hover:bg-gradient-to-t hover:bg-chart-2/70 hover:shadow-inner hover:shadow-violet-900 hover:scale-110 add-transition",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-chart-1 bg-background add-transition hover:bg-chart-1",
+          " shadow-foreground/20 shadow-sm bg-transparent add-transition hover:shadow-inner hover:shadow-foreground/30",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:underline hover:decoration-2",
         link: "text-primary underline-offset-4 hover:underline",
         navigate:
-          "appearence-none bg-background text-foreground/80 border-2 border-chart-1 rounded-md cursor-pointer shadow-md shadow-chart-1/50 focus:outline-none hover:border-none hover:text-white hover:shadow-[inset_0_0_10px_20px] hover:shadow-chart-2 hover:scale-105 transition-all duration-500 ease-in-out"
+          "appearance-none rounded-full font-semibold text-white \
+   bg-[length:300%_100%] \
+   bg-[linear-gradient(90deg,hsl(var(--btn-1))0%,hsl(var(--btn-2))33%,hsl(var(--btn-3))66%,hsl(var(--btn-4))100%)] \
+   shadow-[0_4px_15px_rgba(53, 53, 53, 0.75)] \
+   transition-all duration-500 ease-in-out \
+   hover:bg-[position:100%_0] focus:outline-none"
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
+        lg: "h-10 rounded-md px-8 text-md",
         icon: "px-2 py-2",
       },
     },

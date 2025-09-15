@@ -1,8 +1,7 @@
 {
     "home" : {
         "title": "Hello, I'm yoonju!",
-        "subt" : "Welcome to My Digital Playground.",
-        "description" : "Currently based in France, I work as a freelance graphic designer while developing personal projects using modern web technologies such as Next.js, React, and TypeScript. By combining the creativity and visual sense gained from graphic design with web development, I strive to further enhance web services that deliver enjoyable and user-friendly experiences. Please feel free to explore my work and discover new possibilities along the way.",
+        "description" : "By combining creativity with modern web technologies I create warm and intuitive web experiences for users.",
         "button1" : "Web Development",
         "button2" :"Graphic Design"
     },

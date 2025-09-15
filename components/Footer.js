@@ -11,12 +11,12 @@ export default function Footer() {
 
     const tooltipStyle = "w-5 h-5 add-transition hover:scale-125 text-white"
     return (
-        <footer className="bg-chart-2 px-10 py-6 mx-auto">
+        <footer className="bg-[linear-gradient(0deg,hsl(var(--btn-1))0%,hsl(var(--btn-2))100%)] px-10 py-6 mx-auto">
             <div className="flex items-center gap-5 sm:flex-row flex-col">
                 <Link href="/">
                     <span className="text-2xl text-white font-extrabold">Yoonju.T </span>
                 </Link>
-                <p className='text-sm text-white flex items-center capitalize'>
+                <p className='text-md text-white flex items-center capitalize'>
                     {t("des")}
                 </p>
                 <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>

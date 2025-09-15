@@ -1,8 +1,7 @@
 { 
   "home" : {
     "title": "Bonjour, je suis Yoonju!",
-    "subt" :"Bienvenue dans mon univers créatif numérique",
-    "description" : "Actuellement basé en France, je travaille comme designer graphique freelance tout en développant des projets personnels avec des technologies web modernes telles que Next.js, React et TypeScript. En associant la créativité et le sens visuel acquis grâce au design graphique au développement web, je souhaite faire évoluer davantage des services en ligne offrant une expérience conviviale et agréable. Je vous invite à parcourir mes travaux et à y découvrir de nouvelles possibilités.",
+    "description" : "En alliant créativité et technologies web modernes je conçois des expériences web chaleureuses et intuitives. ",
     "button1" : "Development Web",
     "button2" :"Design Graphique"
     }, 

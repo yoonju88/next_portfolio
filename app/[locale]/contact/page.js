@@ -2,7 +2,7 @@
 import React from 'react'
 import ContactForm from '@/components/form/Contact'
 import emailAnimation from '@/public/email_1.json'
-import { AnimationLottie } from '@/components/animation/DynamicMap'
+//import { AnimationLottie } from '@/components/animation/DynamicMap'
 import PersonalInfo from '@/components/contact/PersonalInfo'
 import { useTranslations } from 'next-intl'
 
@@ -12,10 +12,10 @@ export default function contactPage() {
     return (
         <section className="mt-20 mb-24 px-10">
             <div className="py-10 flex flex-wrap justify-center gap-20">
-                <span className="pl-14 lg:w-[40%] w-[70%] bg-background rounded-lg overflow-hidden flex flex-col justify-center items-center">
+                {/* <span className="pl-14 lg:w-[40%] w-[70%] bg-background rounded-lg overflow-hidden flex flex-col justify-center items-center">
                     <AnimationLottie animation={emailAnimation} />
-                </span>
-                <div className="lg:w-[50%] w-full bg-background border-4 border-chart-2/50 rounded-lg p-8 flex flex-col mt-10 shadow-md">
+                </span> */}
+                <div className="lg:w-[50%] w-full  border-4 border-chart-2/50 rounded-lg p-8 flex flex-col mt-10 shadow-md">
                     <div className="flex items-center justify-between mb-4">
                         <h1 className="text-3xl font-medium title-font">{t("title")}</h1>
                         <PersonalInfo

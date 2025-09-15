@@ -88,7 +88,7 @@ export default function Header() {
     return (
         <header className="px-10 flex flex-wrap flex-col md:flex-row items-center mt-4">
             <Link href={`/${locale}`} className="flex title-font font-medium items-center mb-6 md:mb-0" >
-                <span className="ml-3 text-4xl text-chart-2 font-extrabold" >Yoonju.T</span>
+                <span className="ml-3 text-4xl text-foreground/80 font-extrabold" >Yoonju.T</span>
             </Link>
             <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <div
@@ -136,10 +136,11 @@ export default function Header() {
                         )
                     }
                 })}
+                <div className="md:mt-0 sm:mt-6 mt-0 md:ml-3 ml-0">
+                    <DarkMode />
+                </div>
             </nav>
-            <div className="md:mt-0 mt-6 md:ml-3 ml-0">
-                <DarkMode />
-            </div>
+
         </header>
     )
 }

@@ -8,7 +8,8 @@ import { setRequestLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { locales } from '@/i18n/routing';
 import LocaleSwitcher from '@/components/LocaleSwitcher'
-import { Suspense } from 'react';
+import { Suspense } from 'react'
+
 
 const inter = Inter({ subsets: ['latin'] })
 

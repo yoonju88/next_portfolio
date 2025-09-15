@@ -25,11 +25,14 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
     --chart-1: 32 46% 93%; /*marron pastel*/
-    --chart-2: 254 44% 60%;/*violet pastel*/
+    --chart-2: 329 75% 85%;
     --chart-3:  0 0% 99%;/*gris claire pastel*/
     --chart-4: 43 74% 66%; /* violet*/
     --chart-5: 27 87% 67%;
-
+    --btn-1: 329 90% 71%;
+    --btn-2: 329 75.3% 80.4%;
+    --btn-3 : 329 80% 68%; 
+    --btn-4: 27 87.3% 81.4%;
   }
 
   .dark {
@@ -57,30 +60,88 @@
     --chart-3: 241 89% 62%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --btn-1 : 215 100% 54.8%; 
+    --btn-2: 188 100% 54.8%; 
+    --btn-3: 230 88.8% 54.3%;
+    --btn-4: 233 87% 38%; 
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-drift, .animate-gradient {
+    animation: none !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mix-blend-difference { display: none !important; }
+} 
+@layer utilities {
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+  .animate-gradient-dynamic {
+    background-size: 400% 400%;
+    animation: gradient-shift 12s ease-in-out infinite;
+  }
+}
+/*배경색*/
+body {
+  @apply animate-gradient-dynamic;
+  background-image: linear-gradient(120deg, #f9fbf6, #fad7d7, #f7eebb);
+}
+.dark body {
+  background-image: linear-gradient(120deg, #164cb0, #100c7e, #37f7c1); 
+}
+
+html.loading, body.loading { overflow: hidden; }
+
+@layer components {
+  .loader {
+    @apply w-fit text-[100px] font-mono font-bold uppercase text-transparent;
+    -webkit-text-stroke: 1px #272727;
+    --g: conic-gradient(hsl(329, 90.8%, 71%) 0 0) no-repeat text;
+    background:
+    var(--g) 0ch, var(--g) 1ch, var(--g) 2ch, var(--g) 3ch, var(--g) 4ch,
+    var(--g) 5ch, var(--g) 6ch, var(--g) 7ch, var(--g) 8ch, var(--g) 9ch,
+    var(--g) 10ch, var(--g) 11ch, var(--g) 12ch, var(--g) 13ch, var(--g) 14ch,
+    var(--g) 15ch, var(--g) 16ch, var(--g) 17ch, var(--g) 18ch;
+    animation: l17-0 1s linear infinite alternate, l17-1 2s linear infinite;
+  }
+.dark .loader {
+-webkit-text-stroke: 1px #ffffff;
+}
+  .loader::before {
+    content: "yoonju's portfolio"
+  }
+
+@keyframes l13 {
+  to {background-position: 100%}
+}
+
+  @keyframes l17-0 {
+    0%   {background-size: 1ch 0}
+    100% {background-size: 1ch 100%}
+  }
+  @keyframes l17-1 {
+    0%,50%    {background-position-y: 100%, 0}
+    50.01%,to {background-position-y: 0, 100%}
+  }
+} 
 
 @layer base {
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
-  .container {
-    @apply mx-auto max-w-6xl xl:max-w-7xl px-8;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-foreground/80;
+  @apply text-foreground/60
 }
 
 p {
-  @apply text-foreground/75;
+  @apply text-foreground/70;
 }
 
 .hover-effect-card {
@@ -103,4 +164,54 @@ p {
   .add-transition {
     transition: all 300ms ease-in-out
   }
+/* gradation text*/ 
+  @keyframes gradient-move {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-gradient-text {
+    background-size: 200% 200%; /* 움직일 공간 확보 */
+    animation: gradient-move 4s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* 내부를 배경으로 채움 */
+  }
+
+ /* 제목 타이핑 애니메이션 */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  .animate-typing {
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 1s step-end infinite;
+  }
+  .stroke-title-intro {
+  color : hsl(var(--foreground)/0.8)
+  }
+   /* 설명: 타자 효과 (+ 커서 깜빡임) */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 700ms ease-out both;
+  }
+
+  @keyframes slide-down-soft {
+    from { opacity: 0; transform: translateY(-12px); filter: blur(6px); }
+    to   { opacity: 1; transform: translateY(0);     filter: blur(0); }
+  }
+  .animate-slide-down-soft {
+    animation: slide-down-soft 700ms cubic-bezier(.22,.61,.36,1) both;
+   animation-delay: var(--amin-delay, 0ms);
+  }
 }
+
+
