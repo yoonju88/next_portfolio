@@ -3,7 +3,8 @@
     "title": "Bonjour, je suis Yoonju!",
     "description" : "En alliant créativité et technologies web modernes je conçois des expériences web chaleureuses et intuitives. ",
     "button1" : "Development Web",
-    "button2" :"Design Graphique"
+    "button2" :"Design Graphique",
+    "button3":"Voir mon portfolio"
     }, 
 
   "locale": {
