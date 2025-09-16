@@ -84,15 +84,18 @@ export default function Header() {
             })),
         [t, locale]
     )
-
+    // 텍스트 그림자 효과 [text-shadow:_0_0_6px_hsl(var(--btn-2)/0.5),_0_0_20px_hsl(var(--btn-2)/0.5),_0_0_20px_hsl(var(--btn-2)/0.5)]
     return (
         <header className="px-10 flex flex-wrap flex-col md:flex-row items-center mt-4">
             <Link href={`/${locale}`} className="flex title-font font-medium items-center mb-6 md:mb-0" >
-                <span className="ml-3 text-4xl text-foreground/80 font-extrabold" >Yoonju.T</span>
+                <span className="ml-3 sm:text-4xl text-3xl font-black uppercase tracking-wider
+                    text-foreground/80" >
+                    yoonju.t
+                </span>
             </Link>
             <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
                 <div
-                    className='absolute bottom-0 h-[2px] bg-foreground/80 transition-all duration-500'
+                    className='absolute bottom-0 h-[2px] bg-foreground/75 transition-all duration-500'
                     style={{
                         width: underline.width,
                         left: underline.left,
@@ -136,7 +139,7 @@ export default function Header() {
                         )
                     }
                 })}
-                <div className="md:mt-0 sm:mt-6 mt-0 md:ml-3 ml-0">
+                <div className="ml-2">
                     <DarkMode />
                 </div>
             </nav>

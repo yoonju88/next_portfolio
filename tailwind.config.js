@@ -55,7 +55,7 @@ module.exports = {
 					'2': 'hsl(var(--btn-2))',
 					'3': 'hsl(var(--btn-3))',
 					'4': 'hsl(var(--btn-4))',
-				}
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -89,6 +89,10 @@ module.exports = {
 					'50%': { backgroundPosition: '100% 50%' },
 					'100%': { backgroundPosition: '0% 50%' },
 				},
+				glow: {
+					"0%,100%": { boxShadow: "0 0 10px hsl(var(--btn-2)/0.6)" },
+					"50%": { boxShadow: "0 0 30px hsl(var(--btn-2))" },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.3s ease-out',
@@ -96,6 +100,7 @@ module.exports = {
 				float: 'float 6s ease-in-out infinite',
 				drift: 'drift 10s ease-in-out infinite',
 				gradient: 'gradientShift 12s ease-in-out infinite',
+				glow: "glow 2s ease-in-out infinite",
 			},
 		}
 	},

@@ -14,18 +14,17 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          " shadow-foreground/20 shadow-sm bg-transparent add-transition hover:shadow-inner hover:shadow-foreground/30",
+          " shadow-btn-3/50 shadow-sm bg-transparent add-transition hover:shadow-inner hover:shadow-btn-3/30",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:underline hover:decoration-2",
         link: "text-primary underline-offset-4 hover:underline",
         navigate:
           "appearance-none rounded-full font-semibold text-white \
-   bg-[length:300%_100%] \
-   bg-[linear-gradient(90deg,hsl(var(--btn-1))0%,hsl(var(--btn-2))33%,hsl(var(--btn-3))66%,hsl(var(--btn-4))100%)] \
-   shadow-[0_4px_15px_rgba(53, 53, 53, 0.75)] \
-   transition-all duration-500 ease-in-out \
-   hover:bg-[position:100%_0] focus:outline-none"
+            bg-[length:300%_100%] \
+            bg-[linear-gradient(90deg,hsl(var(--btn-1))0%,hsl(var(--btn-2))33%,hsl(var(--btn-3))66%,hsl(var(--btn-4))100%)] \
+            transition-all duration-500 ease-in-out \
+            hover:bg-[position:100%_0] focus:outline-none"
       },
       size: {
         default: "h-9 px-4 py-2",

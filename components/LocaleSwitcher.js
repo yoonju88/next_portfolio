@@ -52,7 +52,7 @@ export default function LocaleSwitcher() {
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="default" className="flex items-center gap-2">
+                <Button variant="outline" className="flex items-center gap-2 text-sm sm:text-base px-2 py-1 sm:px-4 ">
                     <ReactCountryFlag countryCode={current.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} />
                     <span>{t(current.label)}</span>
                     <ChevronDown className={`transform transition-all duration-500 text-foreground delay-150 ease-in-out ${open ? 'rotate-180' : 'rotate-0'}`} />

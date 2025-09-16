@@ -32,7 +32,7 @@ export default function DarkMode() {
                     <span className='sr-only'>{t("toggle")}</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align='end' className="bg-background/50">
+            <DropdownMenuContent align='end' className="bg-background">
                 <DropdownMenuItem onClick={() => setTheme('light')}>
                     {t("light")}
                 </DropdownMenuItem>
