@@ -101,7 +101,7 @@ html.loading, body.loading { overflow: hidden; }
 
 @layer components {
   .loader {
-    @apply w-fit text-[100px] font-mono font-bold uppercase text-transparent;
+    @apply w-fit text-[40px] md:text-[70px] lg:text-[100px]  text-center font-mono font-bold uppercase text-transparent bg-clip-text;
     -webkit-text-stroke: 1px #f872b7;
     --g: conic-gradient(#f872b7 0 0) no-repeat text;
     background:
