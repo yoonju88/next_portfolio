@@ -16,10 +16,10 @@ export default function Footer() {
                 <Link href="/">
                     <span className="text-2xl text-white font-extrabold">Yoonju.T </span>
                 </Link>
-                <p className='text-md text-white flex items-center capitalize'>
+                <p className='text-md text-white flex items-center capitalize sm:text-center'>
                     {t("des")}
                 </p>
-                <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-0 justify-center sm:justify-start'>
+                <span className='inline-flex gap-4 sm:ml-auto mt-4 sm:mt-2 justify-center sm:justify-start'>
                     <ToolTip
                         text={t("linkedin")}
                     >

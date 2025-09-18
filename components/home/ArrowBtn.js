@@ -24,9 +24,7 @@ export default function ArrowBtn() {
                     className="group relative inline-flex items-center overflow-hidden
                         pl-20 py-6 pr-8 text-white
                         sm:font-meduim sm:text-lg text-base leading-6 tracking-wider uppercase
-                        transition-[transform,color,shadow] duration-500 shadow-[0_0_30px_hsl(var(--btn-2))]
-                        animate-glow [animation-duration:2s]  
-                        hover:[animation:none] hover:shadow-none"
+                        glow-effect"
                 >
                     <svg
                         className="pointer-events-none absolute left-10 top-[17px] w-[35px] h-[15px]

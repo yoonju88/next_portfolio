@@ -2,23 +2,23 @@ import React from 'react'
 
 export default function ExperienceLists({ startDate, endDate, jobTitle, companyName, address, description }) {
     return (
-        <section className="group h-full flex items-start lg:flex-row md:flex-col sm:flex-col p-5 rounded-lg hover-effect-card hover:scale-105 add-transition">
-            <div className="w-30 flex-shrink-0 pt-1 flex flex-col text-center leading-none mb-1 ">
-                <span className="text-xs font-semibold text-chart-2">{startDate} - {endDate}</span>
+        <section className="group h-full flex items-start lg:flex-row flex-col p-5 rounded-lg hover-effect-card">
+            <div className="flex-shrink-0 pt-1 flex flex-col text-center leading-none mb-1 ">
+                <span className="date">{startDate} - {endDate}</span>
             </div>
-            <div className="flex-grow lg:pl-7 md:pl-0 sm:pl-0 ml-3 md:ml-0">
-                <h3 className="title-font text-base font-semibold mb-1 uppercase ">
+            <div className="flex-grow lg:pl-7 md:pl-0 sm:pl-0 lg:ml-3 ml-0 ">
+                <h3 className="mb-1">
                     {jobTitle}
                 </h3>
-                <p className="tracking-widest text-xs title-font font-semibold mb-1 text-chart-2">
+                <h4 className="mb-1">
                     <span className='pr-2'>
                         {companyName}
                     </span>
-                    <span className="border-l pl-2 border-foreground/60  ">
+                    <span className="border-l pl-2 border-btn-1  ">
                         {address}
                     </span>
-                </p>
-                <p className="leading-relaxed mb-2 text-sm ">
+                </h4>
+                <p className="mb-2">
                     {description}
                 </p>
             </div>

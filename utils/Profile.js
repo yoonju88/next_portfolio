@@ -133,9 +133,9 @@ import Ai from '@/public/ai.png'
 import Ae from '@/public/ae.png'
 import Figma from '@/public/figma.png'
 import Fb from '@/public/firebase-logo.png'
-import St from '@/public/stripe.jpeg'
+import St from '@/public/stripe.png'
 import Sh from '@/public/shadcn.png'
-import Cv from '@/public/canva.jpg'
+import Cv from '@/public/canva.png'
 
 export const mySkillsData = [
     {
@@ -231,26 +231,26 @@ export const serviceData = [
     {
         title: "web",
         description: "webdes",
-        icon: (<VscCode className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+        icon: (<VscCode className="size-6 text-white add-transition" />),
     },
     {
         title: "optimization",
         description: "optdes",
-        icon: (<VscSmiley className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+        icon: (<VscSmiley className="size-6 text-white add-transition" />),
     },
     {
         title: "ui",
         description: "uides",
-        icon: (<VscEditorLayout className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+        icon: (<VscEditorLayout className="size-6 text-white  add-transition" />),
     },
     {
         title: "maintenance",
         description: "maindes",
-        icon: (<VscDebugRestart className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+        icon: (<VscDebugRestart className="size-6 text-white add-transition" />),
     },
     {
         title: "deploying",
         description: "deployingdes",
-        icon: (<VscRocket className="size-6 text-white group-hover:text-chart-2 add-transition" />),
+        icon: (<VscRocket className="size-6 text-white  add-transition" />),
     },
 ]

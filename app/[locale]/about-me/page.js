@@ -18,7 +18,7 @@ const icons = {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-foreground/80 hover:text-chart-2 hover:scale-105 add-transition"
+            className="size-8 text-btn-1 hover:scale-105 add-transition"
         >
             <path
                 strokeLinecap="round"
@@ -33,7 +33,7 @@ const icons = {
             fill="none" viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-7 text-foreground/80 hover:text-chart-2 hover:scale-105 add-transition "
+            className="size-8 text-btn-1 hover:scale-105 add-transition "
         >
             <path
                 strokeLinecap="round"
@@ -54,25 +54,24 @@ export default function AboutMePage() {
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
     };
-    const styleContainer = "lg:w-[48%] md:w-[48%] sm:w-full p-6 bg-background rounded-xl box-border"
+
     return (
         <>
-            <div className="px-10 mx-auto flex flex-col">
-                <div className="mx-auto mt-8 space-y-20">
+            <div className="px-10 w-full mx-auto flex flex-col">
+                <div className="mx-auto mt-8 sm:space-y-32 space-y-28">
                     <Profile />
                     {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
                     <Services />
                     {/* <div className='border-t-2 border-foreground/20 mb-10 mx-10' /> */}
                     <MySkills />
                     {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
-                    <div className="py-20 w-full mx-auto flex flex-wrap justify-between">
+                    <div className='sm:mt-32 mt-26 flex flex-col sm:gap-32 gap-24'>
                         <ContentContainer
                             title="Experience"
                             data={experiences}
                             icon={renderIcon("experience")}
-                            className={styleContainer}
                         >
-                            <div className="flex flex-col items-left lg:gap-4 mb:gap-2 sm:gap-2">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                                 {experiences.map((item) => {
                                     return (
                                         <ExperienceLists
@@ -92,9 +91,8 @@ export default function AboutMePage() {
                             title="Education"
                             data={educations}
                             icon={renderIcon("education")}
-                            className={`${styleContainer} lg:mt-0 md:mt-0 sm:mt-10`}
                         >
-                            <div className="flex flex-col items-center gap-4 ">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
                                 {educations.map((item) => {
                                     return (
                                         <EducationList
@@ -113,10 +111,9 @@ export default function AboutMePage() {
                             </div>
                         </ContentContainer>
                     </div>
+                    <ContactMe />
                 </div>
             </div >
-            {/* <div className='border-t-2 border-foreground/20 mb-10 mx-10' /> */}
-            <ContactMe />
         </>
     )
 }

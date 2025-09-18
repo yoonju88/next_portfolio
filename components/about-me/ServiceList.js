@@ -7,20 +7,20 @@ import {
 
 export default function ServiceList({ title, icon, description }) {
     return (
-        <Accordion key={title} type="single" collapsible className="w-full p-4 rounded-2xl add-transition group hover-effect-card">
+        <Accordion key={title} type="single" collapsible className="w-[97%] p-4 rounded-2xl group hover-effect-card">
             <AccordionItem value="item-1">
                 <AccordionTrigger>
-                    <h2 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
-                        <span className="p-1.5 bg-chart-2 shadow-md shadow-chart-2 rounded-full add-transition group-hover:shadow-chart-2 group-hover:shadow-inner group-hover:bg-white">
+                    <h3 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
+                        <span className="p-1.5 bg-btn-1 shadow-sm shadow-btn-1 rounded-full add-transition group-hover:shadow-btn-1 group-hover:shadow-inner group-hover:bg-btn-2">
                             {icon}
                         </span>
-                        <span className="pl-3 text-xl text-center self-center group-hover:font-bold">
+                        <span className="pl-3 sm:text-xl text-lg text-center self-center group-hover:font-bold">
                             {title}
                         </span>
-                    </h2>
+                    </h3>
                 </AccordionTrigger>
                 <AccordionContent>
-                    <p className="leading-relaxed text-foreground/80 text-base mt-2 text-left pl-2 ">{description}</p>
+                    <p className="mt-2 text-left pl-2">{description}</p>
                 </AccordionContent>
             </AccordionItem>
         </Accordion>

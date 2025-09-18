@@ -1,10 +1,10 @@
 import React from 'react'
 import Title from './Title'
 
-export default function ContentContainer({ title, icon, className, children }) {
+export default function ContentContainer({ title, icon, children }) {
 
     return (
-        <div className={className}>
+        <section>
             <Title
                 title={title}
             >
@@ -13,6 +13,6 @@ export default function ContentContainer({ title, icon, className, children }) {
             <div className="flex flex-col gap-7">
                 {children}
             </div>
-        </div>
+        </section>
     )
 }
