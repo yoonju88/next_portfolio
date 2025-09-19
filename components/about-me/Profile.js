@@ -33,7 +33,7 @@ export default function Profile() {
                     <h1 className="step-heading">
                         {t('title')}
                     </h1>
-                    <div className="step-icons flex items-center gap-2 lg:mb-0 mb-4 lg:pl-0 pl-6">
+                    <div className="step-icons flex items-center gap-2 lg:mb-0 md:mb-0 mb-4 sm:pl-6 pl-0 ">
                         <ToolTip
                             text={t('link1')}
                             className={tooltipStyle}

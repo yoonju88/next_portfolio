@@ -41,14 +41,8 @@ export default function IntroReveal({ children, className = '' }) {
 
             tl.fromTo('.step-photo',
                 { autoAlpha: 0, scale: 0.5, y: yVal },
-                { autoAlpha: 1, scale: 1, y: 0, duration: dur, ease: 'back.out(1.7)' }
+                { autoAlpha: 1, scale: 1, y: 0, duration: dur, ease: 'back.out(1.2)' }
             )
-                .fromTo('.step-heading',
-                    { autoAlpha: 0, y: yVal },
-                    { autoAlpha: 1, y: 0, duration: dur },
-                    '-=0.2'
-                )
-                .to('.step-job', { autoAlpha: 1, y: 0 }, '-=0.1')
                 .fromTo('.step-icons .icon',
                     { autoAlpha: 0, scale: 0, y: yVal },
                     {
@@ -59,9 +53,15 @@ export default function IntroReveal({ children, className = '' }) {
                         ease: 'back.out(1.8)',   // 살짝 튀어나오는 느낌
                         stagger: 0.12
                     },
-                    '-=0.1'
+                    '-=0.05'
                 )
-                .to('.step-desc', { autoAlpha: 1, y: 0 }, '-=0.15')
+                .fromTo('.step-heading',
+                    { autoAlpha: 0, y: yVal },
+                    { autoAlpha: 1, y: 0, duration: dur },
+                    '-=0.2'
+                )
+                .to('.step-job', { autoAlpha: 1, y: 0 }, '-=0.1')
+                .to('.step-desc', { autoAlpha: 1, y: 0 }, '-=0.1')
 
         }, el)
 
