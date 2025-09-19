@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
 import { profileData } from '@/utils/Profile'
@@ -9,6 +9,7 @@ import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
 import MySkills from '@/components/about-me/skills/MySkills'
 import { useTranslations } from 'next-intl'
+import Reveal from '@/components/ScrollReveal/Reveal'
 
 const icons = {
     experience: (
@@ -54,28 +55,23 @@ export default function AboutMePage() {
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
     };
-
     return (
-        <>
-            <div className="px-10 w-full mx-auto flex flex-col">
-                <div className="mx-auto mt-8 sm:space-y-32 space-y-28">
-                    <Profile />
-                    {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
-                    <Services />
-                    {/* <div className='border-t-2 border-foreground/20 mb-10 mx-10' /> */}
-                    <MySkills />
-                    {/* <div className='border-t-2 border-foreground/20 mt-10 mx-10' /> */}
-                    <div className='sm:mt-32 mt-26 flex flex-col sm:gap-32 gap-24'>
-                        <ContentContainer
-                            title="Experience"
-                            data={experiences}
-                            icon={renderIcon("experience")}
-                        >
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                {experiences.map((item) => {
-                                    return (
+        <div className="px-10 w-full mx-auto flex flex-col">
+            <div className="mx-auto mt-8 sm:space-y-32 space-y-28">
+                <Profile />
+                <Services />
+                <MySkills />
+                <div className='sm:mt-32 mt-26 flex flex-col sm:gap-32 gap-24'>
+                    <ContentContainer
+                        title="Experience"
+                        data={experiences}
+                        icon={renderIcon("experience")}
+                    >
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            {experiences.map((item) => {
+                                return (
+                                    <Reveal key={item.jobTitle} y={20} duration={0.6} start="top 85%" itemSelector={null}>
                                         <ExperienceLists
-                                            key={item.jobTitle}
                                             startDate={item.duration.start}
                                             endDate={item.duration.end}
                                             jobTitle={t(item.jobTitle)}
@@ -83,20 +79,20 @@ export default function AboutMePage() {
                                             address={t(item.address)}
                                             description={t(item.description)}
                                         />
-                                    )
-                                })}
-                            </div>
-                        </ContentContainer>
-                        <ContentContainer
-                            title="Education"
-                            data={educations}
-                            icon={renderIcon("education")}
-                        >
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
-                                {educations.map((item) => {
-                                    return (
+                                    </Reveal>)
+                            })}
+                        </div>
+                    </ContentContainer>
+                    <ContentContainer
+                        title="Education"
+                        data={educations}
+                        icon={renderIcon("education")}
+                    >
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
+                            {educations.map((item) => {
+                                return (
+                                    <Reveal key={item.name} y={20} duration={0.6} start="top 85%" itemSelector={null}>
                                         <EducationList
-                                            key={item.name}
                                             startDate={item.duration.start}
                                             endDate={item.duration.end}
                                             name={et(item.name)}
@@ -106,14 +102,14 @@ export default function AboutMePage() {
                                             address={et(item.address)}
                                             degree={et(item.degree)}
                                         />
-                                    )
-                                })}
-                            </div>
-                        </ContentContainer>
-                    </div>
-                    <ContactMe />
+                                    </Reveal>
+                                )
+                            })}
+                        </div>
+                    </ContentContainer>
                 </div>
-            </div >
-        </>
+                <ContactMe />
+            </div>
+        </div >
     )
 }

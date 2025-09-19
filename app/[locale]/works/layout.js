@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuNavigate from '@/components/MenuNavigate'
+import MenuNavigate from '@/components/nav/MenuNavigate'
 
 export default function layout({ children }) {
     return (

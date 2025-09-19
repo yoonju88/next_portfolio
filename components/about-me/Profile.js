@@ -27,12 +27,12 @@ export default function Profile() {
                     />
                 </span>
             </div>
-            <div className='lg:w-[70%] w-full pt-10 lg:pt-1 md:pt-10 lg:text-left text-center'>
+            <div className='lg:w-[70%] w-full pt-10 lg:pt-1 lg:text-left text-center'>
                 <div className="flex flex-wrap-reverse lg:flex-nowrap items-center justify-center lg:justify-between">
                     <h1>
                         {t('title')}
                     </h1>
-                    <div className="flex items-center gap-2 lg:mb-0 md:mb-0 mb-4 lg:pl-0 pl-6">
+                    <div className="flex items-center gap-2 lg:mb-0 mb-4 lg:pl-0 pl-6">
                         <ToolTip
                             text={t('link1')}
                             className={tooltipStyle}

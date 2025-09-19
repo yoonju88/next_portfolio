@@ -1,9 +1,11 @@
 'use client'
 import React, { useState } from 'react'
 import { mySkillsData, buttonTypes } from '@/utils/Profile'
-import SkillList from '@/components/about-me/skills/SkillList'
+import SkillCard from '@/components/about-me/skills/SkillList'
 import { FilterButton } from '@/components/form/Buttons';
 import { useTranslations } from 'next-intl';
+import Reveal from '@/components/ScrollReveal/Reveal';
+import RevealGrid from '@/components/ScrollReveal/RevealGrid';
 
 export default function MySkills() {
     const [isFilteredType, setisFilteredType] = useState('all')
@@ -11,39 +13,53 @@ export default function MySkills() {
     const filteredItems = isFilteredType === 'all' ? mySkillsData : mySkillsData.filter(item => item.type === isFilteredType)
 
     return (
-        <section>
-            <div className="mx-auto">
-                <div className="flex flex-col text-center w-full mb-20">
+        <section className="mx-auto">
+            <div className="flex flex-col text-center w-full mb-20">
+                <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null}>
                     <h1 className="mb-2">{t("title")}</h1>
                     <p className=" text-center mt-2">{t("description")}</p>
-                    <div className='flex flex-wrap mt-10 justify-center gap-3'>
-                        {buttonTypes.map((item) => {
-                            return (
-                                <FilterButton
-                                    key={item.id}
-                                    name={t(item.name)}
-                                    active={isFilteredType === item.type}
-                                    onClick={() => setisFilteredType(item.type)}
-                                />
-                            )
-                        })}
-                    </div>
-                </div>
-                <div className="flex flex-wrap -m-4 lg:gap-10 gap-6 justify-center ">
-                    {filteredItems.map((item) => {
+                </Reveal>
+                <RevealGrid
+                    className="flex flex-wrap mt-10 justify-center gap-3"
+                    itemSelector=".skill-card"
+                    from="ramdom"
+                    y={22}
+                    scale={0.92}
+                    duration={0.65}
+                    amount={0.5}
+                >
+                    {buttonTypes.map((item) => {
                         return (
-                            <div key={item.id}>
-                                <SkillList
-                                    key={item.id}
-                                    title={item.title}
-                                    icon={item.icon}
-                                    filtered={isFilteredType}
-                                />
-                            </div>
+                            <FilterButton
+                                key={item.id}
+                                name={t(item.name)}
+                                active={isFilteredType === item.type}
+                                onClick={() => setisFilteredType(item.type)}
+                            />
                         )
                     })}
-                </div>
+                </RevealGrid>
             </div>
+            <RevealGrid
+                className="flex flex-wrap -m-4 lg:gap-10 gap-6 justify-center "
+                itemSelector=".skill-card"
+                from="ramdom"
+                y={22}
+                scale={0.92}
+                duration={0.65}
+                amount={0.5}
+            >
+                {filteredItems.map((item) => {
+                    return (
+                        <SkillCard
+                            key={item.id}
+                            title={item.title}
+                            icon={item.icon}
+                            filtered={isFilteredType}
+                        />
+                    )
+                })}
+            </RevealGrid>
         </section >
     )
 }

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function EducationList({ startDate, endDate, link, image, name, schoolName, address, degree }) {
     return (
-        <div className="flex items-center justify-center hover-effect-card py-6 px-4 rounded-lg group">
+        <div className="flex items-center justify-center min-h-[160px] hover-effect-card py-6 px-5 rounded-lg group">
             <div className="w-12 h-12 inline-flex items-center bg-white rounded-full flex-shrink-0 overflow-hidden shadow-sm shadow-btn-1 add-transition group-hover:scale-105 ">
                 <Link href={link} target="_blank">
                     <Image src={image} alt="school logo" className="w-full object-cover " />

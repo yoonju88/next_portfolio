@@ -1,13 +1,13 @@
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from '@/components/nav/Header'
-import Footer from '@/components/Footer'
+import Footer from '@/components/home/Footer'
 import Providers from "../providers";
 import { ScrollTopButton } from '@/components/form/Buttons';
 import { setRequestLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { locales } from '@/i18n/routing';
-import LocaleSwitcher from '@/components/LocaleSwitcher'
+import LocaleSwitcher from '@/components/nav/LocaleSwitcher'
 import { Suspense } from 'react'
 
 

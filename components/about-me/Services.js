@@ -3,16 +3,19 @@ import React from 'react'
 import ServiceList from './ServiceList';
 import { useTranslations } from 'next-intl';
 import { serviceData } from '@/utils/Profile';
+import Reveal from '../ScrollReveal/Reveal';
 
 export default function Services() {
     const t = useTranslations('services')
 
     return (
         <section>
-            <div className="flex flex-col text-center mb-20">
-                <h1>{t('title')}</h1>
-            </div>
-            <div className="flex flex-wrap -m-4 text-center items-center justify-center gap-6 ">
+            <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null}>
+                <div className="flex flex-col text-center mb-20">
+                    <h1>{t('title')}</h1>
+                </div>
+            </Reveal>
+            <div className="grid lg:grid-cols-2 grid-cols-1 -m-4 text-center items-center justify-center gap-6 ">
                 {serviceData.map((item) => {
                     return (
                         <ServiceList

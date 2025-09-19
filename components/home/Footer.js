@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { IoLogoGithub } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
-import ToolTip from './ToolTip';
+import ToolTip from '../ToolTip';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
