@@ -36,7 +36,7 @@ export default async function RootLayout({ children, params }) {
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers >
-            <div className="pt-4 sm:pr-10 pr-4 ml-0 flex sm:justify-end justify-center ">
+            <div className="pt-4 sm:pr-10 pr-4 ml-0 flex justify-end">
               <Suspense fallback={null}>
                 <sapn className="flex items-center gap-4">
                   <LocaleSwitcher />
