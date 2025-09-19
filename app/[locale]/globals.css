@@ -25,7 +25,7 @@
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
     --chart-1: 32 46% 93%; /*marron pastel*/
-    --chart-2: 329 75% 85%;
+    --chart-2: 329 83% 89%;
     --chart-3:  0 0% 99%;/*gris claire pastel*/
     --chart-4: 43 74% 66%; /* violet*/
     --chart-5: 27 87% 67%;
@@ -87,15 +87,6 @@
     animation: gradient-shift 12s ease-in-out infinite;
   }
 }
-/*배경색*/
-body {
-  @apply animate-gradient-dynamic;
-  background-image: linear-gradient(120deg, #f8eded, #f9d1d1, #faf3cc);
-}
-.dark body {
-  background-image: linear-gradient(120deg, #071245, #384eae, #212b5a);
-
-}
 
 html.loading, body.loading { overflow: hidden; }
 
@@ -115,7 +106,6 @@ html.loading, body.loading { overflow: hidden; }
 -webkit-text-stroke: 1px #ffffff;
 --g: conic-gradient(#ffffff 0 0) no-repeat text;
 }
-
   .loader::before {
     content: "Yoonju.t"
   }
@@ -166,6 +156,15 @@ p {
 
 
 @layer utilities {
+  /* background color  */
+   .bg-gradient-base {
+  @apply animate-gradient-dynamic;
+  background-image: linear-gradient(120deg, #f9d1d1, #fce4e4, #faebad);
+  }
+  .dark .bg-gradient-base{
+    background-image: linear-gradient(120deg, #051045, #3f56bb, #1e2858);
+  }
+
   .text-stroke {
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #7f7dfa
@@ -221,9 +220,6 @@ p {
     background-position: 100% 0%;
     transition: background-position 0.5s ease-in-out;
   }
-
-
-
 
 /* gradation text*/ 
   @keyframes gradient-move {
@@ -313,6 +309,7 @@ p {
     animation: none;
     box-shadow: none;
   }
+
 }
 
 
