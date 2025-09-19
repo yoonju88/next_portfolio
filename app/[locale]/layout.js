@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { locales } from '@/i18n/routing';
 import LocaleSwitcher from '@/components/nav/LocaleSwitcher'
 import { Suspense } from 'react'
+import DarkMode from '@/components/nav/DarkMode';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -35,9 +36,12 @@ export default async function RootLayout({ children, params }) {
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers >
-            <div className="pt-4 sm:pr-10 pr-4 ml-0 flex justify-end">
+            <div className="pt-4 sm:pr-10 pr-4 ml-0 flex sm:justify-end justify-center ">
               <Suspense fallback={null}>
-                <LocaleSwitcher />
+                <sapn className="flex items-center gap-4">
+                  <LocaleSwitcher />
+                  <DarkMode />
+                </sapn>
               </Suspense>
             </div>
             <Suspense fallback={null}>
