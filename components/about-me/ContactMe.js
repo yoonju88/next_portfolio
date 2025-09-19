@@ -18,10 +18,10 @@ export default function ContactMe() {
                             <AnimationLottie animation={ContactAnimation} />
                         </Reveal>
                     </div>
-                    <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null}>
+                    <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null} end="bottom bottom">
                         <p className="leading-relaxed text-lg text-foreground/80 mb-8">{t("des2")}</p>
                     </Reveal>
-                    <Reveal y={20} duration={0.6} start="top 85%" mobileStart="top 95%" itemSelector={null}>
+                    <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null} end="bottom bottom">
                         <ButtonNavigate
                             name={t("bt1")}
                             href="/contact"
