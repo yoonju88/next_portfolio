@@ -7,8 +7,8 @@ export default function RevealGrid({
     itemSelector = '.grid-item', // 자식 아이템 클래스
     start = 'top 80%',
     y = 24,
-    scale = 0.9,
-    duration = 0.7,
+    scale = 1,
+    duration = 0.6,
     ease = 'power3.out',
     from = 'center',            // 'center' | 'edges' | 'random' | 숫자 인덱스
     amount = 0.6,               // 전체 퍼지는 시간(초)

@@ -32,7 +32,7 @@ export const FilterButton = ({ active, name, onClick }) => {
     return (
         <Button
             onClick={onClick}
-            className={`${active ? "font-semibold shadow-inner shadow-btn-1 btn-active" : "shadow-md  font-medium shadow-btn-2 text-white"} skill-card`}
+            className={`${active ? "font-semibold shadow-inner shadow-btn-1 btn-active" : "shadow-md  font-medium shadow-btn-2 text-white"} skill-cardshrink-0 transform-gpu will-change-transform`}
             variant="navigate"
             size='default'
         >

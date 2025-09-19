@@ -22,11 +22,11 @@ export default function MySkills() {
                 <RevealGrid
                     className="flex flex-wrap mt-10 justify-center gap-3"
                     itemSelector=".skill-card"
-                    from="ramdom"
-                    y={22}
+                    from="start"
+                    y={14}
                     scale={0.92}
-                    duration={0.65}
-                    amount={0.5}
+                    duration={0.5}
+                    amount={0.45}
                 >
                     {buttonTypes.map((item) => {
                         return (

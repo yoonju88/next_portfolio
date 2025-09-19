@@ -6,6 +6,8 @@ import { MdAlternateEmail } from "react-icons/md";
 import ToolTip from '../ToolTip';
 import { useTranslations } from 'next-intl';
 
+import Reveal from '../ScrollReveal/Reveal';
+
 export default function Footer() {
     const t = useTranslations("footer")
 
