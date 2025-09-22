@@ -28,12 +28,12 @@ export default function CardReveal({
 
             // 기본 시퀀스(있으면 사용, 없으면 건너뜀)
             const steps = sequence || [
-                { sel: '.ih-icon', from: { autoAlpha: 0, scale: 0 }, to: { autoAlpha: 1, scale: 1, ease: 'back.out(1.5)' } },
-                { sel: '.ih-date', from: { autoAlpha: 0, y: 12 }, to: { autoAlpha: 1, y: 0, stagger: 0.06 }, at: '-=0.1' },
-                { sel: '.ih-title', from: { autoAlpha: 0, y: 16 }, to: { autoAlpha: 1, y: 0 }, at: '-=0.2' },
-                { sel: '.ih-sub', from: { autoAlpha: 0, y: 12 }, to: { autoAlpha: 1, y: 0 }, at: '-=0.15' },
-                { sel: '.ih-desc', from: { autoAlpha: 0, y: 12 }, to: { autoAlpha: 1, y: 0 } },
-                { sel: '.ih-cta', from: { autoAlpha: 0, scale: 0.95 }, to: { autoAlpha: 1, scale: 1 } },
+                { sel: '.ih-icon', from: { autoAlpha: 0, scale: 0, filter: 'blur(6px)' }, to: { autoAlpha: 1, scale: 1, filter: 'blur(0px)', ease: 'back.out(1.5)' } },
+                { sel: '.ih-date', from: { autoAlpha: 0, y: 12, filter: 'blur(4px)' }, to: { autoAlpha: 1, y: 0, filter: 'blur(0px)', stagger: 0.06 }, at: '-=0.1' },
+                { sel: '.ih-title', from: { autoAlpha: 0, y: 16, filter: 'blur(6px)' }, to: { autoAlpha: 1, y: 0, filter: 'blur(0px)' }, at: '-=0.2' },
+                { sel: '.ih-sub', from: { autoAlpha: 0, y: 12, filter: 'blur(4px)' }, to: { autoAlpha: 1, y: 0, filter: 'blur(0px)' }, at: '-=0.15' },
+                { sel: '.ih-desc', from: { autoAlpha: 0, y: 12, filter: 'blur(4px)' }, to: { autoAlpha: 1, y: 0, filter: 'blur(0px)' } },
+                { sel: '.ih-cta', from: { autoAlpha: 0, scale: 0.95, filter: 'blur(4px)' }, to: { autoAlpha: 1, scale: 1, filter: 'blur(0px)' } },
             ]
 
             // 초기 상태 세팅 (존재할 때만)

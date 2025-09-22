@@ -22,7 +22,7 @@ export default function ServiceList({ title, icon, description }) {
                 <AccordionItem value="item-1">
                     <AccordionTrigger>
                         <CardReveal>
-                            <h3 className="group text-xl text-foreground/80 font-semibold inline-flex item-center">
+                            <h3 className="group font-semibold inline-flex item-center">
                                 <span className="p-1.5 ih-icon bg-btn-1 shadow-sm shadow-btn-1 rounded-full add-transition group-hover:shadow-btn-1 group-hover:shadow-inner group-hover:bg-btn-2">
                                     {icon}
                                 </span>

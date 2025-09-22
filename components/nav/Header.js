@@ -70,6 +70,7 @@ export default function Header() {
     };
     const linkStyle = "inline-block capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer sm:text-base text-sm"
 
+
     const localizedNav = useMemo(
         () =>
             navLinks.map((nav) => ({
@@ -107,7 +108,7 @@ export default function Header() {
                             <DropDownMenu
                                 key={nav.key}
                                 name={nav.label}
-                                className={`${linkStyle} ${isDropDownActive(nav.worksLinks) ? "font-bold" : "font-medium"
+                                className={`${linkStyle} ${isDropDownActive(nav.worksLinks) ? "font-bold uppercase" : "font-medium"
                                     }`}
                                 links={nav.worksLinks}
                                 onMouseEnter={(e) => {
@@ -129,7 +130,7 @@ export default function Header() {
                             <Link
                                 key={nav.key}
                                 href={href}
-                                className={`${linkStyle} ${active ? "font-bold" : "font-medium"}`}
+                                className={`${linkStyle} ${active ? "font-bold" : "font-medium "}`}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                                 data-active={active}

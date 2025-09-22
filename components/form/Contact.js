@@ -13,6 +13,8 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const [isLoading, setIsLoading] = useState(false)
 
+    const inputStyle = "w-full text-foreground/80 bg-background/60 rounded border border-btn-2/50 focus:border-btn-2 focus:ring-2 focus:ring-btn-3/20 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-300"
+    const labelStyle = "leading-7 text-sm text-foreground/90"
     const onSubmit = async (data) => {
         setIsLoading(true)
         try {
@@ -38,7 +40,7 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
             <div className="relative mb-4">
                 <label
                     htmlFor="name"
-                    className="leading-7 text-sm text-foreground"
+                    className={`${labelStyle} animate-slide-down-soft [animation-delay:700ms]`}
                 >
                     {name}
                 </label>
@@ -47,13 +49,13 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
                     id='name'
                     {...register('name', { required: true })}
                     placeholder={namePh}
-                    className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-200"
+                    className={`${inputStyle} animate-slide-down-soft [animation-delay:900ms]`}
                 />
             </div>
             <div className="relative mb-4">
                 <label
                     htmlFor="email"
-                    className="leading-7 text-sm text-foreground"
+                    className={`${labelStyle} animate-slide-down-soft [animation-delay:1100ms]`}
                 >
                     {email}
                 </label>
@@ -61,14 +63,14 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
                     type="email"
                     id='email'
                     {...register('email', { required: true })}
-                    className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-200 "
+                    className={`${inputStyle} animate-slide-down-soft [animation-delay:1300ms]`}
                     placeholder='id@email.com'
                 />
             </div>
             <div className="relative mb-4">
                 <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-foreground"
+                    className={`${labelStyle} animate-slide-down-soft [animation-delay:1500ms]`}
                 >
                     {message}
                 </label>
@@ -76,11 +78,11 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
                     rows={4}
                     id='message'
                     {...register('message', { required: true })}
-                    className="w-full bg-background rounded border border-gray-300 focus:border-primary focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-foreground py-1 px-3 resize-none leading-6 transition-colors duration-200"
+                    className={`h-32  resize-none ${inputStyle} animate-slide-down-soft [animation-delay:1800ms]`}
                     placeholder={messagePh}
                 />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center animate-slide-down-soft [animation-delay:2100ms]">
                 <ButtonSubmit
                     type="submit"
                     disabled={isLoading}
@@ -88,7 +90,7 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
                 >
                     {isLoading ? (
                         <>
-                            <CgSpinner className='animate-spin size-7 text-white ' />
+                            <CgSpinner className='animate-spin size-7 text-white' />
                             <span className="text-white">{loading}</span>
                         </>
                     ) : <>{bt}</>
