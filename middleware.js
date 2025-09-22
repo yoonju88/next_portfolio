@@ -10,6 +10,6 @@ export default createMiddleware({
 
 export const config = {
     matcher: [
-        '/((?!_next|_vercel|.*\\..*).*)' // _next, 정적 파일 등 제외
+        '/((?!api|_next|.*\\..*).*)' // _next, 정적 파일 등 제외
     ]
 };
