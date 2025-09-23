@@ -10,7 +10,7 @@ export default function Services() {
 
     return (
         <section>
-            <Reveal y={20} duration={0.6} start="top 85%" itemSelector={null}>
+            <Reveal y={20} duration={0.6} start="top 70%" itemSelector={null}>
                 <div className="flex flex-col text-center mb-20">
                     <h1>{t('title')}</h1>
                 </div>
