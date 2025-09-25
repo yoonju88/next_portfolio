@@ -1,68 +1,76 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import Image from "next/image"
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
+} from '@/components/ui/carousel'
 
-export default function SlideImages({ images }) {
-    const [api, setApi] = React.useState(null)
-    const [current, setCurrent] = React.useState(0)
+export default function SlideImages({ images = [] }) {
+    const [api, setApi] = useState(null)
+    const [current, setCurrent] = useState(0)
 
-    React.useEffect(() => {
-        if (!api) { return }
-        setCurrent(api.selectedScrollSnap())
-
-        api.on("select", () => {
-            setCurrent(api.selectedScrollSnap())
-        })
-        return () => {
-            api.off("select", () => {
-                setCurrent(api.selectedScrollSnap())
-            })
-        }
+    useEffect(() => {
+        if (!api) return
+        const onSelect = () => setCurrent(api.selectedScrollSnap())
+        api.on('select', onSelect)
+        onSelect()
+        return () => api.off('select', onSelect)
     }, [api])
 
-    const imageLengthMoreThanOne = images.length > 1
+    if (!images.length) return null
+    const hasMultiple = images.length > 1
+
     return (
-        <Carousel className="w-full" setApi={setApi}>
+        <Carousel
+            setApi={setApi}
+            opts={{ align: 'start', loop: false }}
+            className="w-full relative"
+        >
             <CarouselContent>
-                {images.map((image, index) => {
-                    return (
-                        <CarouselItem key={index}>
-                            <div className="relative max-h-[550px] object-center overflow-hidden">
-                                <Image
-                                    src={image}
-                                    alt={`project image-${index + 1}`}
-                                    className='relative rounded-lg bg-slate-100 object-center'
-                                    priority
-                                />
-                            </div>
-                        </CarouselItem>
-                    )
-                }
-                )}
+                {images.map((image, index) => (
+                    <CarouselItem
+                        key={index}
+                        className="relative w-full overflow-hidden rounded-lg"
+                    >
+                        <Image
+                            src={image}
+                            alt={`project image ${index + 1}`}
+                            width={1000}         // ← 숫자!
+                            height={600}
+                            sizes="(min-width: 1024px) 900px, 100vw"
+                            className={[
+                                'object-cover bg-slate-100 transition-opacity duration-500 ease-out',
+                                current === index ? 'opacity-100' : 'opacity-60',
+                            ].join(' ')}
+                            priority={index === 0}
+                        />
+                    </CarouselItem>
+                ))}
             </CarouselContent>
-            {imageLengthMoreThanOne && (
+
+            {hasMultiple && (
                 <>
                     <CarouselPrevious />
                     <CarouselNext />
-                    <div className="absolute bottom-8 flex gap-2.5 justify-center items-center right-1/2 transform translate-x-1/2">
-                        {images.map((_, index) => {
-                            return (
-                                <div
-                                    key={`dots-${index}`}
-                                    className={`w-3 h-3 rounded-full ${current === index ? "bg-chart-2 shadow-md" : "bg-chart-1/80"}`}
-                                />
-                            )
-                        })}
+                    <div className="absolute pointer-events-auto bottom-4 flex gap-2 left-1/2 -translate-x-1/2">
+                        {images.map((_, index) => (
+                            <button
+                                key={`dot-${index}`}
+                                onClick={() => api?.scrollTo(index)}
+                                aria-label={`Go to image ${index + 1}`}
+                                className={`w-3 h-3 rounded-full transition ${current === index ? 'bg-btn-1 shadow-md' : 'bg-btn-2/80'
+                                    }`}
+                            />
+                        ))}
                     </div>
+
                 </>
-            )}
+            )
+            }
         </Carousel>
     )
 }

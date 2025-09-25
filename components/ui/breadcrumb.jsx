@@ -1,13 +1,39 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight, MoreHorizontal } from "lucide-react"
+import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
-const Breadcrumb = React.forwardRef(
-  ({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />
-)
-Breadcrumb.displayName = "Breadcrumb"
+const Breadcrumbs = ({ items, className }) => {
+  return (
+    <Breadcrumb className={className}>
+      <BreadcrumbList>
+        {items.map((item, i) => (
+          <React.Fragment key={item.label}>
+            <BreadcrumbItem>
+              {!!item.href ?
+                <Link href={item.href}>
+                  {item.label}
+                </Link> :
+                <BreadcrumbPage>
+                  {item.label}
+                </BreadcrumbPage>
+              }
+            </BreadcrumbItem>
+            {i < items.length - 1 && <BreadcrumbSeparator />}
+          </React.Fragment>
+        ))}
+      </BreadcrumbList>
+    </Breadcrumb>
+  )
+}
+Breadcrumbs.displayName = "Breadcrumbs"
+
+function Breadcrumb({ ...props }) {
+  return <nav aria-label="breadcrumb" data-slot="breadcrumb" className="flex justify-start" {...props} />
+}
+export default Breadcrumbs;
 
 const BreadcrumbList = React.forwardRef(({ className, ...props }, ref) => (
   <ol

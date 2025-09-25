@@ -76,7 +76,9 @@
       "duration" : "Durée du project",
       "techs" : "Outils et technologies",
       "link" : "Voir sur GitHub",
-      "days" : "jours"
+      "days" : "jours",
+      "features" : "Fonctionnalités clés et objectifs",
+      "link2": "Visiter le site"
   },
   "designlabels" : {
     "program" : "Logiciel utilisés",

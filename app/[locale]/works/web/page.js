@@ -2,9 +2,9 @@ import React, { Suspense } from 'react'
 import ProjectTitle from '@/components/works/ProjectTitle'
 import WorksCardLoading from '@/components/loading/WorksCardLoading'
 import { getTranslations } from 'next-intl/server'
-import { getWorks } from '@/lib/getWorks'
+//import { getWorks } from '@/lib/getWorks'
 import { getWebProjects } from '@/lib/notion'
-import { CarouselOrientation } from '@/components/works/CarouselHor'
+import ImageOverlay from '@/components/works/design/ImageOverlay'
 
 
 export const revalidate = 300;
@@ -12,7 +12,7 @@ export const revalidate = 300;
 export default async function webPage({ params }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "web" })
-    const items = await getWorks(params.locale)
+    //const items = await getWorks(params.locale)
     const webDB = await getWebProjects(locale)
 
     return (
@@ -22,21 +22,20 @@ export default async function webPage({ params }) {
                 description={t("description")}
             />
             <Suspense fallback={<WorksCardLoading />}>
-                <CarouselOrientation data={webDB} />
-                {/* <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center mt-16 w-full px-6 lg:px-10 ">
-                    {items.map((item) => {
+                {/* <CarouselOrientation data={webDB} /> */}
+                <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center mt-16 w-full px-6 lg:px-10 ">
+                    {webDB.map((item) => {
                         return (
-                            <WorkList
+                            <ImageOverlay
                                 key={item.id}
                                 id={item.id}
                                 name={item.title}
-                                cover={item.image}
-                                type={item.type}
+                                cover={item.coverImage}
                                 link={`/${locale}/works/web/${item.id}`}
                             />
                         )
                     })}
-                </section > */}
+                </section >
             </Suspense>
         </div>
     )

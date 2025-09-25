@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import SelectSrollable from './SelectSrollable'
 import { typeDesigns } from '@/utils/worksData'
 import PageNumber from './PageNumber'
-import WorkList from './WorkList'
+import WorkList from './ImageOverlay'
 import { useLocale, useTranslations } from "next-intl";
 
 export default function ListContainer({ data }) {
