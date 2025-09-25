@@ -34,9 +34,11 @@ export default function WebDetailsClient({ project, labels }) {
                 <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
                     <h1 className="title-font font-medium mb-1 text-4xl capitalize">{project.title}</h1>
                     <p className="leading-relaxed mt-6 text-md mb-4">{project.description}</p>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col">
                         <ToggleProperty
                             title={labels.duration}
+                            stlye=''
+                            value='item-1'
                         >
                             <CalculateDays
                                 startDate={project.startDate}
@@ -46,6 +48,8 @@ export default function WebDetailsClient({ project, labels }) {
                         </ToggleProperty>
                         <ToggleProperty
                             title={labels.techs}
+                            stlye=''
+                            value='item-1'
                         >
                             <Tags
                                 tags={project.tags}
@@ -54,6 +58,8 @@ export default function WebDetailsClient({ project, labels }) {
                         {project.admin &&
                             <ToggleProperty
                                 title={labels.features}
+                                stlye="scrollbar-custom"
+                                value='item-2'
                             >
                                 <div className="grid gap-4 px-2">
                                     {sections.map(({ title, data }) => (
@@ -63,7 +69,7 @@ export default function WebDetailsClient({ project, labels }) {
                             </ToggleProperty>
                         }
                     </div>
-                    <div className=" flex lg:justify-start justify-center mt-8">
+                    <div className="flex lg:justify-start justify-center mt-8">
                         <ButtonLink
                             href={project.link1}
                             name={labels.link}

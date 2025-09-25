@@ -14,9 +14,11 @@ export default function DesignDetailsClient({ project, labels }) {
                     <h3 className='text-btn-2 uppercase font-bold'>{project.category}</h3>
                     <h1>{project.title}</h1>
                     <Description description={project.description} />
-                    <div className='mt-8  flex flex-col gap-4'>
+                    <div className='mt-8  flex flex-col'>
                         <ToggleProperty
                             title={labels.program}
+                            stlye=''
+                            value="item-1"
                         >
                             <Tags
                                 tags={project.tags}
@@ -25,11 +27,15 @@ export default function DesignDetailsClient({ project, labels }) {
                         <ToggleProperty
                             title={labels.cy}
                             description={project.duration}
+                            stlye=''
+                            value="item-1"
                         />
                         {project.companyName ? (
                             <ToggleProperty
                                 title={labels.company}
                                 description={project.companyName}
+                                stlye=''
+                                value="item-1"
                             />
                         ) : ('')}
                     </div>

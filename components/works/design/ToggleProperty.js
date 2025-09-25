@@ -8,22 +8,23 @@ import {
 
 
 
-export default function ToggleProperty({ title, description, children }) {
+export default function ToggleProperty({ title, description, children, style, value }) {
     return (
         <Accordion
             type="single"
             collapsible
             className="w-full py-1 px-3 rounded-lg"
+            defaultValue='item-1'
         >
-            <AccordionItem>
+            <AccordionItem value={value}>
                 <AccordionTrigger className="uppercase text-sm hover:text-btn-1 hover:font-semibold">{title}</AccordionTrigger>
-                <AccordionContent asChild>
-                    <div className="max-h-60 overflow-y-auto pr-2 scrollbar-custom">
+                <AccordionContent>
+                    <div className={`max-h-60 overflow-y-auto pr-2 ${style}`}>
                         {description && <p className='pb-4'>{description}</p>}
                         {children && <div className='pb-4'>{children}</div>}
                     </div>
                 </AccordionContent>
             </AccordionItem>
-        </Accordion>
+        </Accordion >
     )
 }
