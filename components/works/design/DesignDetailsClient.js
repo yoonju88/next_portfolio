@@ -9,12 +9,12 @@ export default function DesignDetailsClient({ project, labels }) {
     return (
         <section className="px-10">
             <div className="mx-auto flex flex-col lg:flex-row items-center justify-center py-20">
-                <SlideImages images={project.images} />
+                <SlideImages images={project.allImages} />
                 <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
-                    <h2 className='text-chart-2 text-md uppercase font-semibold'>{project.type}</h2>
-                    <h1 className="title-font font-medium mb-4 mt-1.5 text-3xl uppercase">{project.title}</h1>
+                    <h3 className='text-btn-2 uppercase font-bold'>{project.category}</h3>
+                    <h1>{project.title}</h1>
                     <Description description={project.description} />
-                    <div className='mt-8 '>
+                    <div className='mt-8  flex flex-col gap-4'>
                         <ToggleProperty
                             title={labels.program}
                         >
@@ -24,7 +24,7 @@ export default function DesignDetailsClient({ project, labels }) {
                         </ToggleProperty>
                         <ToggleProperty
                             title={labels.cy}
-                            description={project.cy}
+                            description={project.duration}
                         />
                         {project.companyName ? (
                             <ToggleProperty

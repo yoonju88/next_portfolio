@@ -52,6 +52,11 @@ export const worksBase = [
 
 export const typeDesigns = [
     {
+        id: 29,
+        key: "selection.s0",
+        value: "all"
+    },
+    {
         id: 30,
         key: "selection.s1",
         value: "communication"

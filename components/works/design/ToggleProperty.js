@@ -9,16 +9,15 @@ import {
 
 
 export default function ToggleProperty({ title, description, children }) {
-
     return (
         <Accordion
             type="single"
             collapsible
-            className="w-full hover-effect-card add-transition py-1 px-3 rounded-lg"
+            className="w-full py-1 px-3 rounded-lg"
         >
-            <AccordionItem value="item-1">
-                <AccordionTrigger className="uppercase text-sm"> {title}</AccordionTrigger>
-                <AccordionContent >
+            <AccordionItem>
+                <AccordionTrigger className="uppercase text-sm hover:text-btn-1 hover:font-semibold">{title}</AccordionTrigger>
+                <AccordionContent asChild>
                     <div className="max-h-60 overflow-y-auto pr-2 scrollbar-custom">
                         {description && <p className='pb-4'>{description}</p>}
                         {children && <div className='pb-4'>{children}</div>}

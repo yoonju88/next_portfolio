@@ -3,7 +3,6 @@
 
 import { IoLogoGithub } from "react-icons/io";
 import { IoLogoVercel } from "react-icons/io5";
-import Link from "next/link"
 import { ButtonLink } from '@/components/form/Buttons'
 import CalculateDays from '@/components/works/CalculateDays'
 import Tags from '@/components/works/Tags'

@@ -19,7 +19,7 @@ export default function ImageOverlay({ cover, name, type, link, important = fals
                     fetchPriority={important ? "high" : "auto"}
                 />
                 <div className="flex flex-col items-center justify-center text-center relative rounded-lg w-full h-full z-10 bg-btn-2/60 opacity-0 group-hover:opacity-100 group-hover:shadow-md group-hover:shadow-btn-1 group-hover:border-2 group-hover:border-btn-2">
-                    <h2 className="text-white uppercase break-words overflow-wrap">{name}</h2>
+                    <h2 className="text-white text-shadow-lg uppercase break-words overflow-wrap">{name}</h2>
                 </div>
             </Link>
         </article>

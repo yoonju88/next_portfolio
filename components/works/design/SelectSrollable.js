@@ -13,7 +13,7 @@ import {
 export default function SelectSrollable({ title, lists, onClick }) {
     return (
         <Select onValueChange={(value) => onClick(value)}> {/* !! 외부 라이브러리 이므로 여기에 원 클릭을 적용해야 함 */}
-            <SelectTrigger className="w-[250px] h-[40px] capitalize text-center ">
+            <SelectTrigger className="w-[250px] h-[40px] capitalize text-center bg-background/50 ">
                 <SelectValue placeholder={title} />
             </SelectTrigger>
             <SelectContent>

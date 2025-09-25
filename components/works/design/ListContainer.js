@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import SelectSrollable from './SelectSrollable'
 import { typeDesigns } from '@/utils/worksData'
 import PageNumber from './PageNumber'
-import WorkList from './ImageOverlay'
+import ImageOverlay from './ImageOverlay'
 import { useLocale, useTranslations } from "next-intl";
 
 export default function ListContainer({ data }) {
@@ -26,7 +26,11 @@ export default function ListContainer({ data }) {
         return () => window.removeEventListener("resize", handleResize)
     }, [])
 
-    const filteredItems = ((!isFilteredType ? data : data.filter(item => item.type === isFilteredType)) || [])
+    const filteredItems = (
+        !isFilteredType || isFilteredType === 'all'
+            ? data
+            : data.filter(item => item.category === isFilteredType)
+    ) || [];
     const paginatedItems = filteredItems.slice(
         (currentPage - 1) * perPage,
         currentPage * perPage
@@ -54,12 +58,12 @@ export default function ListContainer({ data }) {
             <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 px-6 lg:px-10">
                 {paginatedItems.map((item) => {
                     return (
-                        <WorkList
+                        <ImageOverlay
                             key={item.id}
                             id={item.id}
                             name={item.title}
-                            cover={item.cover}
-                            type={item.type}
+                            cover={item.coverImage}
+                            type={item.category}
                             link={`/${locale}/works/design/${item.id}`}
                         />
                     )

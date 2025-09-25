@@ -41,6 +41,7 @@
 
   "selection" : {
       "title" : "Sélection de catégorie",
+      "s0": "Tous", 
       "s1" : "Communication",
       "s2" : "Design produits",
       "s3" : "Design infographie",

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import ProjectTitle from '@/components/works/ProjectTitle'
 import WorksCardLoading from '@/components/loading/WorksCardLoading'
 import { getTranslations } from 'next-intl/server'
-//import { getWorks } from '@/lib/getWorks'
+
 import { getWebProjects } from '@/lib/notion'
 import ImageOverlay from '@/components/works/design/ImageOverlay'
 

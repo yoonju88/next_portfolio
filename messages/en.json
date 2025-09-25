@@ -41,6 +41,7 @@
     },
     "selection" : {
         "title" : "Select Discipline",
+        "s0": "All", 
         "s1" : "Brand Communication",
         "s2" : "Product Design",
         "s3" : "Infographic Design",
