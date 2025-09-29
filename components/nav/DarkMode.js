@@ -15,18 +15,20 @@ import { useTranslations } from "next-intl";
 
 export default function DarkMode() {
     const { theme, resolvedTheme, setTheme } = useTheme()
+    const [mounted, setMounted] = React.useState(false)
+    React.useEffect(() => setMounted(true), [])
     const t = useTranslations("theme")
 
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant='outline' size='icon' className="px-3.5">
-                    {typeof window !== 'undefined' && !resolvedTheme ? (
+                    {!mounted ? (
                         <BiLoader className="h-5 w-5 animate-spin text-gray-400" />
                     ) : (
                         <>
-                            <MdSunny className={`text-orange-500 add-transition ${theme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
-                            <FaMoon className={`text-amber-300 absolute  add-transition ${theme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
+                            <MdSunny className={`text-orange-500 add-transition ${resolvedTheme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
+                            <FaMoon className={`text-amber-300 absolute  add-transition ${resolvedTheme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
                         </>
                     )}
                     <span className='sr-only'>{t("toggle")}</span>
