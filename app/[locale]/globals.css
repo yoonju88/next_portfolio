@@ -195,7 +195,7 @@ html.loading, body.loading { overflow: hidden; }
 
   .shadow_btn {
   @apply
-  shadow-btn-3/50 shadow-sm hover:shadow-inner hover:shadow-btn-3/30;
+  shadow-btn-1/60 shadow-sm hover:shadow-inner hover:shadow-btn-1/60;
   }
 
   .dark .shadow_btn {

@@ -27,7 +27,7 @@ export default function DarkMode() {
                         <BiLoader className="h-5 w-5 animate-spin text-gray-400" />
                     ) : (
                         <>
-                            <MdSunny className={`text-orange-500 add-transition ${resolvedTheme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
+                            <MdSunny className={`text-orange-600 add-transition  ${resolvedTheme === 'dark' ? '-rotate-90 scale-0' : 'rotate-0 scale-100'}`} />
                             <FaMoon className={`text-amber-300 absolute  add-transition ${resolvedTheme === 'dark' ? 'rotate-0 scale-100' : 'rotate-90 scale-0'}`} />
                         </>
                     )}
