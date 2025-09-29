@@ -28,7 +28,7 @@ export default function SlideImages({ images = [] }) {
         <Carousel
             setApi={setApi}
             opts={{ align: 'start', loop: false }}
-            className="w-full relative"
+            className="w-full relative animate-scale-up-soft [--anim-delay:600ms]"
         >
             <CarouselContent>
                 {images.map((image, index) => (
@@ -42,11 +42,14 @@ export default function SlideImages({ images = [] }) {
                             width={1000}         // ← 숫자!
                             height={600}
                             sizes="(min-width: 1024px) 900px, 100vw"
+                            blurDataURL={image}
+                            placeholder="blur"
                             className={[
                                 'object-cover bg-slate-100 transition-opacity duration-500 ease-out',
                                 current === index ? 'opacity-100' : 'opacity-60',
                             ].join(' ')}
                             priority={index === 0}
+
                         />
                     </CarouselItem>
                 ))}
@@ -62,8 +65,7 @@ export default function SlideImages({ images = [] }) {
                                 key={`dot-${index}`}
                                 onClick={() => api?.scrollTo(index)}
                                 aria-label={`Go to image ${index + 1}`}
-                                className={`w-3 h-3 rounded-full transition ${current === index ? 'bg-btn-1 shadow-md' : 'bg-btn-2/80'
-                                    }`}
+                                className={`w-3 h-3 rounded-full transition ${current === index ? 'bg-btn-1 shadow-md' : 'bg-btn-2/80'}`}
                             />
                         ))}
                     </div>

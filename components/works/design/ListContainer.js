@@ -2,8 +2,8 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import SelectSrollable from './SelectSrollable'
 import { typeDesigns } from '@/utils/worksData'
-import PageNumber from './PageNumber'
-import ImageOverlay from './ImageOverlay'
+import PageNumber from '../PageNumber'
+import ImageOverlay from '../ImageOverlay'
 import { useLocale, useTranslations } from "next-intl";
 
 export default function ListContainer({ data }) {
@@ -48,14 +48,14 @@ export default function ListContainer({ data }) {
 
     return (
         <>
-            <span className='flex justify-center mt-10'>
+            <span className='animate-slide-down-soft [animation-delay:1300ms] flex justify-center mt-10'>
                 <SelectSrollable
                     title={t("selection.title")}
                     lists={translatedTypes}
                     onClick={handleClick}
                 />
             </span>
-            <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 px-6 lg:px-10">
+            <section className="animate-slide-down-soft [animation-delay:2000ms] grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 px-6 lg:px-10">
                 {paginatedItems.map((item) => {
                     return (
                         <ImageOverlay

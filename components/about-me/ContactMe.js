@@ -17,17 +17,13 @@ export default function ContactMe() {
                             <AnimationLottie animation={ContactAnimation} />
                         </Reveal>
                     </div>
-                    <Reveal y={20} duration={0.8} start="top bottom" itemSelector={null}>
-                        <p className="leading-relaxed text-lg text-foreground/80 mb-8">{t("des2")}</p>
-                    </Reveal>
-                    <Reveal y={20} duration={0.8} start="top bottom" itemSelector={null}>
-                        <ButtonNavigate
-                            name={t("bt1")}
-                            href="/contact"
-                            variant="navigate"
-                            size='lg'
-                        />
-                    </Reveal>
+                    <p className="leading-relaxed text-lg text-foreground/80 mb-8">{t("des2")}</p>
+                    <ButtonNavigate
+                        name={t("bt1")}
+                        href="/contact"
+                        variant="navigate"
+                        size='lg'
+                    />
                 </div>
             </div>
         </section >

@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageOverlay from './design/ImageOverlay'
+import ImageOverlay from './ImageOverlay'
 
 export default function MoreProjects({ data = [], projectId, locale }) {
     return (

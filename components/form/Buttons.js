@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import React, { useState, useEffect } from 'react'
 
-export const ButtonLink = ({ href, name, size, variant, children }) => {
+export const ButtonLink = ({ href, name, size, variant, children, animation }) => {
 
     return (
-        <Button variant={variant} size={size} className="mt-1" >
+        <Button variant={variant} size={size} className={`mt-1 ${animation}`} >
             <Link href={href} target='_blank' className="flex flex-inline items-center gap-2">
                 {name}
                 {children}

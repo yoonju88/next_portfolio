@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import { mySkillsData, buttonTypes } from '@/utils/Profile'
-import SkillCard from '@/components/about-me/skills/SkillList'
+import SkillCard from '@/components/about-me/skills/SkillCard'
 import { FilterButton } from '@/components/form/Buttons';
 import { useTranslations } from 'next-intl';
 import Reveal from '@/components/ScrollReveal/Reveal';
