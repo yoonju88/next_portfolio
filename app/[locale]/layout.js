@@ -32,7 +32,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased bg-gradient-base`}
+        className={`${inter.className} antialiased gradient-base`}
       >
         <NextIntlClientProvider messages={messages} locale={locale}>
           <Providers >
