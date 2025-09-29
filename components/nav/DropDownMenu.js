@@ -13,7 +13,7 @@ export default function DropDownMenu({ links, name, className, onMouseEnter, onM
     return (
         <DropdownMenu>
             <DropdownMenuTrigger
-                className="flex items-center gap-1"
+                className="flex items-center gap-1 focus:outline-none focus:ring-0"
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
             >
@@ -27,7 +27,7 @@ export default function DropDownMenu({ links, name, className, onMouseEnter, onM
                 </Link>
                 <span className="sr-only">Works</span>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="center" className="bg-background/50">
+            <DropdownMenuContent align="center" className="bg-background">
                 {links.map((link) => {
                     return (
                         <DropdownMenuItem key={link.label}>

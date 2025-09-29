@@ -18,7 +18,7 @@ export default function Profile() {
         <section className="group flex flex-wrap items-center justify-center mt-14 py-10">
             <div className="max-w-[230px] lg:pr-10 pr-0 sm:mb-4 mb-0 flex items-center justify-center step-photo">
                 <span className="w-full animate-scale-up-soft [animation-delay:500ms] aspect-[5/6] rounded-xl overflow-hidden shadow-none transform transition-all rotate-0 duration-300
-                group-hover:border-2 group-hover:border-white group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-btn-2 group-hover:shadow-lg">
+                group-hover:border-2 group-hover:border-white group-hover:rotate-3 group-hover:scale-110 group-hover:shadow-chart-1/50 group-hover:shadow-lg">
                     <Image
                         src={ProfileYJ}
                         alt="profil-yoonju"

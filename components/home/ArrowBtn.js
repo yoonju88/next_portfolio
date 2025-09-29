@@ -4,9 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 
 
-export default function ArrowBtn() {
-    const locale = useLocale();
-    const t = useTranslations("home")
+export default function ArrowBtn({ name, link, animation }) {
     return (
         <>
             <svg style={{ display: "none" }}>
@@ -17,7 +15,7 @@ export default function ArrowBtn() {
                     </symbol>
                 </defs>
             </svg>
-            <Link href={`/${locale}/works`} >
+            <Link href={link} className={animation} >
                 <Button
                     variant="navigate"
                     size="lg"
@@ -45,7 +43,7 @@ export default function ArrowBtn() {
                         group-hover:-translate-x-[52px]
                         [backface-visibility:hidden] [perspective:1000px] will-change-transform "
                     >
-                        {t("button3")}
+                        {name}
                     </span>
 
                     {/* 오른쪽 화살표 (기본 숨김/축소 → hover에 나타남) */}

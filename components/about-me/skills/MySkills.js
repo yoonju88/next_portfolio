@@ -41,7 +41,7 @@ export default function MySkills() {
                 </RevealGrid>
             </div>
             <RevealGrid
-                className="flex flex-wrap -m-4 lg:gap-10 gap-6 justify-center "
+                className="flex flex-wrap -m-4 lg:gap-10 gap-6 justify-center"
                 itemSelector=".skill-card"
                 from="ramdom"
                 y={22}

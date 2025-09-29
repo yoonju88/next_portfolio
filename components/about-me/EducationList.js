@@ -12,18 +12,18 @@ export default function EducationList({ startDate, endDate, link, image, name, s
                 </Link>
             </div>
             <div className="flex-grow pl-7">
-                <span className='date mb-0.5 ih-date'>
+                <span className='date mb-0.5 ih-date text-color_subtitle'>
                     {startDate} - {endDate}
                 </span>
                 <h3 className="mb-0.5 flex flex-wrap items-center ih-title ">
                     {name}  &nbsp;
                     <span className="tracking-widest sm:text-[14px] text-[12px]"> ({degree})</span>
                 </h3>
-                <h4 className="ih-sub">
+                <h4 className="ih-sub text-color_subtitle">
                     <Link href={link} target="_blank" className='pr-2 '>
                         {schoolName}
                     </Link>
-                    <span className="border-l pl-2 border-chart-2 text-wrap ">
+                    <span className="border-l pl-2 border-color text-wrap ">
                         {address}
                     </span>
                 </h4>

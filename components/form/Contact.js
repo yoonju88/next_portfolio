@@ -13,8 +13,8 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const [isLoading, setIsLoading] = useState(false)
 
-    const inputStyle = "w-full text-foreground/80 bg-background/60 rounded border border-btn-2/50 focus:border-btn-2 focus:ring-2 focus:ring-btn-3/20 text-base outline-none text-foreground py-1 px-3 leading-8 transition-colors duration-300"
-    const labelStyle = "leading-7 text-sm text-foreground/90"
+    const inputStyle = "w-full text-color input_style rounded  text-base outline-none py-1 px-3 leading-8 transition-colors duration-300"
+    const labelStyle = "leading-7 text-sm border-color animate-slide-down-soft"
     const onSubmit = async (data) => {
         setIsLoading(true)
         try {
@@ -40,7 +40,7 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
             <div className="relative mb-4">
                 <label
                     htmlFor="name"
-                    className={`${labelStyle} animate-slide-down-soft [animation-delay:700ms]`}
+                    className={`${labelStyle} [animation-delay:700ms]`}
                 >
                     {name}
                 </label>
@@ -55,7 +55,7 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
             <div className="relative mb-4">
                 <label
                     htmlFor="email"
-                    className={`${labelStyle} animate-slide-down-soft [animation-delay:1100ms]`}
+                    className={`${labelStyle} [animation-delay:1100ms]`}
                 >
                     {email}
                 </label>
@@ -70,7 +70,7 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
             <div className="relative mb-4">
                 <label
                     htmlFor="message"
-                    className={`${labelStyle} animate-slide-down-soft [animation-delay:1500ms]`}
+                    className={`${labelStyle} [animation-delay:1500ms]`}
                 >
                     {message}
                 </label>

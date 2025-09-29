@@ -18,7 +18,7 @@ export default function ToggleProperty({ title, description, children, style, va
             defaultValue='item-1'
         >
             <AccordionItem value={value}>
-                <AccordionTrigger className="uppercase text-sm hover:text-btn-1 hover:font-semibold">{title}</AccordionTrigger>
+                <AccordionTrigger className="uppercase text-sm text-toggle_title hover:font-semibold">{title}</AccordionTrigger>
                 <AccordionContent>
                     <div className={`max-h-60 overflow-y-auto pr-2 ${style}`}>
                         {description && <p className='pb-4'>{description}</p>}

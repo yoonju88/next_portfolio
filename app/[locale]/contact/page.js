@@ -10,7 +10,7 @@ export default function contactPage() {
     return (
         <section className="mb-24 px-10">
             <div className="py-10 flex flex-wrap justify-center gap-20">
-                <div className="lg:w-[50%] w-full animate-slide-down-soft bg-background/20 border border-btn-2/50 hover rounded-lg p-8 flex flex-col shadow-md">
+                <div className="lg:w-[50%] w-full animate-slide-down-soft contact_card bg-background/20 border rounded-lg p-8 flex flex-col">
                     <div className="flex items-center justify-between mb-4">
                         <h1 className="animate-slide-down-soft [animation-delay:300ms] ">{t("title")}</h1>
                         <PersonalInfo

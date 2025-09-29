@@ -32,9 +32,7 @@ export default function Home() {
         className="sm:mb-32 mb-16 lg:text-2xl md:text-lg leading-relaxed text-foreground/80 sm:w-[80%] w-[90%] animate-slide-down-soft  [animation-delay:2200ms]"
       >
         {t('description')}</p>
-      <span className="leading-relaxed animate-slide-down-soft  [animation-delay:3000ms] ">
-        <ArrowBtn />
-      </span>
+      <ArrowBtn name={t("button3")} link={`${locale}/works/web`} animation="animate-slide-down-soft  [animation-delay:3000ms]" />
     </div>
   );
 }

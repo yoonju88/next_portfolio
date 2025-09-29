@@ -68,7 +68,7 @@ export default function Header() {
     const isDropDownActive = (links) => {
         return links.some(link => isPathActive(link.href));
     };
-    const linkStyle = "inline-block capitalize text-foreground/80 hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer sm:text-base text-sm"
+    const linkStyle = "inline-block capitalize text-color hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer sm:text-base text-sm"
 
 
     const localizedNav = useMemo(
@@ -90,7 +90,7 @@ export default function Header() {
         <header className="sm:px-10 px-0 flex flex-wrap flex-col md:flex-row items-center lg:mt-4  md:mt-6 mt-12">
             <Link href={`/${locale}`} className="flex title-font font-medium items-center mb-6 md:mb-0" >
                 <span className="sm:ml-3 ml-0 sm:text-4xl text-3xl font-black uppercase tracking-wider
-                    text-foreground/80" >
+                    text-color" >
                     yoonju.t
                 </span>
             </Link>
