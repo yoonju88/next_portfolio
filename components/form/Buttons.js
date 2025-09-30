@@ -80,6 +80,7 @@ export const ScrollTopButton = () => {
             className={`flex flex-col fixed bottom-36 right-8 py-1.5 px-1.5 rounded-lg bg-btn-2 shadow-lg add-transition hover:shadow-inner hover:shadow-chart-1 hover:animate-none ${isVisible ? "opacity-100 scale-100 glow-effect" : "opacity-0 scale-0"}`}
             onClick={scrollToTop}
             disabled={!isVisible}
+
         >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-8 text-white">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
@@ -95,7 +96,7 @@ export const ButtonSubmit = ({ type, disabled, children, loading }) => {
             type={type}
             disabled={disabled}
             variant="navigate"
-            className={`min-w-[120px] flex justify-center ${loading ? "bg-chart-2" : "bg-background"}`}
+            className={`min-w-[120px] flex justify-center ${loading ? "bg-btn-2" : "bg-background"}`}
         >
             {children}
         </Button>

@@ -32,6 +32,8 @@ export default function contactPage() {
                         messagePh={t("mp")}
                         bt={t("bt2")}
                         loading={t("loading")}
+                        toast={t("toast")}
+                        failed={t("toastError")}
                     />
                 </div>
             </div>

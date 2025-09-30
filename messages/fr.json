@@ -273,7 +273,9 @@
     "mp": "Votre message...",
     "bt2": "Envoyer",
     "loading" : "Envoi en cours…",
-    "address": "Adresse"
+    "address": "Adresse",
+    "toast": "E-mail envoyé avec succès.",
+    "toastError": "Échec de l'envoi du message. Veuillez réessayer dans un moment."
   },
   "footer": {
     "des" : "© 2025 Tous droits réservés par TERRENOIRE Yoonju",

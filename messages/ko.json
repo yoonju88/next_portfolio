@@ -2,7 +2,7 @@
   "home": {
     "title": "안녕하세요, 호윤주입니다!",
     "description": "디자인에서 얻은 감각과 최신 웹 기술을 더해 사용자에게 따뜻하면서도 직관적인 웹 경험을 만듭니다.",
-    "button1": "웹 개발",
+    "subtitle": "",
     "button2": "그래픽 디자인",
     "button3":"작업 보러가기"
   },
@@ -267,7 +267,9 @@
     "mp": "메세지를 작성하세요.",
     "bt2": "메일 보내기",
     "loading" : "메일 보내는 중...",
-    "address": "주소"
+    "address": "주소",
+    "toast": "메일을 성공적으로 보냈습니다.",
+    "toastError": "메일 보내기가 실패하였습니다. 잠시 후에 다시 시도해보세요."
   }, 
   "footer": {
     "des" : "© 2025 TERRENOIRE Yoonju. All rights reserved.",

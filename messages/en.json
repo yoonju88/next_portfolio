@@ -273,7 +273,9 @@
         "mp": "Your message...",
         "bt2": "Send",
         "loading" : "Sending...",
-        "address": "Address"
+        "address": "Address",
+        "toast": "Email sent successfully.",
+        "toastError": "Failed to send email. Please try again later."
     },
     "footer": {
         "des" : "2025 all rights reserved by TERRENOIRE Yoonju",

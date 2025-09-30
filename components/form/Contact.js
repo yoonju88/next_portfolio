@@ -8,7 +8,7 @@ import { CgSpinner } from "react-icons/cg"; //  add animate-spin
 import { ButtonSubmit } from './Buttons'
 
 
-export default function ContactForm({ name, namePh, email, message, messagePh, bt, loading }) {
+export default function ContactForm({ name, namePh, email, message, messagePh, bt, loading, toast, failed }) {
     const { toast } = useToast()
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const [isLoading, setIsLoading] = useState(false)
@@ -23,14 +23,14 @@ export default function ContactForm({ name, namePh, email, message, messagePh, b
             if (res.status === 200) {
                 toast({
                     title: "Success",
-                    description: "Your message sent successfully",
+                    description: { toast },
                 })
             }
         } catch (error) {
             setIsLoading(false)
             toast({
                 title: "Error",
-                description: error.message || "Error",
+                description: error.message || { failed },
             })
         }
         reset()
