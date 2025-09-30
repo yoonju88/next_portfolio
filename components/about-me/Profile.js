@@ -6,7 +6,7 @@ import ToolTip from '../ToolTip'
 import { IoLogoGithub } from "react-icons/io";
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
-import IntroReveal from '../ScrollReveal/IntroReveal'
+import DownloadCV from './DownloadCV'
 
 
 export default function Profile() {
@@ -42,7 +42,7 @@ export default function Profile() {
                         text={t('cv')}
                         className={`${tooltipStyle} animate-scale-up-soft animate [animation-delay:900ms]`}
                     >
-                        <a href='/cv/cv_yj_en_web.pdf' download>
+                        <DownloadCV >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -57,7 +57,7 @@ export default function Profile() {
                                     d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
                                 />
                             </svg>
-                        </a>
+                        </DownloadCV>
                     </ToolTip>
                 </div>
                 <h1 className="animate-slide-down-soft [animation-delay:700ms] lg:w-[80%] w-full">
