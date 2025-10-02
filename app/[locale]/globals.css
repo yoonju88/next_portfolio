@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --mx: 0px;
+    --my: 0px;
     --background: 50 100% 98%;
     --foreground: 225 90% 15%;
     --card: 0 0% 100%;
@@ -233,13 +235,13 @@ html.loading, body.loading { overflow: hidden; }
   background-color: rgba(24, 48, 107, 0.8); /* slate-900 정도 */
   backdrop-filter: blur(8px);
 }
-
+/* #faebad */
 
 @layer utilities {
   /* background color  */
    .gradient-base {
   @apply animate-gradient-dynamic;
-  background-image: linear-gradient(120deg, #f9d1d1, #fce4e4, #faebad);
+  background-image: linear-gradient(120deg, #f9d1d1, #fce4e4,  #faebad );
   }
   .dark .gradient-base{
     background-image: linear-gradient(120deg, #051045, #3f56bb, #1e2858);
@@ -346,11 +348,11 @@ html.loading, body.loading { overflow: hidden; }
   }
    /* 설명: 타자 효과 (+ 커서 깜빡임) */
   @keyframes fade-up {
-    from { opacity: 0; transform: translateY(10px); }
+    from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }
   .animate-fade-up {
-    animation: fade-up 700ms ease-out both;
+    animation: fade-up 1s ease-out both;
   }
 
   @keyframes slide-down-soft {

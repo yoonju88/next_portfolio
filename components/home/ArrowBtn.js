@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 
 
-export default function ArrowBtn({ name, link, animation }) {
+export default function ArrowBtn({ name, link, className }) {
     return (
         <>
             <svg style={{ display: "none" }}>
@@ -15,7 +15,7 @@ export default function ArrowBtn({ name, link, animation }) {
                     </symbol>
                 </defs>
             </svg>
-            <Link href={link} className={animation} >
+            <Link href={link} className={className} >
                 <Button
                     variant="navigate"
                     size="lg"
