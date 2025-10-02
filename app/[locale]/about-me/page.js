@@ -59,7 +59,7 @@ export default async function AboutMePage({ params }) {
     const experiences = profileData.filter(item => item.type === "experience")
     const educations = profileData.filter(item => item.type === "education")
     const t = await getTranslations({ locale, namespace: "experience" })
-    const et = await getuseTranslations({ locale, namespace: "education" })
+    const et = await getTranslations({ locale, namespace: "education" })
 
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환
