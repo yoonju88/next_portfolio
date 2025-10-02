@@ -10,6 +10,7 @@ import { locales } from '@/i18n/routing';
 import LocaleSwitcher from '@/components/nav/LocaleSwitcher'
 import { Suspense } from 'react'
 import DarkMode from '@/components/nav/DarkMode';
+import { getTranslations } from 'next-intl/server';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,8 +23,17 @@ export function generateStaticParams() {
 // (선택) hreflang/SEO
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return { alternates: { languages: { en: '/en', fr: '/fr', ko: '/ko' } } };
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: {
+      template: `%s | ${t('siteName')}`,  // 템플릿 추가
+      default: t('siteName')
+    },
+    description: t('siteDescription'),
+    alternates: { languages: { en: '/en', fr: '/fr', ko: '/ko' } }
+  };
 }
+
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;

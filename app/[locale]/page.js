@@ -6,6 +6,7 @@ import ArrowBtn from "@/components/home/ArrowBtn";
 import parse from "html-react-parser";
 // npm install html-react-parser
 
+
 export default function Home() {
   const [loading, setLoading] = useState(true)
   const t = useTranslations('home');
@@ -31,8 +32,6 @@ export default function Home() {
     return <Loading />;
   }
 
-
-
   return (
     <section className="sm:px-20 px-4 flex flex-col justify-center items-center text-center">
       <h1
@@ -43,8 +42,8 @@ export default function Home() {
         {parse(t('title'))}
       </h1>
       <h2
-        className="text-color_subtitle mb-2 lg:text-3xl md:text-xl text-lg animate-slide-down-soft 
-        transform translate-x-[var(--mx,0)] translate-y-[var(--my,0)][animation-delay:2200ms]"
+        className="text-color_subtitle mb-2 lg:text-3xl md:text-xl text-lg animate-slide-down-soft
+        transform translate-x-[var(--mx,0)] translate-y-[var(--my,0)] [animation-delay:2200ms]"
       >
         {t('subtitle')}
       </h2>

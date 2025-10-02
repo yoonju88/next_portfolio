@@ -7,6 +7,23 @@
     "button3":"Voir mon portfolio"
     }, 
 
+  "metadata": {
+    "siteName": "Mon Portfolio",
+    "siteDescription": "Portfolio de développeur Frontend",
+    "home": {
+      "title": "Accueil",
+      "description": "Bienvenue sur mon site portfolio"
+    },
+    "works": {
+      "title": "Projets",
+      "description": "Ici, vous pouvez voir mes projets de développement web et mes travaux de design graphique"
+    },
+    "about": {
+      "title": "À propos",
+      "description": "Découvrez mon parcours et mon expérience"
+    }
+  },
+
   "locale": {
     "english": "Anglais",
     "french": "Français",

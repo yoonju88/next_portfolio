@@ -66,7 +66,7 @@ export default function LocaleSwitcher() {
                         onClick={() => switchTo(opt.code)}
                         className="flex items-center gap-2"
                     >
-                        <ReactCountryFlag countryCode={opt.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} />
+                        <ReactCountryFlag countryCode={opt.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} title={opt.flagCode} />
                         <span>{t(opt.label)}</span>
                     </DropdownMenuItem>
                 ))}

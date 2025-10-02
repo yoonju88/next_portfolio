@@ -1,5 +1,4 @@
-'use client'
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
 import { profileData } from '@/utils/Profile'
@@ -8,8 +7,17 @@ import EducationList from '@/components/about-me/EducationList'
 import Services from '@/components/about-me/Services'
 import ContactMe from '@/components/about-me/ContactMe'
 import MySkills from '@/components/about-me/skills/MySkills'
-import { useTranslations } from 'next-intl'
+import { getTranslations } from 'next-intl/server'
 import Reveal from '@/components/ScrollReveal/Reveal'
+
+export function generateMetadata({ params }) {
+    const { locale } = params;
+    const t = getMetadata(locale);
+    return {
+        title: t.about.title,
+        description: t.about.description,
+    };
+}
 
 const icons = {
     experience: (
@@ -45,12 +53,13 @@ const icons = {
     )
 }
 
-export default function AboutMePage() {
+export default async function AboutMePage({ params }) {
+    const { locale } = params;
     if (!profileData) { return null }
     const experiences = profileData.filter(item => item.type === "experience")
     const educations = profileData.filter(item => item.type === "education")
-    const t = useTranslations("experience")
-    const et = useTranslations("education")
+    const t = await getTranslations({ locale, namespace: "experience" })
+    const et = await getuseTranslations({ locale, namespace: "education" })
 
     const renderIcon = (type) => {
         return icons[type] || null; // type이 없으면 null 반환

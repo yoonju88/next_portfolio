@@ -68,7 +68,7 @@ export default function Header() {
     const isDropDownActive = (links) => {
         return links.some(link => isPathActive(link.href));
     };
-    const linkStyle = "inline-block capitalize text-color hover:font-bold duration-300 relative mr-2 px-1 py-1 cursor-pointer sm:text-base text-sm"
+    const linkStyle = "inline-block capitalize text-color hover:font-bold duration-300 relative mr-2 p-1.5 cursor-pointer sm:text-base text-sm"
 
 
     const localizedNav = useMemo(

@@ -6,7 +6,6 @@ import { getWebProjects } from '@/lib/notion'
 import ImageOverlay from '@/components/works/ImageOverlay'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
-
 export const revalidate = 300;
 
 export default async function webPage({ params }) {

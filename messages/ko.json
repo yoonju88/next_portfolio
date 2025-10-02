@@ -6,6 +6,22 @@
     "button2": "그래픽 디자인",
     "button3":"작업 보러가기"
   },
+  "metadata": {
+    "siteName": "내 포트폴리오",
+    "siteDescription": "프론트엔드 개발자 포트폴리오",
+    "home": {
+      "title": "홈",
+      "description": "저의 포트폴리오 사이트에 온것을 환영합니다"
+    },
+    "works": {
+      "title": "작품",
+      "description": "여기서 저의 웹개발 프로젝트와 그래픽디자인 작품을 보실수있습니다"
+    },
+    "about": {
+      "title": "소개",
+      "description": "저의 이력에 대해서 알아보세요 "
+    }
+  },
   
   "locale": {
     "english": "English",

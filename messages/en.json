@@ -6,6 +6,23 @@
         "button2" :"Graphic Design",
         "button3":"See my works"
     },
+    
+    "metadata": {
+    "siteName": "My Portfolio",
+    "siteDescription": "Frontend Developer Portfolio",
+    "home": {
+      "title": "Home",
+      "description": "Welcome to my portfolio website"
+    },
+    "works": {
+      "title": "Works",
+      "description": "Here you can view my web development projects and graphic design works"
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about my resume and experience"
+    }
+  },
 
     "locale" : {
         "english": "English",
