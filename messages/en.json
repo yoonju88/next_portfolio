@@ -2,7 +2,7 @@
     "home" : {
         "title": "Hello, I'm yoonju!",
         "description" : "By combining creativity with modern web technologies I create warm and intuitive web experiences for users.",
-        "button1" : "Web Development",
+        "subtitle" : "Web Developer (React & Next.js)",
         "button2" :"Graphic Design",
         "button3":"See my works"
     },
