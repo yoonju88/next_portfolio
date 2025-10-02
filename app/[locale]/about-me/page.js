@@ -10,12 +10,13 @@ import MySkills from '@/components/about-me/skills/MySkills'
 import { getTranslations } from 'next-intl/server'
 import Reveal from '@/components/ScrollReveal/Reveal'
 
-export function generateMetadata({ params }) {
+export async function generateMetadata({ params }) {
     const { locale } = params;
-    const t = getMetadata(locale);
+    const t = await getTranslations(locale, 'metadata');
+
     return {
         title: t.about.title,
-        description: t.about.description,
+        description: t.about.description
     };
 }
 
