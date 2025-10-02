@@ -30,7 +30,14 @@ export async function generateMetadata({ params }) {
       default: t('siteName')
     },
     description: t('siteDescription'),
-    alternates: { languages: { en: '/en', fr: '/fr', ko: '/ko' } }
+    alternates: {
+      // canonical: `${base}/${params.locale || ''}`,
+      languages: {
+        en: `/en`,
+        fr: `/fr`,
+        ko: `/ko`,
+      }
+    }
   };
 }
 

@@ -53,7 +53,13 @@ export default function LocaleSwitcher() {
         <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="flex items-center gap-2 text-sm sm:text-base px-2 py-1 sm:px-4 ">
-                    <ReactCountryFlag countryCode={current.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} />
+                    <ReactCountryFlag
+                        countryCode={current.flagCode}
+                        svg
+                        style={{ width: "1.5em", height: "1.5em" }}
+                        aria-label={t(current.label)}     // 스크린리더에 읽힘
+                        role="img"
+                    />
                     <span>{t(current.label)}</span>
                     <ChevronDown className={`transform transition-all duration-500 text-foreground delay-150 ease-in-out ${open ? 'rotate-180' : 'rotate-0'}`} />
                 </Button>
@@ -66,7 +72,12 @@ export default function LocaleSwitcher() {
                         onClick={() => switchTo(opt.code)}
                         className="flex items-center gap-2"
                     >
-                        <ReactCountryFlag countryCode={opt.flagCode} svg style={{ width: "1.5em", height: "1.5em" }} title={opt.flagCode} />
+                        <ReactCountryFlag
+                            countryCode={opt.flagCode}
+                            svg
+                            style={{ width: "1.5em", height: "1.5em" }}
+                            title={t(opt.label)}
+                        />
                         <span>{t(opt.label)}</span>
                     </DropdownMenuItem>
                 ))}

@@ -3,7 +3,6 @@ import React, { useState, useEffect, useMemo } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from "next-intl";
 import Link from 'next/link'
-import DarkMode from './DarkMode'
 import DropDownMenu from './DropDownMenu'
 import { navLinks } from '@/utils/navLinks'
 
@@ -89,12 +88,12 @@ export default function Header() {
     return (
         <header className="sm:px-10 px-0 flex flex-wrap flex-col md:flex-row items-center lg:mt-4  md:mt-6 mt-12">
             <Link href={`/${locale}`} className="flex title-font font-medium items-center mb-6 md:mb-0" >
-                <span className="sm:ml-3 ml-0 sm:text-4xl text-3xl font-black uppercase tracking-wider
-                    text-color" >
+                <span className="sm:ml-3 ml-0 sm:text-4xl text-3xl font-black uppercase tracking-wider text-color" >
                     yoonju.t
                 </span>
             </Link>
             <nav className="relative md:ml-auto flex flex-wrap items-center text-base justify-center">
+                {/* underline indicator */}
                 <div
                     className='absolute bottom-0 h-[2px] bg-foreground/75 transition-all duration-500'
                     style={{
@@ -102,13 +101,15 @@ export default function Header() {
                         left: underline.left,
                     }}
                 />
+
                 {localizedNav.map((nav) => {
                     if (nav.worksLinks) {
+                        const active = isDropDownActive(nav.worksLinks);
                         return (
                             <DropDownMenu
                                 key={nav.key}
                                 name={nav.label}
-                                className={`${linkStyle} ${isDropDownActive(nav.worksLinks) ? "font-bold uppercase" : "font-medium"
+                                className={`${linkStyle} ${active ? "font-bold uppercase" : "font-medium"
                                     }`}
                                 links={nav.worksLinks}
                                 onMouseEnter={(e) => {
