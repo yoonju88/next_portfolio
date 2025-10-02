@@ -1,4 +1,3 @@
-import React from 'react'
 import Profile from '@/components/about-me/Profile'
 import ContentContainer from '@/components/about-me/ContentContainer'
 import { profileData } from '@/utils/Profile'
@@ -12,11 +11,11 @@ import Reveal from '@/components/ScrollReveal/Reveal'
 
 export async function generateMetadata({ params }) {
     const { locale } = params;
-    const t = await getTranslations(locale, 'metadata');
+    const t = await getTranslations({ locale, namespace: 'metadata' });
 
     return {
-        title: t.about.title,
-        description: t.about.description
+        title: t('about.title'),  // "작품"
+        description: t('about.description')
     };
 }
 
