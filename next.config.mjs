@@ -14,8 +14,14 @@ export default withNextIntl({
             },
             {
                 protocol: "https",
-                hostname: "prod-files-secure.notion-static.com", // 노션 이미지용 (있을 경우)
+                hostname: "prod-files-secure.notion-static.com", // old notion host (fallback)
             },
+            {
+                protocol: "https",
+                hostname: "prod-files-secure.cdn.notion-static.com", // common notion CDN host in production
+            },
+            // Optional legacy hosts (uncomment if needed)
+            // { protocol: "https", hostname: "image.notion.so" },
         ],
     },
 });
