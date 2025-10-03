@@ -1,162 +1,184 @@
-### Next.js Portfolio – README (KO / EN / FR)
+### Next.js Portfolio – README (EN / FR / KO)
 
 ---
 
-### 소개 (한국어)
-이 저장소는 Next.js 14(App Router) 기반의 다국어 포트폴리오 웹사이트입니다. `next-intl`로 i18n을 지원하며, 접근성과 SEO(메타데이터, hreflang, robots, sitemap)를 고려했습니다.
+## Overview (English)
+A multilingual portfolio built with Next.js 14 (App Router). It implements internationalization with `next-intl`, modern styling with Tailwind CSS + shadcn/ui, and SEO/accessibility best practices. Deployed on Vercel.
 
-- **주요 기술**: Next.js 14, React, next-intl, Tailwind CSS, shadcn/ui, Vercel
-- **i18n**: `en`, `fr`, `ko` 로케일, 라우팅 프리픽스(`/en`, `/fr`, `/ko`)
-- **접근성/SEO**: aria 라벨, 큰 터치 타깃, canonical/hreflang/robots
+- **Routing**: Next.js App Router (`app/`), locale-prefixed routes (`/en`, `/fr`, `/ko`)
+- **i18n**: `next-intl` (server: `setRequestLocale`, `getMessages`, client: `useTranslations`)
+- **API**: Next.js Route Handlers (`app/api/...`) used for email sending
+- **UI/Styling**: Tailwind CSS, shadcn/ui components, responsive and accessible design
+- **Images**: Next/Image for optimized loading and LCP focus
+- **SEO**: `metadataBase`, per-page `canonical`, `hreflang` alternates, dynamic `robots.txt`
+- **Deployment**: Vercel (production), environment-driven absolute URLs
 
-#### 빠른 시작
+### Getting Started
 ```bash
-pnpm install    # 또는 npm install / yarn
-pnpm dev        # 또는 npm run dev / yarn dev
-```
-
-브라우저에서 `http://localhost:3000/en` (또는 `/fr`, `/ko`)로 접속하세요.
-
-#### 환경 변수
-프로덕션용 도메인을 설정하세요.
-```bash
-# .env.local
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
-
-#### 주요 스크립트
-```bash
-pnpm dev        # 개발 서버 (http://localhost:3000)
-pnpm build      # 프로덕션 빌드
-pnpm start      # 프로덕션 서버 실행
-```
-
-#### 프로젝트 구조 개요
-- `app/[locale]/` 다국어 라우트 및 레이아웃, 페이지
-- `app/robots.js` 동적 robots.txt 생성
-- `components/` UI 컴포넌트, 내비게이션, 섹션 컴포넌트
-- `i18n/` 요청/라우팅 설정
-- `messages/` 번역 JSON(`en.json`, `fr.json`, `ko.json`)
-
-#### i18n 사용법 요약
-- 레이아웃: `setRequestLocale`, `getMessages`, `NextIntlClientProvider`
-- 페이지/컴포넌트: `useTranslations()` 또는 `getTranslations()`
-- 로케일 전환: `components/nav/LocaleSwitcher.js`
-
-#### SEO 구성 요약
-- `app/[locale]/layout.js`에서 `metadataBase`, canonical, `alternates.languages`(`x-default` 포함) 설정
-- 각 페이지는 필요 시 `generateMetadata`에서 canonical/alternates 지정
-- `app/robots.js`는 `Host`/`Sitemap` 포함한 유효한 robots.txt 제공
-
-#### 접근성 가이드
-- 아이콘 버튼에는 `aria-label` 또는 `sr-only` 텍스트 제공
-- 장식 아이콘/국기는 `aria-hidden`/`role="presentation"`
-- 터치 타깃 최소 44×44px 유지, 포커스 표시 보존
-
-#### 배포
-- Vercel에 배포 시 환경 변수 `NEXT_PUBLIC_SITE_URL`을 반드시 설정하세요.
-
----
-
-### Overview (English)
-This is a multilingual portfolio built with Next.js 14 (App Router). It uses `next-intl` for i18n and implements accessibility and SEO best practices.
-
-- **Stack**: Next.js 14, React, next-intl, Tailwind CSS, shadcn/ui, Vercel
-- **i18n**: Locales `en`, `fr`, `ko` with URL prefixes
-- **A11y/SEO**: aria labels, large touch targets, canonical/hreflang/robots
-
-#### Getting Started
-```bash
-pnpm install
-pnpm dev
+pnpm install    # or npm install / yarn
+pnpm dev        # or npm run dev / yarn dev
 ```
 Open `http://localhost:3000/en` (or `/fr`, `/ko`).
 
-#### Environment Vars
+### Environment Variables
 ```bash
 # .env.local
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
 ```
 
-#### Scripts
+### Scripts
 ```bash
 pnpm dev
 pnpm build
 pnpm start
 ```
 
-#### Structure Highlights
-- `app/[locale]/` localized routes/layout/pages
+### Project Structure
+- `app/[locale]/` localized routes, layout, and pages (App Router)
+- `app/api/` route handlers (e.g., email endpoint)
 - `app/robots.js` dynamic robots.txt
-- `components/` UI/navigation/sections
+- `components/` UI/navigation/sections (shadcn/ui + custom)
 - `i18n/` request/routing config
-- `messages/` translations
+- `messages/` translation JSON (`en.json`, `fr.json`, `ko.json`)
 
-#### i18n Quick Use
-- Layout: `setRequestLocale`, `getMessages`, `NextIntlClientProvider`
-- Pages/Components: `useTranslations()` or `getTranslations()`
-- Locale switcher: `components/nav/LocaleSwitcher.js`
+### Internationalization
+- Layout sets locale on the server: `setRequestLocale(locale)` and fetches messages with `getMessages`
+- Pages/components use `useTranslations()` or `getTranslations()`
+- Language switcher: `components/nav/LocaleSwitcher.js`
 
-#### SEO Notes
-- Set `metadataBase`, canonical, `alternates.languages` (with `x-default`) in `app/[locale]/layout.js`
-- Pages may define `generateMetadata`
-- `app/robots.js` outputs valid robots.txt with Host/Sitemap
+### SEO
+- Global: `metadataBase` from `NEXT_PUBLIC_SITE_URL`, `hreflang` alternates in layout
+- Per-page: `generateMetadata` can define `canonical` and `alternates`
+- Robots: `app/robots.js` generates valid rules with `Host` and `Sitemap`
 
-#### Accessibility Notes
-- Provide `aria-label`/`sr-only` for icon-only buttons
-- Decorative flags/icons: `aria-hidden`, `role="presentation"`
-- Keep minimum 44×44px touch targets
+### Accessibility
+- Icon-only buttons include `aria-label` or hidden text (`sr-only`)
+- Decorative flags/icons are `aria-hidden` with `role="presentation"`
+- Touch targets sized to meet ~44×44px where applicable
+
+### Deployment (Vercel)
+- Set `NEXT_PUBLIC_SITE_URL` in the Vercel Project Settings → Environment Variables
+- Trigger a production build; Next.js will emit absolute URLs for SEO tags
 
 ---
 
-### Présentation (Français)
-Portfolio multilingue basé sur Next.js 14 (App Router), avec `next-intl`. Accessibilité et SEO pris en compte.
+## Présentation (Français)
+Portfolio multilingue basé sur Next.js 14 (App Router), avec `next-intl`. Style moderne via Tailwind CSS + shadcn/ui, bonnes pratiques SEO et accessibilité. Déployé sur Vercel.
 
-- **Stack**: Next.js 14, React, next-intl, Tailwind CSS, shadcn/ui, Vercel
-- **i18n**: Locales `en`, `fr`, `ko` (préfixes d’URL)
-- **A11y/SEO**: libellés aria, grandes cibles tactiles, canonical/hreflang/robots
+- **Routage**: App Router (`app/`), préfixes de langue (`/en`, `/fr`, `/ko`)
+- **i18n**: `next-intl` (serveur: `setRequestLocale`, `getMessages`, client: `useTranslations`)
+- **API**: Route Handlers Next.js (`app/api/...`) pour l’envoi d’e-mails
+- **UI/Style**: Tailwind CSS, composants shadcn/ui, design responsive et accessible
+- **Images**: Next/Image (optimisation et LCP)
+- **SEO**: `metadataBase`, canonical par page, alternates `hreflang`, `robots.txt` dynamique
+- **Déploiement**: Vercel, URLs absolues via variables d’environnement
 
-#### Démarrage
+### Démarrage
 ```bash
 pnpm install
 pnpm dev
 ```
 Ouvrez `http://localhost:3000/fr` (ou `/en`, `/ko`).
 
-#### Variables d’environnement
+### Variables d’environnement
 ```bash
 # .env.local
 NEXT_PUBLIC_SITE_URL=https://votre-domaine.com
 ```
 
-#### Scripts
+### Scripts
 ```bash
 pnpm dev
 pnpm build
 pnpm start
 ```
 
-#### Structure
-- `app/[locale]/` routes/pages localisées
+### Structure du projet
+- `app/[locale]/` routes/pages localisées (App Router)
+- `app/api/` route handlers (ex: endpoint e-mail)
 - `app/robots.js` robots.txt dynamique
-- `components/` UI/navigation/sections
-- `i18n/` configuration
-- `messages/` traductions
+- `components/` UI/navigation/sections (shadcn/ui + custom)
+- `i18n/` configuration requêtes/routage
+- `messages/` traductions (`en.json`, `fr.json`, `ko.json`)
 
-#### i18n – Utilisation rapide
-- Layout: `setRequestLocale`, `getMessages`, `NextIntlClientProvider`
-- Pages/Composants: `useTranslations()` ou `getTranslations()`
+### Internationalisation
+- Layout serveur: `setRequestLocale` + `getMessages`
+- Pages/composants: `useTranslations()` ou `getTranslations()`
 - Sélecteur de langue: `components/nav/LocaleSwitcher.js`
 
-#### SEO
-- Définir `metadataBase`, canonical, `alternates.languages` (avec `x-default`) dans `app/[locale]/layout.js`
-- Définir `generateMetadata` par page si nécessaire
-- `app/robots.js` génère un robots.txt valide (Host/Sitemap)
+### SEO
+- Global: `metadataBase` (via `NEXT_PUBLIC_SITE_URL`), alternates `hreflang`
+- Par page: `generateMetadata` (canonical/alternates)
+- Robots: `app/robots.js` (Host/Sitemap valides)
 
-#### Accessibilité
-- Boutons icône uniquement: `aria-label`/texte `sr-only`
-- Icônes/drapeaux décoratifs: `aria-hidden`, `role="presentation"`
-- Cibles tactiles min. 44×44px
+### Accessibilité
+- Boutons uniquement icône: `aria-label` ou texte `sr-only`
+- Drapeaux/icônes décoratifs: `aria-hidden`, `role="presentation"`
+- Cibles tactiles ~44×44px
+
+### Déploiement (Vercel)
+- Définissez `NEXT_PUBLIC_SITE_URL` dans Vercel → Variables d’environnement
+- Lancez un build de production pour générer des URLs absolues
+
+---
+
+## 소개 (한국어)
+Next.js 14(App Router) 기반의 다국어 포트폴리오입니다. `next-intl`로 i18n을 구현하고 Tailwind CSS + shadcn/ui로 스타일링했으며, SEO/접근성 베스트 프랙티스를 반영했습니다. Vercel에 배포되었습니다.
+
+- **라우팅**: App Router(`app/`), 로케일 프리픽스(`/en`, `/fr`, `/ko`)
+- **i18n**: `next-intl` (서버: `setRequestLocale`, `getMessages`, 클라이언트: `useTranslations`)
+- **API**: 이메일 전송용 Next.js Route Handlers (`app/api/...`)
+- **UI/스타일**: Tailwind CSS, shadcn/ui 컴포넌트, 반응형/접근성
+- **이미지**: Next/Image (최적화 및 LCP)
+- **SEO**: `metadataBase`, 페이지별 `canonical`, `hreflang` alternates, 동적 `robots.txt`
+- **배포**: Vercel (프로덕션), 절대 URL은 환경 변수로 관리
+
+### 시작하기
+```bash
+pnpm install
+pnpm dev
+```
+브라우저에서 `http://localhost:3000/ko` (또는 `/en`, `/fr`)로 접속하세요.
+
+### 환경 변수
+```bash
+# .env.local
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+### 스크립트
+```bash
+pnpm dev
+pnpm build
+pnpm start
+```
+
+### 구조
+- `app/[locale]/` 다국어 레이아웃/페이지 (App Router)
+- `app/api/` 이메일 등 API 라우트 핸들러
+- `app/robots.js` 유효한 robots.txt 동적 생성
+- `components/` UI/내비게이션/섹션 (shadcn/ui + 커스텀)
+- `i18n/` 요청/라우팅 설정
+- `messages/` 번역 JSON(`en.json`, `fr.json`, `ko.json`)
+
+### 국제화
+- 레이아웃(서버): `setRequestLocale` + `getMessages`
+- 페이지/컴포넌트: `useTranslations()` 또는 `getTranslations()`
+- 언어 스위처: `components/nav/LocaleSwitcher.js`
+
+### SEO
+- 전역: `NEXT_PUBLIC_SITE_URL` 기준의 `metadataBase`, 레이아웃 `hreflang`
+- 페이지: `generateMetadata`로 `canonical`/`alternates` 지정
+- 로봇: `app/robots.js`에서 `Host`/`Sitemap` 포함
+
+### 접근성
+- 아이콘 전용 버튼: `aria-label` 또는 `sr-only` 텍스트 제공
+- 장식용 국기/아이콘: `aria-hidden`, `role="presentation"`
+- 터치 타깃 최소 약 44×44px 권장
+
+### 배포 (Vercel)
+- Vercel 프로젝트 설정에서 `NEXT_PUBLIC_SITE_URL` 환경 변수를 설정하세요.
+- 프로덕션 빌드 시 절대 URL이 메타 태그에 반영됩니다.
 
 
 
