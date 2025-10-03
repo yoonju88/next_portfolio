@@ -43,11 +43,16 @@ export const FilterButton = ({ active, name, onClick }) => {
 
 export const IconButton = ({ href, style }) => {
     return (
-        <button className={`flex flex-col py-2 px-2 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 ${style}`} >
+        <button
+            type="button"
+            aria-label="Navigate"
+            className={`flex flex-col py-2 px-2 rounded-lg bg-chart-2 shadow-lg add-transition hover:bg-chart-2/80 hover:shadow-inner hover:shadow-violet-950 ${style}`}
+        >
             <Link href={href}>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white ">
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-6 text-white ">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
                 </svg>
+                <span className="sr-only">Navigate</span>
             </Link>
         </button >
     )
@@ -80,12 +85,15 @@ export const ScrollTopButton = () => {
             className={`flex flex-col fixed bottom-36 right-8 py-1.5 px-1.5 rounded-lg bg-btn-2 shadow-lg add-transition hover:shadow-inner hover:shadow-chart-1 hover:animate-none ${isVisible ? "opacity-100 scale-100 glow-effect" : "opacity-0 scale-0"}`}
             onClick={scrollToTop}
             disabled={!isVisible}
+            aria-disabled={!isVisible}
+            aria-label="Scroll to top"
 
         >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-8 text-white">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-8 text-white">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
             </svg>
+            <span className="sr-only">Scroll to top</span>
         </button>
     )
 }

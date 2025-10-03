@@ -57,8 +57,8 @@ export default function LocaleSwitcher() {
                         countryCode={current.flagCode}
                         svg
                         style={{ width: "1.5em", height: "1.5em" }}
-                        aria-label={t(current.label)}     // 스크린리더에 읽힘
-                        role="img"
+                        aria-hidden
+                        role="presentation"
                     />
                     <span>{t(current.label)}</span>
                     <ChevronDown className={`transform transition-all duration-500 text-foreground delay-150 ease-in-out ${open ? 'rotate-180' : 'rotate-0'}`} />
@@ -76,7 +76,8 @@ export default function LocaleSwitcher() {
                             countryCode={opt.flagCode}
                             svg
                             style={{ width: "1.5em", height: "1.5em" }}
-                            title={t(opt.label)}
+                            aria-hidden
+                            role="presentation"
                         />
                         <span>{t(opt.label)}</span>
                     </DropdownMenuItem>

@@ -25,14 +25,16 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'),
     title: {
       template: `%s | ${t('siteName')}`,  // 템플릿 추가
       default: t('siteName')
     },
     description: t('siteDescription'),
     alternates: {
-      // canonical: `${base}/${params.locale || ''}`,
+      canonical: `/${locale}`,
       languages: {
+        'x-default': '/',
         en: `/en`,
         fr: `/fr`,
         ko: `/ko`,
