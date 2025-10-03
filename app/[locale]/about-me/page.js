@@ -10,7 +10,7 @@ import { getTranslations } from 'next-intl/server'
 import Reveal from '@/components/ScrollReveal/Reveal'
 
 export async function generateMetadata({ params }) {
-    const { locale } = params;
+    const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'metadata' });
 
     return {
@@ -54,7 +54,7 @@ const icons = {
 }
 
 export default async function AboutMePage({ params }) {
-    const { locale } = params;
+    const { locale } = await params;
     if (!profileData) { return null }
     const experiences = profileData.filter(item => item.type === "experience")
     const educations = profileData.filter(item => item.type === "education")
