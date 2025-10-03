@@ -15,7 +15,16 @@ export async function generateMetadata({ params }) {
 
     return {
         title: t('about.title'),  // "작품"
-        description: t('about.description')
+        description: t('about.description'),
+        alternates: {
+            canonical: `/${locale}/about-me`,
+            languages: {
+                'x-default': `/about-me`,
+                en: `/en/about-me`,
+                fr: `/fr/about-me`,
+                ko: `/ko/about-me`
+            }
+        }
     };
 }
 
