@@ -18,16 +18,23 @@ function toList(str) {
         .filter(Boolean);
 }
 export default function WebDetailsClient({ project, labels }) {
-    const adminMode = toList(project.admin);
-    const clientMode = toList(project.client);
+    const admin = toList(project.admin);
+    const client = toList(project.client);
     const goal = toList(project.goal);
+    const problem = toList(project.solution)
+    const learning = toList(project.learned)
 
     const sections = [
-        { title: project.adminT, data: adminMode },
-        { title: project.clientT, data: clientMode },
-        { title: project.goalT, data: goal },
-    ];
-
+        { title: project.adminTitle, data: admin },
+        { title: project.clientTitle, data: client },
+        { title: project.goalTitle, data: goal },
+    ].filter(({ data }) => Array.isArray(data) && data.length > 0);
+    const hasFeatures = sections.length > 0;
+    
+    const learningSection = [
+        { title: project.problemT, data: problem },
+        { title: project.learningT, data: learning },
+    ]
     return (
         <section className="px-10 mx-auto flex flex-col lg:flex-row overflow-hidden items-center justify-center mt-10" >
             <SlideImages images={project.allImages} />
@@ -57,11 +64,23 @@ export default function WebDetailsClient({ project, labels }) {
                             tags={project.tags}
                         />
                     </ToggleProperty>
-                    {project.admin &&
+                    <ToggleProperty
+                        title={labels.learning}
+                        style="scrollbar-custom"
+                        animation="animate-slide-down-soft [--anim-delay:1800ms]"
+                        value='item-3'
+                    >
+                        <div className="grid gap-4 px-2">
+                            {learningSection.map(({ title, data }) => (
+                                <FeatureDetail key={title} title={title} data={data} />
+                            ))}
+                        </div>
+                    </ToggleProperty>
+                    {hasFeatures &&
                         <ToggleProperty
                             title={labels.features}
                             style="scrollbar-custom"
-                            animation="animate-slide-down-soft [--anim-delay:1800ms]"
+                            animation="animate-slide-down-soft [--anim-delay:2100ms]"
                             value='item-3'
                         >
                             <div className="grid gap-4 px-2">

@@ -9,7 +9,6 @@ import {
 
 
 export default function ToggleProperty({ title, description, children, style, value, animation }) {
-    console.log(style)
     return (
         <Accordion
             type="single"

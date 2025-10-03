@@ -19,6 +19,7 @@ export default async function WebDetailsPage({ params }) {
         techs: t("techs"),
         link: t("link"),
         days: t("days"),
+        learning: t('learning'),
         features: t("features"),
         link2: t("link2")
     }
