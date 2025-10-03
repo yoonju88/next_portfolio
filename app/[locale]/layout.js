@@ -32,7 +32,6 @@ export async function generateMetadata({ params }) {
     },
     description: t('siteDescription'),
     alternates: {
-      canonical: `/${locale}`,
       languages: {
         'x-default': '/',
         en: `/en`,
