@@ -45,7 +45,7 @@ export default function SlideImages({ images = [] }) {
                             blurDataURL={image}
                             placeholder="blur"
                             className={[
-                                'object-cover bg-slate-100 transition-opacity duration-500 ease-out rounded-lg',
+                                'object-center object-cover bg-slate-100 transition-opacity duration-500 ease-out rounded-lg',
                                 current === index ? 'opacity-100' : 'opacity-60',
                             ].join(' ')}
                             priority={index === 0}

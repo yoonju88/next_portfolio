@@ -15,6 +15,7 @@ export default function ImageOverlay({ cover, name, type, link, important = fals
                     sizes="(min-width: 1280px) 400px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className={`absolute inset-0 object-cover object-top bg-gray-100 transform transition-all duration-300 group-hover:scale-105 ${className}`}
                     src={cover}
+                    unoptimized={true}
                     priority={important}                         // LCP 후보면 true
                     loading={important ? "eager" : "lazy"}
                     fetchPriority={important ? "high" : "auto"}
