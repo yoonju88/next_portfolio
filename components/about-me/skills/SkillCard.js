@@ -6,7 +6,7 @@ export default function SkillCard({ title, icon, filtered }) {
 
     return (
         <div
-            className="group skill-card h-28 w-32 rounded-lg flex flex-col justify-center items-center
+            className="group skill-card lg:h-28 lg:w-32 h-[95px] w-[100px] rounded-lg flex flex-col justify-center items-center
                 hover:scale-110 hover-effect-card add-transition"
         >
             <Image
@@ -17,7 +17,7 @@ export default function SkillCard({ title, icon, filtered }) {
                 className="w-11 object-cover grayscale group-hover:grayscale-0 rounded-md group-hover:scale-110 add-transition"
                 loading="lazy"
             />
-            <h4 className="mt-3 text-color group-hover:font-medium">{title}</h4>
+            <h4 className="sm:text-md text-[14.5px] mt-3 text-color group-hover:font-medium">{title}</h4>
         </div >
     )
 }
