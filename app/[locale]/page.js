@@ -35,8 +35,8 @@ export default function Home() {
   return (
     <section className="sm:px-20 px-4 flex flex-col justify-center items-center text-center">
       <h1
-        className="relatitle-font lg:text-7xl md:text-5xl text-[28px] flex flex-wrap  mb-6 font-extrabold sm:uppercase 
-        overflow-hidden whitespace-nowrap tracking-wide text-transparent stroke-title-intro
+        className="relatitle-font lg:text-7xl md:text-5xl text-[28px] mb-6 font-extrabold sm:uppercase 
+        whitespace-normal tracking-wide text-transparent stroke-title-intro
         animate-typing transform translate-x-[var(--mx,0)] translate-y-[var(--my,0)]"
       >
         {parse(t('title'))}
