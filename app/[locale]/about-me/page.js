@@ -74,7 +74,7 @@ export default async function AboutMePage({ params }) {
         return icons[type] || null; // type이 없으면 null 반환
     };
     return (
-        <div className="px-10 w-full mx-auto flex flex-col">
+        <div className="lg:px-10 px-4 w-full mx-auto flex flex-col">
             <div className="mx-auto mt-8 sm:space-y-32 space-y-28">
                 <Profile />
                 <Services />

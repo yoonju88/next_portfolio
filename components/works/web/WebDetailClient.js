@@ -30,18 +30,18 @@ export default function WebDetailsClient({ project, labels }) {
         { title: project.goalTitle, data: goal },
     ].filter(({ data }) => Array.isArray(data) && data.length > 0);
     const hasFeatures = sections.length > 0;
-    
+
     const learningSection = [
         { title: project.problemT, data: problem },
         { title: project.learningT, data: learning },
     ]
     return (
-        <section className="px-10 mx-auto flex flex-col lg:flex-row overflow-hidden items-center justify-center mt-10" >
+        <section className="lg:px-10 px-0 mx-auto flex flex-col lg:flex-row overflow-hidden items-center justify-center mt-10" >
             <SlideImages images={project.allImages} />
-            <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
+            <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 px-4">
                 <h1 className="capitalize animate-slide-down-soft [--anim-delay:600ms]">{project.title}</h1>
                 <Description description={project.description} animation="animate-slide-down-soft [--anim-delay:900ms]" />
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:mt-0 mt-6">
                     <ToggleProperty
                         title={labels.duration}
                         stlye=''

@@ -23,7 +23,7 @@ export default function Breadcrumbs({
     currentPage
 }) {
     return (
-        <Breadcrumb className="px-10 lg:px-14 mx-auto w-full animate-slide-down-soft [animation-delay:250ms]">
+        <Breadcrumb className="lg:px-12 px-4 mx-auto w-full animate-slide-down-soft [animation-delay:250ms]">
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>

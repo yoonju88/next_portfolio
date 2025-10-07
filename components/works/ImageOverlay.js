@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function ImageOverlay({ cover, name, type, link, important = false, className }) {
     return (
-        <article className="w-full h-[450px]">
+        <article className="w-full lg:h-[450px] md:h-[450px] h-[300px]">
             <Link
                 href={link}
                 className="group relative block rounded-lg overflow-hidden h-full w-full"

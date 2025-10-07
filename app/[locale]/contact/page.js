@@ -8,7 +8,7 @@ export default function contactPage() {
     const t = useTranslations("contact")
 
     return (
-        <section className="mb-24 px-10">
+        <section className="mb-24 lg:px-10 px-4">
             <div className="py-10 flex flex-wrap justify-center gap-20">
                 <div className="lg:w-[50%] w-full animate-slide-down-soft contact_card bg-background/20 border rounded-lg p-8 flex flex-col">
                     <div className="flex items-center justify-between mb-4">

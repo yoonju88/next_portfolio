@@ -1,6 +1,6 @@
 { 
   "home" : {
-    "title": "Bonjour, je suis Yoonju!",
+    "title": "Bienvenue !",
     "description" : "En alliant créativité et technologies web modernes je conçois des expériences web chaleureuses et intuitives. ",
     "subtitle" : "Développeuse Web (React & Next.js)",
     "button2" :"Design Graphique",
@@ -33,7 +33,7 @@
   "menu" :{
     "home" : "Accueil",
     "works" : {
-      "label": "Réalisations",
+      "label": "Potfolio",
       "web": "Web",
       "design": "Design"
     },

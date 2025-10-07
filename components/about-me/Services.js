@@ -15,7 +15,7 @@ export default function Services() {
                     <h1>{t('title')}</h1>
                 </div>
             </Reveal>
-            <div className="grid lg:grid-cols-2 grid-cols-1 -m-4 text-center items-center justify-center gap-6 ">
+            <div className="grid lg:grid-cols-2 grid-cols-1 text-center items-center justify-center gap-6">
                 {serviceData.map((item) => {
                     return (
                         <ServiceList

@@ -16,7 +16,7 @@ export default async function webPage({ params }) {
     const n = await getTranslations({ locale, namespace: "menu" })
 
     return (
-        <div className='flex flex-col justify-center gap-20 mt-20 mb-40'>
+        <div className='flex flex-col justify-center mt-20 mb-40'>
             <Breadcrumbs
                 home={n('home')}
                 homeLink={`/${locale}`}
@@ -33,7 +33,7 @@ export default async function webPage({ params }) {
             />
             <Suspense fallback={<WorksCardLoading />}>
                 {/* <CarouselOrientation data={webDB} /> */}
-                <section className="animate-slide-down-soft [animation-delay:1000ms] grid grid-cols-1 lg:grid-cols-2 gap-4 justify-center mt-16 w-full px-6 lg:px-10">
+                <section className="animate-slide-down-soft [animation-delay:1000ms] grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center mt-16 w-full px-0 lg:px-10">
                     {webDB.map((item) => {
                         return (
                             <ImageOverlay

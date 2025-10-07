@@ -17,7 +17,7 @@ export default function ServiceList({ title, icon, description }) {
                 key={title}
                 type="single"
                 collapsible
-                className="w-[97%] p-4 rounded-2xl group hover-effect-card"
+                className="p-4 rounded-lg group hover-effect-card"
             >
                 <AccordionItem value="item-1">
                     <AccordionTrigger>

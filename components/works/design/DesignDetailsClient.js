@@ -7,9 +7,9 @@ import Tags from '@/components/works/Tags'
 export default function DesignDetailsClient({ project, labels }) {
 
     return (
-        <section className=" px-10 mx-auto flex flex-col lg:flex-row items-center justify-center py-20">
+        <section className="mx-auto flex flex-col lg:flex-row items-center justify-center py-20 lg:px-10 px-0">
             <SlideImages images={project.allImages} />
-            <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 ">
+            <div className="w-full lg:pl-14 lg:py-0 mt-10 lg:mt-0 px-4">
                 <h3 className='text-btn-2 uppercase font-bold animate-slide-down-soft [--anim-delay:300ms]'>{project.category}</h3>
                 <h1 className="animate-slide-down-soft [--anim-delay:600ms]">{project.title}</h1>
                 <Description description={project.description} aniamtion="animate-slide-down-soft [--anim-delay:900ms]" />

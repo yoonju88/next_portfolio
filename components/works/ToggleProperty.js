@@ -13,7 +13,7 @@ export default function ToggleProperty({ title, description, children, style, va
         <Accordion
             type="single"
             collapsible
-            className={`w-full py-1 px-3 rounded-lg ${animation}`}
+            className={`w-full py-1 px-2 rounded-lg ${animation}`}
             defaultValue='item-1'
         >
             <AccordionItem value={value}>
