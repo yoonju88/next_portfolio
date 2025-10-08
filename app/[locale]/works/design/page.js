@@ -6,6 +6,8 @@ import { getTranslations } from 'next-intl/server'
 import { getDesignProjects } from '@/lib/notion'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
+export const revalidate = 300;
+
 export default async function DesignPage({ params }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: "design" })

@@ -4,6 +4,8 @@ import DesignDetailsClient from '@/components/works/design/DesignDetailsClient';
 import { getTranslations } from "next-intl/server";
 import Breadcrumbs from "@/components/nav/NavBreadcrumbs";
 
+export const revalidate = 300;
+
 
 export default async function designDetailsPage({ params }) {
     const { locale, id } = await params

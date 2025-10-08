@@ -9,6 +9,22 @@ import {
     CarouselPrevious,
 } from '@/components/ui/carousel'
 
+function toProxy(url) {
+    try {
+        const u = new URL(url)
+        if (
+            u.hostname === 'prod-files-secure.s3.us-west-2.amazonaws.com' ||
+            u.hostname === 'prod-files-secure.notion-static.com' ||
+            u.hostname === 'prod-files-secure.cdn.notion-static.com'
+        ) {
+            return `/api/image?url=${encodeURIComponent(url)}`
+        }
+        return url
+    } catch {
+        return url
+    }
+}
+
 export default function SlideImages({ images = [] }) {
     const [api, setApi] = useState(null)
     const [current, setCurrent] = useState(0)
@@ -31,7 +47,9 @@ export default function SlideImages({ images = [] }) {
             className="w-full relative animate-scale-up-soft [--anim-delay:600ms]"
         >
             <CarouselContent>
-                {images.map((image, index) => (
+                {images.map((raw, index) => {
+                    const image = toProxy(raw)
+                    return (
                     <CarouselItem
                         key={index}
                         className="relative w-full overflow-hidden rounded-lg"
@@ -52,7 +70,7 @@ export default function SlideImages({ images = [] }) {
 
                         />
                     </CarouselItem>
-                ))}
+                )})}
             </CarouselContent>
 
             {hasMultiple && (

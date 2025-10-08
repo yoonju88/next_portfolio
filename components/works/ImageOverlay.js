@@ -3,6 +3,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function ImageOverlay({ cover, name, type, link, important = false, className }) {
+    function toProxy(url) {
+        try {
+            const u = new URL(url)
+            if (
+                u.hostname === 'prod-files-secure.s3.us-west-2.amazonaws.com' ||
+                u.hostname === 'prod-files-secure.notion-static.com' ||
+                u.hostname === 'prod-files-secure.cdn.notion-static.com'
+            ) {
+                return `/api/image?url=${encodeURIComponent(url)}`
+            }
+            return url
+        } catch {
+            return url
+        }
+    }
     return (
         <article className="w-full lg:h-[450px] md:h-[450px] h-[300px]">
             <Link
@@ -14,7 +29,7 @@ export default function ImageOverlay({ cover, name, type, link, important = fals
                     fill
                     sizes="(min-width: 1280px) 400px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className={`absolute inset-0 object-cover object-top bg-gray-100 transform transition-all duration-300 group-hover:scale-105 ${className}`}
-                    src={cover}
+                    src={toProxy(cover)}
                     unoptimized={true}
                     priority={important}                         // LCP 후보면 true
                     loading={important ? "eager" : "lazy"}
