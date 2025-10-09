@@ -6,7 +6,7 @@ import { getTranslations } from 'next-intl/server'
 import { getDesignProjects } from '@/lib/notion'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
-export const revalidate = 300;
+export const revalidate = 3600;// 1시간마다 재생성
 
 export default async function DesignPage({ params }) {
     const { locale } = await params;
