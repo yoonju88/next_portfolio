@@ -8,22 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel'
-
-function toProxy(url) {
-    try {
-        const u = new URL(url)
-        if (
-            u.hostname === 'prod-files-secure.s3.us-west-2.amazonaws.com' ||
-            u.hostname === 'prod-files-secure.notion-static.com' ||
-            u.hostname === 'prod-files-secure.cdn.notion-static.com'
-        ) {
-            return `/api/image?url=${encodeURIComponent(url)}`
-        }
-        return url
-    } catch {
-        return url
-    }
-}
+import { formatImageUrlForProxy } from '@/lib/image'
 
 export default function SlideImages({ images = [] }) {
     const [api, setApi] = useState(null)
@@ -48,29 +33,30 @@ export default function SlideImages({ images = [] }) {
         >
             <CarouselContent>
                 {images.map((raw, index) => {
-                    const image = toProxy(raw)
+                    const image = formatImageUrlForProxy(raw)
                     return (
-                    <CarouselItem
-                        key={index}
-                        className="relative w-full overflow-hidden rounded-lg"
-                    >
-                        <Image
-                            src={image}
-                            alt={`project image ${index + 1}`}
-                            width={1000}         // ← 숫자!
-                            height={600}
-                            sizes="(min-width: 1024px) 900px, 100vw"
-                            blurDataURL={image}
-                            placeholder="blur"
-                            className={[
-                                'object-center object-cover bg-slate-100 transition-opacity duration-500 ease-out rounded-lg',
-                                current === index ? 'opacity-100' : 'opacity-60',
-                            ].join(' ')}
-                            priority={index === 0}
+                        <CarouselItem
+                            key={index}
+                            className="relative w-full overflow-hidden rounded-lg"
+                        >
+                            <Image
+                                src={image}
+                                alt={`project image ${index + 1}`}
+                                width={1000}         // ← 숫자!
+                                height={600}
+                                sizes="(min-width: 1024px) 900px, 100vw"
+                                blurDataURL={image}
+                                placeholder="blur"
+                                className={[
+                                    'object-center object-cover bg-slate-100 transition-opacity duration-500 ease-out rounded-lg',
+                                    current === index ? 'opacity-100' : 'opacity-60',
+                                ].join(' ')}
+                                priority={index === 0}
 
-                        />
-                    </CarouselItem>
-                )})}
+                            />
+                        </CarouselItem>
+                    )
+                })}
             </CarouselContent>
 
             {hasMultiple && (

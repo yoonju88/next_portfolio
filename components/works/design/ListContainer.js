@@ -13,6 +13,7 @@ export default function ListContainer({ data }) {
     const [currentPage, setCurrentPage] = useState(1)
     const [perPage, setPerPage] = useState(6)
 
+
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 768) {

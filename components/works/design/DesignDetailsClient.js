@@ -1,9 +1,10 @@
 'use client'
 import SlideImages from '@/components/works/SlideImages'
-import { IconButton } from '@/components/form/Buttons'
 import ToggleProperty from '@/components/works/ToggleProperty'
 import Description from '@/components/works/Description'
 import Tags from '@/components/works/Tags'
+
+
 export default function DesignDetailsClient({ project, labels }) {
 
     return (
