@@ -33,9 +33,8 @@ export async function GET(req) {
         // 필요한 헤더만 전달
         const headers = new Headers();
         headers.set('Content-Type', upstream.headers.get('Content-Type') || 'image/jpeg');
-        headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
-        headers.set('Pragma', 'no-cache');
-        headers.set('Expires', '0');
+        // **캐싱 전략 수정:** 1년 동안 캐시, Vercel/CDN 에서도 캐시
+        headers.set('Cache-Control', 'public, max-age=31536000, immutable');
 
         return new Response(upstream.body, {
             status: 200,

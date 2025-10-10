@@ -42,6 +42,7 @@ export default async function webPage({ params }) {
                                 name={item.title}
                                 cover={item.coverImage}
                                 link={`/${locale}/works/web/${item.id}`}
+                                important={index < 2}
                             />
                         )
                     })}

@@ -66,6 +66,7 @@ export default function ListContainer({ data }) {
                             cover={item.coverImage}
                             type={item.category}
                             link={`/${locale}/works/design/${item.id}`}
+                            important={index < 2}
                         />
                     )
                 })}
