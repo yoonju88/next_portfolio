@@ -57,7 +57,7 @@ export default function ListContainer({ data }) {
                 />
             </span>
             <section className="animate-slide-down-soft [animation-delay:2000ms] grid grid-cols-1 lg:grid-cols-2 gap-8 pt-10 px-0 lg:px-10">
-                {paginatedItems.map((item) => {
+                {paginatedItems.map((item, index) => {
                     const isImportant = index < 2;
                     return (
                         <ImageOverlay
