@@ -34,7 +34,8 @@ export default async function webPage({ params }) {
             <Suspense fallback={<WorksCardLoading />}>
                 {/* <CarouselOrientation data={webDB} /> */}
                 <section className="animate-slide-down-soft [animation-delay:1000ms] grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center mt-16 w-full px-0 lg:px-10">
-                    {webDB.map((item) => {
+                    {webDB.map((item, index) => {
+                        const isImportant = index < 2;
                         return (
                             <ImageOverlay
                                 key={item.id}
@@ -42,7 +43,7 @@ export default async function webPage({ params }) {
                                 name={item.title}
                                 cover={item.coverImage}
                                 link={`/${locale}/works/web/${item.id}`}
-                                important={index < 2}
+                                important={isImportant}
                             />
                         )
                     })}
