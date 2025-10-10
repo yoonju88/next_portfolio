@@ -13,7 +13,8 @@ import { formatImageUrlForProxy } from '@/lib/image'
 export default function SlideImages({ images = [] }) {
     const [api, setApi] = useState(null)
     const [current, setCurrent] = useState(0)
-
+    //슬라이더/캐러셀 같은 UI에서 현재 선택된 스냅(슬라이드) 인덱스를 state로 관리하는 패턴
+    //초기 로딩 시 한 번 상태를 세팅하고, 슬라이드 이동 시 이벤트로 상태를 업데이트하며, 컴포넌트 언마운트 시 이벤트를 깨끗하게 제거함.
     useEffect(() => {
         if (!api) return
         const onSelect = () => setCurrent(api.selectedScrollSnap())
