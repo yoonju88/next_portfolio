@@ -231,7 +231,7 @@
         "uides": "I create reusable components and consistent design systems leveraging modern UI libraries such as shadcn/ui and NextUI to implement responsive interfaces. This ensures a seamless and consistent user experience across all devices.",
         "maintenance": "Maintenance",
         "maindes": "I refactor existing code, fix bugs and continuously integrate new features and SEO strategies to enhance stability, visibility and long-term performance of the web.",
-        "deploying" : "Deployment & Hosting",
+        "deploying" : "Deployment",
         "deployingdes": "I deploy projects efficiently using Vercel leveraging a serverless environment to deliver stable and fast web services."
     },
     "skills": {
