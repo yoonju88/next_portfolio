@@ -12,7 +12,7 @@ export const revalidate = 0;// 페이지 방문 시 항상 데이터를 새로 �
  * 사용자가 요청할 때마다 서버에서 페이지를 새로 렌더링하도록 강제
  * 모든 요청에 대해 페이지를 서버에서 새로 렌더링하여 항상 최신 Notion URL을 가져오도록 보장
  */
-export const dynamic = 'force-dynamic'; //
+export const dynamic = 'force-dynamic';
 
 export default async function DesignPage({ params }) {
     const { locale } = await params;
