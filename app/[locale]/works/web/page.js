@@ -6,7 +6,7 @@ import { getWebProjects } from '@/lib/notion'
 import ImageOverlay from '@/components/works/ImageOverlay'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
-export const revalidate = 3600;// 1시간마다 재생성
+export const revalidate = 0;// 페이지 방문 시 항상 데이터를 새로 가져옵니다
 
 export default async function webPage({ params }) {
     const { locale } = await params;
