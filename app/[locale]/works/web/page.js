@@ -7,6 +7,7 @@ import ImageOverlay from '@/components/works/ImageOverlay'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
 export const revalidate = 0;// 페이지 방문 시 항상 데이터를 새로 가져옵니다
+export const dynamic = 'force-dynamic'; // 페이지를 방문할 때마다 항상 새로 렌더링하도록 설정 (캐시 비활성화)
 
 export default async function webPage({ params }) {
     const { locale } = await params;

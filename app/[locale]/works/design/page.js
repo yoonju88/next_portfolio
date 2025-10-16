@@ -7,6 +7,12 @@ import { getDesignProjects } from '@/lib/notion'
 import Breadcrumbs from '@/components/nav/NavBreadcrumbs'
 
 export const revalidate = 0;// 페이지 방문 시 항상 데이터를 새로 가져옵니다
+/*
+ * Next.js의 기본 동작인 정적 페이지 생성을 비활성화
+ * 사용자가 요청할 때마다 서버에서 페이지를 새로 렌더링하도록 강제
+ * 모든 요청에 대해 페이지를 서버에서 새로 렌더링하여 항상 최신 Notion URL을 가져오도록 보장
+ */
+export const dynamic = 'force-dynamic'; //
 
 export default async function DesignPage({ params }) {
     const { locale } = await params;
