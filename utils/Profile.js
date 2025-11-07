@@ -136,6 +136,8 @@ import Fb from '@/public/firebase-logo.png'
 import St from '@/public/stripe.png'
 import Sh from '@/public/shadcn.png'
 import Cv from '@/public/canva.png'
+import Pm from '@/public/prisma.png'
+import Nj from '@/public/nodejs.png'
 
 export const mySkillsData = [
     {
@@ -215,6 +217,18 @@ export const mySkillsData = [
         icon: Ae,
         type: "design",
         id: 464,
+    },
+    {
+        title: "Prisma",
+        icon: Pm,
+        type: "web",
+        id: 465,
+    },
+    {
+        title: "NodeJs",
+        icon: Nj,
+        type: "web",
+        id: 466,
     },
 ]
 
