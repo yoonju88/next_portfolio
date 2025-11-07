@@ -222,7 +222,7 @@ export const mySkillsData = [
         title: "Prisma",
         icon: Pm,
         type: "web",
-        id: 465,
+        id: 467,
     },
     {
         title: "NodeJs",
