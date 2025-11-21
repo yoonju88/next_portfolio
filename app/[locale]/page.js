@@ -42,7 +42,7 @@ export default function Home() {
         {parse(t('title'))}
       </h1>
       <h2
-        className="text-color_subtitle mb-2 lg:text-3xl md:text-xl text-lg animate-slide-down-soft
+        className="text-color_subtitle mb-6 lg:text-3xl md:text-xl text-lg animate-slide-down-soft
         transform translate-x-[var(--mx,0)] translate-y-[var(--my,0)] [animation-delay:2200ms]"
       >
         {t('subtitle')}
