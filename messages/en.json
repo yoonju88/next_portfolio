@@ -49,7 +49,7 @@
 
     "web" : {
         "title" : "Web Development",
-        "description" : "I have built web applications using modern technologies such as React and Next.js. Rather than just focusing on functionality, I designed clear and user-friendly interfaces with responsive layouts that work smoothly across devices. I integrated multiple APIs and databases to deliver fast performance and a seamless user experience. By organizing code into reusable components, I made projects easier to maintain and expand. I also applied the latest web trends and accessibility standards so that anyone can use the applications comfortably. Through experience in planning, design, and development, I developed the ability to write clean code and collaborate effectively skills that can be applied directly in real-world projects."
+        "description" : "I have experience building end-to-end features in real projects including Stripe payments, Firebase authentication and data management using Firestore/Prisma (PostgreSQL) as well as supporting multilingual functionality. Through the OpenClassrooms Integration Web course, I practiced fundamental technologies such as JavaScript, React, Redux, MongoDB, Node.js, CSS, and unit testing which helped me strengthen my core development skills."
     },
 
     "design" : {

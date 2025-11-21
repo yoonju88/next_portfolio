@@ -49,7 +49,7 @@
 
   "web" : {
     "title" : "Development Web",
-    "description" : "J’ai développé des applications web en utilisant des technologies modernes telles que React et Next.js. Au-delà de la simple fonctionnalité, j’ai conçu des interfaces claires et faciles à utiliser, avec des mises en page responsives adaptées à tous les appareils. J’ai intégré plusieurs API et bases de données afin d’offrir de bonnes performances et une expérience fluide pour l’utilisateur. En structurant le code sous forme de composants réutilisables, j’ai facilité la maintenance et l’évolution des projets. J’ai également appliqué les dernières tendances du web et les normes d’accessibilité pour garantir une utilisation confortable par tous. Grâce à une expérience couvrant la planification, le design et le développement, j’ai acquis la capacité d’écrire un code propre et de collaborer efficacement des compétences directement applicables en entreprise."
+    "description" : "J'ai acquis de l'expérience dans la réalisation complète de fonctionnalités pour des projets réels. Notamment les paiements Stripe, l'authentification Firebase et la gestion de données avec Firestore/Prisma ainsi que la prise en charge de fonctionnalités multilingues. Grâce au cours Integration Web d'OpenClassrooms, j'ai pratiqué des technologies fondamentales telles que JavaScript, React, Redux, MongoDB, Node.js, CSS et les tests unitaires tests unitairesce qui m’a permis de renforcer mes compétences de développement fondamentales."
   },
   "design" : {
     "title" : "Design Graphic",
